@@ -115,7 +115,7 @@ useEffect(() => {
   <img
     src={logo}
     alt="Logo"
-    className="w-[240px] sm:w-[360px] md:w-[480px] lg:w-[578px] h-auto object-contain"
+    className="w-[290px] sm:w-[360px] md:w-[480px] lg:w-[578px] h-auto object-contain"
   />
 </div>
 
@@ -124,13 +124,13 @@ useEffect(() => {
 
 
     <div className="min-h-screen flex items-center justify-center px-4 mt-5  md:mt-16">
-      <div className="bg-white border-2 border-gray-200 p-6 md:p-16 w-full max-w-[840px] md:w-[840px] md:h-[720px] h-auto relative text-center space-y-10">
+      <div className="bg-white border-2 border-gray-200 p-6  md:p-16 w-full max-w-[840px] md:w-[840px] md:h-[720px] h-auto relative text-center space-y-10">
         <hr className="border-t-4 border-gray-400" />
       <div  className="relative z-20 flex items-center justify-center"  data-aos="fade-up">
-      <img src={logo1} alt="Centered" className="w-40 md:w-72 lg:w-[200px] opacity-90 lg:pt-14" />
+      <img src={logo1} alt="Centered" className="w-56 md:w-72 lg:w-[200px] opacity-90 lg:pt-14" />
     </div>
 
-    <p  className="text-base md:text-[26px] lg:text-[32px] px-2 md:px-8 font-semibold lg:w-[728px] lg:h-[376px] lg:leading-8 font-cormorant text-gray-800 flex items-center"  data-aos="fade-up"  data-aos-delay="200">
+    <p  className="text-lg md:text-[26px] lg:text-[32px] px-2 md:px-8 font-semibold lg:w-[728px] lg:h-[376px] lg:leading-8 font-cormorant text-gray-800 flex items-center"  data-aos="fade-up"  data-aos-delay="200">
       Paper Plane Wedding aims to craft heartfelt and visually stunning wedding films for couples embarking on their unique adventure of love, while guiding aspiring filmmakers to soar in their own creative journeys. From documenting intimate elopements in breathtaking landscapes to sharing our passion through inspiring workshops, Paper Plane Wedding caters to adventurous, free-spirited couples and fellow storytellers around the globe.
     </p>
         <hr className="border-t-4 border-gray-400 " />
@@ -144,7 +144,7 @@ useEffect(() => {
     <img
       src="https://images.pexels.com/photos/16632447/pexels-photo-16632447/free-photo-of-smiling-indian-bride-and-groom-in-traditional-costumes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       alt="Kiran and Anu"
-      className="w-full md:w-1/2 h-[300px] md:h-[500px] lg:w-[720px] lg:h-[720px] rounded-md object-cover shadow-md"
+      className="w-full md:w-1/2 h-[300px] md:h-[500px] lg:w-[670px] lg:h-[670px] rounded-md object-cover shadow-md"
     />
     <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
       <h2 className="text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-cormorant font-semibold">
@@ -175,7 +175,7 @@ useEffect(() => {
     <img
       src="https://images.pexels.com/photos/16632447/pexels-photo-16632447/free-photo-of-smiling-indian-bride-and-groom-in-traditional-costumes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       alt="Kiran and Anu"
-      className="w-full md:w-1/2 h-[300px] md:h-[500px] lg:w-[720px] lg:h-[720px] rounded-md object-cover shadow-md"
+      className="w-full md:w-1/2 h-[300px] md:h-[500px] lg:w-[670px] lg:h-[670px] rounded-md object-cover shadow-md"
     />
   </div>
 </div>
