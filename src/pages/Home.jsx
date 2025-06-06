@@ -104,7 +104,7 @@ useEffect(() => {
                   key={index}
                   src={img}
                   alt={`Slide ${index}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1000ms] ease-in-out ${
+                  className={`absolute inset-0 w-full h-full object-cover transition-all brightness-50 duration-[1000ms] ease-in-out ${
                     index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
                   }`}
                   style={{ transitionProperty: 'opacity, transform' }}
@@ -136,78 +136,75 @@ useEffect(() => {
     </div> 
 
 
-<div className="h-full bg-[#f4f4f4] border border-black px-8 sm:px-12 md:px-20 lg:px-32 py-12 lg:py-20 shadow-lg rounded-md md:my-12 space-y-24 mx-5 md:mx-14 lg:mx-24">
+<div className="h-full bg-[#f4f4f4] border px-4 sm:px-6 md:px-12 lg:px-24 py-10 lg:py-16 shadow-lg rounded-md md:my-12 space-y-20 mx-4 sm:mx-6 md:mx-12 lg:mx-20">
   {/* Block 1 */}
-  <div className="flex flex-col md:flex-row items-center gap-12 justify-center max-w-[1440px] mx-auto">
+  <div className="flex flex-col md:flex-row items-center gap-10 justify-center max-w-[1440px] mx-auto">
     <img
       src="https://images.pexels.com/photos/16632447/pexels-photo-16632447/free-photo-of-smiling-indian-bride-and-groom-in-traditional-costumes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       alt="Kiran and Anu"
-      className="w-full md:w-1/2 h-[300px] md:h-[500px] lg:w-[670px] lg:h-[670px] rounded-md object-cover shadow-md"
+      className="w-full md:w-1/2 h-[240px] sm:h-[300px] md:h-[400px] lg:w-[560px] lg:h-[520px] rounded-md object-cover shadow-md"
     />
     <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
-      <h2 className="text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-cormorant uppercase font-semibold">
-              swasika & pream
+      <h2 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-cormorant uppercase font-semibold">
+        swasika & pream
       </h2>
-      <p className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-cormorant leading-relaxed pt-6 md:pt-8 pb-12">
+      <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] font-cormorant leading-relaxed pt-4 md:pt-6 pb-10">
         Paper Plane Wedding's work is breathtaking. They made us feel so comfortable, and the film and photos are incredibly personal and beautiful.
       </p>
       <NavLink
-  to="/swasika&pream"
-  className="
-    bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant
-    mx-auto
-    w-full sm:w-[300px] md:w-[400px] lg:w-[520px]
-    h-[50px] md:h-[64px] lg:h-[80px]
-    text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px]
-    flex items-center justify-center
-  "
->
-  Explore their memories
-</NavLink>
-
+        to="/swasika&pream"
+        className="
+          bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant
+          mx-auto
+          w-full sm:w-[260px] md:w-[340px] lg:w-[400px]
+          h-[44px] md:h-[58px] lg:h-[64px]
+          text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]
+          flex items-center justify-center
+        "
+      >
+        Explore their memories
+      </NavLink>
     </div>
   </div>
 
   {/* Block 2 */}
-  <div className="flex flex-col-reverse md:flex-row items-center gap-12 justify-center max-w-[1440px] mx-auto">
+  <div className="flex flex-col-reverse md:flex-row items-center gap-10 justify-center max-w-[1440px] mx-auto">
     <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
-      <h2 className="text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-cormorant uppercase font-semibold">
+      <h2 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-cormorant uppercase font-semibold">
         rishi & aiswarya
       </h2>
-      <p className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-cormorant leading-relaxed pt-6 md:pt-8 pb-12">
+      <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] font-cormorant leading-relaxed pt-4 md:pt-6 pb-10">
         We were blown away by Paper Plane Wedding! They made us feel so relaxed, and the photos and video perfectly captured our personalities and the joy of our day.
       </p>
       <NavLink
-  to="/rishi&aiswarya"
-  className="
-    bg-gray-600 text-white rounded-md hover:bg-gray-700 transition
-    font-cormorant
-    mx-auto
-    w-full sm:w-[300px] md:w-[400px] lg:w-[520px]
-    h-[50px] md:h-[64px] lg:h-[80px]
-    text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px]
-    flex items-center justify-center
-  "
->
-  Explore their memories
-</NavLink>
-
+        to="/rishi&aiswarya"
+        className="
+          bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant
+          mx-auto
+          w-full sm:w-[260px] md:w-[340px] lg:w-[400px]
+          h-[44px] md:h-[58px] lg:h-[64px]
+          text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]
+          flex items-center justify-center
+        "
+      >
+        Explore their memories
+      </NavLink>
     </div>
     <img
       src="https://images.pexels.com/photos/16632447/pexels-photo-16632447/free-photo-of-smiling-indian-bride-and-groom-in-traditional-costumes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       alt="Kiran and Anu"
-      className="w-full md:w-1/2 h-[300px] md:h-[500px] lg:w-[670px] lg:h-[670px] rounded-md object-cover shadow-md"
+      className="w-full md:w-1/2 h-[240px] sm:h-[300px] md:h-[400px] lg:w-[560px] lg:h-[520px] rounded-md object-cover shadow-md"
     />
   </div>
 </div>
 
-
-  <div className="bg-[#1e1e1e] py-16 px-4 mt-28">
-  <h2 className="text-white text-center text-2xl md:text-3xl lg:text-[48px] font-serif mb-6 md:mb-8 lg:mb-10 leading-tight">
+<div className="bg-[#1e1e1e] py-16 px-4 mt-28">
+  <h2 className="text-white text-center text-2xl md:text-3xl lg:text-[36px] font-serif mb-6 md:mb-8 lg:mb-10 leading-tight">
     Best Moments of their Life
   </h2>
+
   <div className="flex flex-col md:flex-row justify-center gap-8 max-w-[1500px] mx-auto px-4">
-    {[ 
+    {[
       {
         title: "Ashique & Asiya",
         description:
@@ -233,18 +230,18 @@ useEffect(() => {
       <NavLink
         to="/gallery"
         key={index}
-        className="group relative rounded-md overflow-hidden shadow-md w-full max-w-[460px] h-auto sm:h-[550px] md:h-[630px] transition-transform duration-300"
+        className="group relative rounded-md overflow-hidden shadow-md w-full max-w-[380px] h-[360px] sm:h-[420px] md:h-[500px] lg:h-[550px] transition-transform duration-300"
       >
         <img
           src={item.image}
           alt={item.title}
           className="w-full h-full object-cover rounded-md transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
         />
-        <div className="absolute left-0 right-0 bottom-0 top-1/2 bg-black bg-opacity-60 text-white text-center  flex flex-col items-center justify-between px-6 rounded-b-md py-10">
-          <h3 className="text-3xl md:text-4xl lg:text-[40px] font-cormorant font-semibold leading-tight">
+        <div className="absolute left-0 right-0 bottom-0 top-1/2 bg-black bg-opacity-60 text-white text-center flex flex-col items-center justify-between px-4 rounded-b-md py-6">
+          <h3 className="text-2xl md:text-3xl lg:text-[28px] font-cormorant font-semibold leading-tight">
             {item.title}
           </h3>
-          <p className="text-lg md:text-xl lg:text-[32px] font-cormorant  h-40 max-w-xs leading-relaxed">
+          <p className="text-base md:text-lg lg:text-[20px] font-cormorant max-w-xs leading-relaxed">
             {item.description}
           </p>
         </div>
@@ -253,7 +250,8 @@ useEffect(() => {
   </div>
 </div>
 
-    <div className="bg-[#f4f4f4] flex flex-col md:flex-row items-center justify-between md:px-24 px-6 py-6 md:space-x-8 md:h-[240px] gap-5 rounded-md shadow-md overflow-hidden">
+
+    <div className="bg-[#f4f4f4] flex flex-col md:flex-row items-center justify-between md:px-24 px-6 py-6 md:space-x-5 md:h-[240px] gap-5 rounded-md shadow-md overflow-hidden">
       <h3
         ref={leftRef}
         className={`text-xl md:text-3xl lg:text-[72px] font-cormorant text-center md:text-left transition-all duration-1000 ease-in-out ${

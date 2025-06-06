@@ -50,7 +50,7 @@ const About = () => {
                   key={index}
                   src={img}
                   alt={`Slide ${index}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1000ms] ease-in-out ${
+                  className={`absolute inset-0 w-full h-full object-cover  brightness-50 transition-all duration-[1000ms] ease-in-out ${
                     index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
                   }`}
                   style={{ transitionProperty: 'opacity, transform' }}
@@ -69,7 +69,7 @@ const About = () => {
 
      <section className="bg-[#fefefe] text-[#1e1e1e] py-20 px-6 md:px-16 font-cormorant">
       <div className="max-w-5xl mx-auto text-center space-y-6">
-        <h2 className="text-4xl md:text-6xl font-semibold mb-6">About Us</h2>
+        <h2 className="text-4xl md:text-6xl font-semibold mb-6">Who Are We</h2>
         <p className="text-xl md:text-2xl leading-relaxed">
           🎥 Since 2013, <span className="font-bold">PaperPlane</span> has been flying high—led by our visionary founder{" "}
           <span className="italic">Mohammed Shafeek Hussain</span>. What started as a dream in Palakkad has now turned
