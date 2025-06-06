@@ -238,12 +238,12 @@ useEffect(() => {
 
 </div>
 
-<div className="bg-[#1e1e1e] py-16 px-4 mt-28">
+<div className="bg-[#1e1e1e] py-16 px-4 mt-28 overflow-x-hidden">
   <h2 className="text-white text-center text-2xl md:text-3xl lg:text-[32px] font-serif mb-6 md:mb-8 lg:mb-10 leading-tight">
     Best Moments of their Life
   </h2>
 
-  <div className="flex flex-col md:flex-row justify-center gap-8 max-w-[1300px] mx-auto px-4">
+  <div className="flex flex-col md:flex-row justify-center items-start gap-8 max-w-[1300px] mx-auto w-full px-2 sm:px-4">
     {[
       {
         title: "Ashique & Asiya",
@@ -270,18 +270,23 @@ useEffect(() => {
       <NavLink
         to="/gallery"
         key={index}
-        className="group relative rounded-md overflow-hidden shadow-md w-full max-w-[320px] h-[400px] sm:h-[400px] md:h-[460px] lg:h-[480px] transition-transform duration-300"
+        className="group relative rounded-md overflow-hidden shadow-md flex-1 min-w-0 max-w-full sm:max-w-[320px] h-[400px] sm:h-[400px] md:h-[460px] lg:h-[480px] transition-transform duration-300"
       >
         <img
           src={item.image}
           alt={item.title}
           className="w-full h-full object-cover rounded-md transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
         />
-        <div className="absolute left-0 right-0 bottom-0 top-1/2 justify-center bg-black bg-opacity-60 text-white text-center flex flex-col items-center gap-2 px-4 rounded-b-md py-6">
-          <h3 className="text-xl md:text-2xl lg:text-[24px] font-cormorant font-semibold leading-tight">
-            {item.title}                  
+        <div className="absolute left-0 right-0 bottom-0 top-1/2 flex flex-col items-center justify-center gap-3 bg-black bg-opacity-60 text-white text-center rounded-b-md
+                        px-6 py-10
+                        sm:px-8 sm:py-12
+                        md:px-4 md:py-6">
+          <h3 className="font-cormorant font-semibold leading-tight
+                        text-lg sm:text-xl md:text-2xl lg:text-[24px]">
+            {item.title}
           </h3>
-          <p className="text-sm md:text-base lg:text-[18px] font-cormorant max-w-xs leading-relaxed">
+          <p className="font-cormorant max-w-xs leading-relaxed
+                       text-base sm:text-lg md:text-base lg:text-[18px]">
             {item.description}
           </p>
         </div>

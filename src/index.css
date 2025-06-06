@@ -2,31 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.transition-slower {
-  transition-duration: 3000ms !important; 
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  .animate-marquee {
-    animation: marquee 25s linear infinite;
-  }
-
-      @keyframes marquee {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-    .animate-marquee {
-      animation: marquee 15s linear infinite;
-    }
+.animate-marquee {
+  display: flex;
+  width: max-content; /* important: width depends on content */
+  animation: marquee 20s linear infinite;
+}

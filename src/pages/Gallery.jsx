@@ -82,23 +82,20 @@ const Gallery = () => {
     </h1>
   </div>
 
-  <div className="w-full px-4 md:px-10 lg:px-16 overflow-hidden">
-    {/* Removed mx-auto max-w-7xl here */}
-    <div className="flex animate-marquee gap-1 w-full">
-      {images.concat(images).map((src, index) => (
-        <div
-          key={index}
-          className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[420px]"
-        >
-          <img
-            src={src}
-            alt={`Slide ${index + 1}`}
-            className="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[380px] xl:h-[450px] w-full object-cover shadow-lg"
-          />
-        </div>
-      ))}
-    </div>
+ <div className="w-full overflow-hidden">
+  <div className="flex animate-marquee">
+    {[...images, ...images].map((src, i) => (
+      <div key={i} className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[420px]">
+        <img
+          src={src}
+          alt={`Slide ${i + 1}`}
+          className="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[380px] xl:h-[450px] w-full object-cover shadow-lg"
+        />
+      </div>
+    ))}
   </div>
+</div>
+
 
   <div className="flex justify-end lg:py-8 py-2">
     <NavLink
@@ -118,23 +115,20 @@ const Gallery = () => {
     </h1>
   </div>
 
-   <div className="w-full px-4 md:px-10 lg:px-16 overflow-hidden">
-    {/* Removed mx-auto max-w-7xl here */}
-    <div className="flex animate-marquee gap-1 w-full">
-      {images.concat(images).map((src, index) => (
-        <div
-          key={index}
-          className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[420px]"
-        >
-          <img
-            src={src}
-            alt={`Slide ${index + 1}`}
-            className="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[380px] xl:h-[450px] w-full object-cover shadow-lg"
-          />
-        </div>
-      ))}
-    </div>
+  <div className="w-full overflow-hidden">
+  <div className="flex animate-marquee">
+    {[...images, ...images].map((src, i) => (
+      <div key={i} className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[420px]">
+        <img
+          src={src}
+          alt={`Slide ${i + 1}`}
+          className="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[380px] xl:h-[450px] w-full object-cover shadow-lg"
+        />
+      </div>
+    ))}
   </div>
+</div>
+
 
   <div className="flex justify-end lg:py-8 py-2">
     <NavLink
@@ -153,23 +147,20 @@ const Gallery = () => {
     </h1>
   </div>
 
-  <div className="overflow-hidden">
-    {/* Removed mx-auto and max-w here to let flex fill the full padded width */}
-    <div className="flex animate-marquee gap-4 w-full">
-      {images.concat(images).map((src, index) => (
-        <div
-          key={index}
-          className="flex-shrink-0 w-[240px] sm:w-[280px] md:w-[320px] lg:w-[380px]"
-        >
-          <img
-            src={src}
-            alt={`Slide ${index + 1}`}
-            className="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[380px] xl:h-[450px] w-full object-cover shadow-lg rounded-md"
-          />
-        </div>
-      ))}
-    </div>
+<div className="w-full overflow-hidden">
+  <div className="flex animate-marquee">
+    {[...images, ...images].map((src, i) => (
+      <div key={i} className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[420px]">
+        <img
+          src={src}
+          alt={`Slide ${i + 1}`}
+          className="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[380px] xl:h-[450px] w-full object-cover shadow-lg"
+        />
+      </div>
+    ))}
   </div>
+</div>
+
 
   <div className="flex justify-end  lg:py-8 py-2 mb-10">
     <NavLink
