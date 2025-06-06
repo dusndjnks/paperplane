@@ -35,11 +35,11 @@ const Header = () => {
         <div className="md:hidden absolute right-6 top-1/2 -translate-y-1/2">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="focus:outline-none text-white"
+            className="focus:outline-none text-white "
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             <svg
-              className="w-6 h-6"
+              className="w-8 h-8"
               fill="none"
               stroke="currentColor"
               strokeWidth={2}

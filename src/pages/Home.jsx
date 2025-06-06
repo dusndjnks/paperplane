@@ -145,14 +145,14 @@ useEffect(() => {
       className="w-full md:w-1/2 h-[300px] md:h-[500px] lg:w-[670px] lg:h-[670px] rounded-md object-cover shadow-md"
     />
     <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
-      <h2 className="text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-cormorant font-semibold">
-        KIRAN & ANU
+      <h2 className="text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-cormorant uppercase font-semibold">
+              swasika & pream
       </h2>
       <p className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-cormorant leading-relaxed pt-6 md:pt-8 pb-12">
-        We were blown away by Paper Plane Wedding! They made us feel so relaxed, and the photos and video perfectly captured our personalities and the joy of our day.
+        Paper Plane Wedding's work is breathtaking. They made us feel so comfortable, and the film and photos are incredibly personal and beautiful.
       </p>
       <NavLink
-  to="/swasika-pream"
+  to="/swasika&pream"
   className="bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant w-full sm:w-[300px] md:w-[400px] lg:w-[520px] h-[50px] md:h-[64px] lg:h-[80px] text-[18px] py-5 sm:text-[20px] md:text-[22px] lg:text-[24px]"
 >
   Explore their memories
@@ -163,8 +163,8 @@ useEffect(() => {
   {/* Block 2 */}
   <div className="flex flex-col-reverse md:flex-row items-center gap-12 justify-center max-w-[1440px] mx-auto">
     <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
-      <h2 className="text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-cormorant font-semibold">
-        KIRAN & ANU
+      <h2 className="text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-cormorant uppercase font-semibold">
+        rishi & aiswarya
       </h2>
       <p className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-cormorant leading-relaxed pt-6 md:pt-8 pb-12">
         We were blown away by Paper Plane Wedding! They made us feel so relaxed, and the photos and video perfectly captured our personalities and the joy of our day.
