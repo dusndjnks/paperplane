@@ -117,10 +117,7 @@ useEffect(() => {
               ))}
             </div>
           <div className="absolute inset-0 flex items-center justify-center text-center z-20">
-             <h1 className="text-white font-cormorant leading-tight
-                   text-[52px] sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[140px]">
-                    Let’s capture your <br /> story together
-              </h1>
+             <img src={logo} alt="" />
           </div>
 
           </div>
