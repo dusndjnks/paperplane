@@ -118,12 +118,10 @@ useEffect(() => {
     className="w-[290px] sm:w-[360px] md:w-[480px] lg:w-[578px] h-auto object-contain"
   />
 </div>
-
-
           </div>
 
 
-    <div className="min-h-screen flex items-center justify-center px-4 mt-5  md:mt-16">
+    <div className="min-h-screen flex items-center justify-center px-4 mt-5  md:mt-16 ">
       <div className="bg-white border-2 border-gray-200 p-6  md:p-16 w-full max-w-[840px] md:w-[840px] md:h-[720px] h-auto relative text-center space-y-10">
         <hr className="border-t-4 border-gray-400" />
       <div  className="relative z-20 flex items-center justify-center"  data-aos="fade-up">
