@@ -124,6 +124,8 @@ useEffect(() => {
           </div>
 
           </div>
+
+
     <div className="min-h-screen flex items-center justify-center px-4 mt-16">
       <div className="bg-white border-2 border-gray-200 p-6 md:p-16 w-full max-w-[840px] md:w-[840px] md:h-[720px] h-auto relative text-center space-y-10">
         <hr className="border-t-4 border-gray-400" />
@@ -139,9 +141,8 @@ useEffect(() => {
     </div> 
 
 
-
-<div className="bg-[#f4f4f4] border border-black  max-w-[1499px] h-full md:m-28 px-6 sm:px-8 md:px-12 lg:px-20 py-12 lg:py-20 shadow-lg rounded-md m-4 space-y-16 lg:space-y-40">
-          <div className="flex flex-col md:flex-row items-center gap-12 justify-center max-w-[1440px] mx-auto">
+<div className="bg-[#f4f4f4] border border-black w-full max-w-[1499px] h-full mx-auto md:m-28 px-6 sm:px-8 md:px-12 lg:px-20 py-12 lg:py-20 shadow-lg rounded-md m-4 space-y-16 lg:space-y-40">
+          <div className="flex flex-col-reverse md:flex-row items-center gap-12 justify-center max-w-[1440px] mx-auto">
             <img
       src="https://images.pexels.com/photos/16632447/pexels-photo-16632447/free-photo-of-smiling-indian-bride-and-groom-in-traditional-costumes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       alt="Kiran and Anu"
