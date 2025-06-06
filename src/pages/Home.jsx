@@ -117,8 +117,13 @@ useEffect(() => {
               ))}
             </div>
           <div className="absolute inset-0 flex items-center justify-center text-center z-20">
-             <img src={logo} alt="" />
-          </div>
+  <img
+    src={logo}
+    alt="Logo"
+    className="w-[240px] sm:w-[360px] md:w-[480px] lg:w-[578px] h-auto object-contain"
+  />
+</div>
+
 
           </div>
 
@@ -138,41 +143,44 @@ useEffect(() => {
     </div> 
 
 
-<div className="bg-[#f4f4f4] border border-black w-full max-w-[1499px] h-full mx-auto md:m-28 px-6 sm:px-8 md:px-12 lg:px-20 py-12 lg:py-20 shadow-lg rounded-md m-4 space-y-16 lg:space-y-40">
-          <div className="flex flex-col-reverse md:flex-row items-center gap-12 justify-center max-w-[1440px] mx-auto">
-            <img
+<div className="h-full bg-[#f4f4f4] border border-black px-8 sm:px-12 md:px-20 py-12 lg:py-20 shadow-lg rounded-md my-12 space-y-24 mx-5 md:mx-14 lg:mx-24">
+  {/* Block 1 */}
+  <div className="flex flex-col md:flex-row items-center gap-12 justify-center max-w-[1440px] mx-auto">
+    <img
       src="https://images.pexels.com/photos/16632447/pexels-photo-16632447/free-photo-of-smiling-indian-bride-and-groom-in-traditional-costumes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       alt="Kiran and Anu"
-      className="w-full md:w-[600px] lg:w-[720px] h-[360px] md:h-[600px] lg:h-[720px] rounded-md object-cover shadow-md"
+      className="w-full md:w-1/2 h-[300px] md:h-[500px] lg:w-[720px] lg:h-[720px] rounded-md object-cover shadow-md"
     />
-    <div className="flex flex-col justify-center items-center text-center max-w-[720px] h-full px-2 sm:px-4">
-      <h2 className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-cormorant font-semibold">
+    <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
+      <h2 className="text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-cormorant font-semibold">
         KIRAN & ANU
       </h2>
-      <p className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-cormorant leading-relaxed pt-6 md:pt-8 pb-16 md:pb-28">
+      <p className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-cormorant leading-relaxed pt-6 md:pt-8 pb-12">
         We were blown away by Paper Plane Wedding! They made us feel so relaxed, and the photos and video perfectly captured our personalities and the joy of our day.
       </p>
-      <button className="bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant w-full sm:w-[360px] md:w-[420px] lg:w-[560px] h-[60px] md:h-[70px] lg:h-[86px] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px]">
+      <button className="bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant w-full sm:w-[300px] md:w-[400px] lg:w-[520px] h-[50px] md:h-[64px] lg:h-[80px] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px]">
         Explore their memories
       </button>
     </div>
   </div>
+
+  {/* Block 2 */}
   <div className="flex flex-col-reverse md:flex-row items-center gap-12 justify-center max-w-[1440px] mx-auto">
-    <div className="flex flex-col justify-center items-center text-center max-w-[720px] h-full px-2 sm:px-4">
-      <h2 className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-cormorant font-semibold">
+    <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
+      <h2 className="text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-cormorant font-semibold">
         KIRAN & ANU
       </h2>
-      <p className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-cormorant leading-relaxed pt-6 md:pt-8 pb-16 md:pb-28">
+      <p className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-cormorant leading-relaxed pt-6 md:pt-8 pb-12">
         We were blown away by Paper Plane Wedding! They made us feel so relaxed, and the photos and video perfectly captured our personalities and the joy of our day.
       </p>
-      <button className="bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant w-full sm:w-[360px] md:w-[420px] lg:w-[560px] h-[60px] md:h-[70px] lg:h-[86px] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px]">
+      <button className="bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant w-full sm:w-[300px] md:w-[400px] lg:w-[520px] h-[50px] md:h-[64px] lg:h-[80px] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px]">
         Explore their memories
       </button>
     </div>
     <img
       src="https://images.pexels.com/photos/16632447/pexels-photo-16632447/free-photo-of-smiling-indian-bride-and-groom-in-traditional-costumes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       alt="Kiran and Anu"
-      className="w-full md:w-[600px] lg:w-[720px] h-[360px] md:h-[600px] lg:h-[720px] rounded-md object-cover shadow-md"
+      className="w-full md:w-1/2 h-[300px] md:h-[500px] lg:w-[720px] lg:h-[720px] rounded-md object-cover shadow-md"
     />
   </div>
 </div>
