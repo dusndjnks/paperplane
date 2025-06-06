@@ -77,7 +77,7 @@ const Gallery = () => {
 
      <div className="w-screen px-5 md:px-12 xl:px-20">
   <div className="flex items-center justify-center pt-16 font-cormorant">
-    <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-6xl mb-3">
+    <h1 className=" text-2xl sm:text-3xl md:text-4xl xl:text-6xl mb-3 text-center">
       Save The Date
     </h1>
   </div>
