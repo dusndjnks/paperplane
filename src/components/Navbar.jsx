@@ -15,7 +15,7 @@ const Header = () => {
     <header className="absolute top-8 left-0 w-full z-30">
       <div className="flex items-center justify-center px-6 py-4 bg-transparent relative">
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-20 text-lg md:text-2xl lg:text-4xl font-cormorant uppercase">
+        <nav className="hidden md:flex space-x-20 text-lg md:text-2xl lg:text-[32px] font-cormorant uppercase">
           {navLinks.map((link) => (
             <NavLink
               key={link.name}
