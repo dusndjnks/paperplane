@@ -66,9 +66,12 @@ const Contact = () => {
           </div>
     </div>
 
-    <div className="lg:mt-28 mt-8 mb-10">
-        <h2 className="text-center text-4xl font-semibold md:text-[72px] font-cormorant">Let’s talk</h2>
-    </div>
+  <div className="lg:mt-20 mt-6 mb-8 px-4">
+  <h2 className="text-center font-cormorant text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+    Let’s talk
+  </h2>
+</div>
+
 
   <ContactForm/>
 

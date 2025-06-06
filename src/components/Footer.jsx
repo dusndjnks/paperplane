@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <div>
 
-     <div className=" hidden md:flex">
+ <div className="hidden md:flex justify-center">
   <section className="relative py-12">
     <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-20">
 
@@ -13,16 +13,25 @@ const Footer = () => {
           href="https://www.instagram.com/paperplanewedding?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-black/60 hover:bg-black/70 text-white text-lg sm:text-2xl md:text-4xl lg:text-5xl text-center font-serif w-full max-w-[850px] py-4 md:py-10 rounded-md shadow-lg transition-all duration-300"
+          className="
+            font-cormorant
+            bg-black/60 hover:bg-black/70 text-white text-lg sm:text-2xl md:text-4xl 
+            lg:text-4xl text-center w-full max-w-[700px] 
+            py-4 md:py-10 rounded-md shadow-lg transition-all duration-300
+          "
         >
           Check Our Instagram
         </a>
       </div>
 
       {/* Image Grid */}
-      <div className="mt-4 md:mt-0 flex md:grid md:grid-cols-5 gap-2 overflow-x-auto md:overflow-visible px-1 sm:px-2 md:px-0">
+      <div className="mt-4 md:mt-0 flex md:grid md:grid-cols-5 gap-2 overflow-x-auto md:overflow-visible px-1 sm:px-2 md:px-0 justify-center">
         {[...Array(5)].map((_, index) => (
-          <div key={index} className="flex-shrink-0 md:shrink md:w-auto w-3/4 sm:w-1/2">
+          <div
+            key={index}
+            className="flex-shrink-0 md:shrink md:w-auto w-3/4 sm:w-1/2"
+            style={{ width: "280px" }}
+          >
             <img
               src={
                 index % 2 === 0
@@ -37,6 +46,8 @@ const Footer = () => {
     </div>
   </section>
 </div>
+
+
 
 <div className="flex md:hidden">
   <section className="relative py-12">

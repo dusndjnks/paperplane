@@ -67,59 +67,71 @@ const About = () => {
           </div>
     </div>
 
-     <section className="bg-[#fefefe] text-[#1e1e1e] py-20 px-6 md:px-16 font-cormorant">
-      <div className="max-w-5xl mx-auto text-center space-y-6">
-        <h2 className="text-4xl md:text-6xl font-semibold mb-6">Who Are We</h2>
-        <p className="text-xl md:text-2xl leading-relaxed">
-          🎥 Since 2013, <span className="font-bold">PaperPlane</span> has been flying high—led by our visionary founder{" "}
-          <span className="italic">Mohammed Shafeek Hussain</span>. What started as a dream in Palakkad has now turned
-          into a full-blown adventure across <span className="font-semibold">Kerala, Tamil Nadu</span>, and{" "}
-          <span className="font-semibold">Karnataka</span>. ✨
-        </p>
-        <p className="text-xl md:text-2xl leading-relaxed">
-          From emotional <span className="underline">weddings</span> 💍 to playful{" "}
-          <span className="underline">save-the-date</span> shoots 💌, heartfelt <span className="underline">engagements</span> 💑
-          to cinematic <span className="underline">films</span> 🎬—we capture it all with style and soul. Every frame we shoot
-          tells a story, your story, the *PaperPlane* way. 📸
-        </p>
-        <p className="text-xl md:text-2xl leading-relaxed">
-          We don't just shoot moments—we create magic that earns us those glowing{" "}
-          <span className="text-yellow-500 font-bold">★★★★★</span> reviews. 💫
-        </p>
-      </div>
-    </section>
-
     <section className="bg-[#fefefe] text-[#1e1e1e] py-20 px-6 md:px-16 font-cormorant">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-12">
-        <div className="w-full md:w-1/3">
-          <img
-            src={creator}
-            alt="Mohammed Shafeek Hussain"
-            className="rounded-lg shadow-lg"
-          />
-        </div>
-        <div className="w-full md:w-2/3 space-y-4">
-          <h3 className="text-3xl md:text-4xl font-semibold">Meet the Visionary</h3>
-          <p className="text-xl md:text-2xl leading-relaxed">
-            📸 <span className="font-bold">Mohammed Shafeek Hussain</span>, the creative force behind <span className="font-bold">PaperPlane</span>, has been capturing love stories since 2013. Based in Palakkad, his lens has traveled across Kerala, Tamil Nadu, and Karnataka, turning moments into timeless memories.
-          </p>
-          <p className="text-xl md:text-2xl leading-relaxed">
-            With a passion for storytelling, Shafeek specializes in weddings, save-the-date shoots, engagements, and cinematic films. His dedication and artistry have earned PaperPlane a reputation for excellence and a trail of 5-star reviews.
-          </p>
-          <p className="text-xl md:text-2xl leading-relaxed">
-            Connect with Shafeek on Instagram:{" "}
-            <a
-              href="https://www.instagram.com/shafeekaaliofficial?igsh=bjNkZnIxc2hwODkx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline font-semibold"
-            >
-              @shafeekaaliofficial
-            </a>
-          </p>
-        </div>
+  <div className="max-w-5xl mx-auto text-center space-y-8">
+    <h2 className="text-4xl md:text-6xl font-semibold mb-6 tracking-wide">Who Are We</h2>
+    <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
+      Since 2013, <span className="font-bold">PaperPlane</span> has been flying high—led by our visionary founder{" "}
+      <span className="italic">Mohammed Shafeek Hussain</span>. What started as a dream in Palakkad has now blossomed
+      into a full-fledged adventure across <span className="font-semibold">Kerala, Tamil Nadu</span>, and{" "}
+      <span className="font-semibold">Karnataka</span>.
+    </p>
+    <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
+      From emotional <span className="underline decoration-dotted decoration-2 underline-offset-4">weddings</span> to playful{" "}
+      <span className="underline decoration-dotted decoration-2 underline-offset-4">save-the-date</span> shoots, heartfelt{" "}
+      <span className="underline decoration-dotted decoration-2 underline-offset-4">engagements</span> to cinematic{" "}
+      <span className="underline decoration-dotted decoration-2 underline-offset-4">films</span>—we capture it all with style and soul. Every frame tells your story, the <em>PaperPlane</em> way.
+    </p>
+    <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
+      We don’t just shoot moments—we create magic that has earned us glowing{" "}
+      <span className="text-yellow-500 font-bold tracking-wide">★★★★★</span> reviews.
+    </p>
+  </div>
+</section>
+
+
+<section className="flex items-center justify-center px-6 py-16 md:py-20 lg:py-24">
+  <div className="bg-[#fefefe] border-2 border-gray-300 p-8 md:p-16 w-full max-w-7xl relative text-center font-cormorant text-[#1e1e1e]">
+    
+    <hr className="border-t-4 border-gray-400 mb-10" />
+
+    <div className="relative z-20 flex flex-col md:flex-row items-stretch justify-center space-y-10 md:space-y-0 md:space-x-16">
+      <div className="w-full md:w-1/3 flex-shrink-0 px-4 md:px-0">
+        <img
+          src={creator}
+          alt="Mohammed Shafeek Hussain"
+          className="rounded-lg shadow-lg mx-auto w-full h-64 sm:h-80 md:h-[380px] object-cover"
+        />
       </div>
-    </section>
+      <div className="w-full md:w-2/3 space-y-6 text-left flex flex-col justify-center px-4 md:px-0">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">Meet the Visionary</h3>
+        <p className="text-base sm:text-lg md:text-xl leading-relaxed">
+          <span className="font-bold">Mohammed Shafeek Hussain</span>, the creative force behind <span className="font-bold">PaperPlane</span>, has been capturing love stories since 2013. Based in Palakkad, his lens has traveled across Kerala, Tamil Nadu, and Karnataka, turning moments into timeless memories.
+        </p>
+        <p className="text-base sm:text-lg md:text-xl leading-relaxed">
+          With a passion for storytelling, Shafeek specializes in weddings, save-the-date shoots, engagements, and cinematic films. His dedication and artistry have earned PaperPlane a reputation for excellence and a trail of 5-star reviews.
+        </p>
+        <p className="text-base sm:text-lg md:text-xl leading-relaxed">
+          Connect with Shafeek on Instagram:{" "}
+          <a
+            href="https://www.instagram.com/shafeekaaliofficial?igsh=bjNkZnIxc2hwODkx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline font-semibold"
+          >
+            @shafeekaaliofficial
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <hr className="border-t-4 border-gray-400 mt-14" />
+  </div>
+</section>
+
+
+
+
    </Layout>
   )
 }

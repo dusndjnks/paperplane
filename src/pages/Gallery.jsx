@@ -67,120 +67,121 @@ const Gallery = () => {
             </div>
           <div className="absolute inset-0 flex items-center justify-center text-center z-20">
              <h1 className="text-white font-cormorant leading-tight
-                   text-[52px] sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[140px]">
-                    Your precious <br /> moments
+                   text-[52px] sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[120px]">
+                    Your precious moments
               </h1>
           </div>
 
           </div>
     </div>
 
-       <div>
-         <div className="flex items-center justify-center pt-16 font-cormorant">
-          <h1 className="text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] text-center">
-            Save The Date
-          </h1>
+     <div className="w-screen px-5 md:px-12 xl:px-20">
+  <div className="flex items-center justify-center pt-16 font-cormorant">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-6xl mb-3">
+      Save The Date
+    </h1>
+  </div>
+
+  <div className="w-full px-4 md:px-10 lg:px-16 overflow-hidden">
+    {/* Removed mx-auto max-w-7xl here */}
+    <div className="flex animate-marquee gap-1 w-full">
+      {images.concat(images).map((src, index) => (
+        <div
+          key={index}
+          className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[420px]"
+        >
+          <img
+            src={src}
+            alt={`Slide ${index + 1}`}
+            className="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[380px] xl:h-[450px] w-full object-cover shadow-lg"
+          />
         </div>
+      ))}
+    </div>
+  </div>
 
-        <div className="w-full px-4 md:px-10 lg:px-16">
-          <div className="relative">
-            <div className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-4 pb-4 scrollbar-hide">
-              {images.map((src, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 snap-center w-[260px] sm:w-[320px] md:w-[400px] lg:w-[486px]"
-                >
-                  <img
-                    src={src}
-                    alt={`Slide ${index + 1}`}
-                    className="h-[350px] sm:h-[440px] md:h-[500px] lg:h-[578px] w-full object-cover shadow-lg"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+  <div className="flex justify-end lg:py-8 py-2">
+    <NavLink
+      to="/save-the-date"
+      className="text-sm sm:text-base md:text-lg lg:text-2xl font-cormorant text-gray-800 border border-gray-800 px-6 lg:px-16 py-2 rounded hover:bg-gray-800 hover:text-white transition"
+    >
+      View All
+    </NavLink>
+  </div>
+</div>
+
+
+   <div className="w-screen px-5 md:px-12 xl:px-20">
+  <div className="flex items-center justify-center pt-16 font-cormorant">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-6xl mb-3 text-center">
+      Engagement
+    </h1>
+  </div>
+
+   <div className="w-full px-4 md:px-10 lg:px-16 overflow-hidden">
+    {/* Removed mx-auto max-w-7xl here */}
+    <div className="flex animate-marquee gap-1 w-full">
+      {images.concat(images).map((src, index) => (
+        <div
+          key={index}
+          className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[420px]"
+        >
+          <img
+            src={src}
+            alt={`Slide ${index + 1}`}
+            className="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[380px] xl:h-[450px] w-full object-cover shadow-lg"
+          />
         </div>
+      ))}
+    </div>
+  </div>
 
-          <div className="flex justify-end px-4 sm:px-8 md:px-12 lg:px-20 lg:py-8 py-2">
-            <NavLink
-              to="/save-the-date"
-              className="text-lg sm:text-xl md:text-2xl lg:text-[48px] font-cormorant text-gray-800 border border-gray-800 px-6 py-2 rounded hover:bg-gray-800 hover:text-white transition"
-            >
-              View All
-            </NavLink>
-          </div>
-       </div>
+  <div className="flex justify-end lg:py-8 py-2">
+    <NavLink
+      to="/engagement"
+      className="text-sm sm:text-base md:text-lg lg:text-2xl font-cormorant text-gray-800 border border-gray-800 px-6 lg:px-16 py-2 rounded hover:bg-gray-800 hover:text-white transition"
+    >
+      View All
+    </NavLink>
+  </div>
+</div>
 
-          <div className="flex items-center justify-center pt-5 font-cormorant">
-            <h1 className="text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] text-center">
-              Engagement
-            </h1>
-          </div>
+<div className="w-full px-4 md:px-10 lg:px-16">
+  <div className="flex items-center justify-center pt-6 font-cormorant">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-6xl text-center">
+      Wedding
+    </h1>
+  </div>
 
-          <div className="w-full px-4 md:px-10 lg:px-16">
-          <div className="relative">
-            <div className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-4 pb-4 scrollbar-hide">
-              {images.map((src, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 snap-center w-[260px] sm:w-[320px] md:w-[400px] lg:w-[486px]"
-                >
-                  <img
-                    src={src}
-                    alt={`Slide ${index + 1}`}
-                    className="h-[350px] sm:h-[440px] md:h-[500px] lg:h-[578px] w-full object-cover shadow-lg"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+  <div className="overflow-hidden">
+    {/* Removed mx-auto and max-w here to let flex fill the full padded width */}
+    <div className="flex animate-marquee gap-4 w-full">
+      {images.concat(images).map((src, index) => (
+        <div
+          key={index}
+          className="flex-shrink-0 w-[240px] sm:w-[280px] md:w-[320px] lg:w-[380px]"
+        >
+          <img
+            src={src}
+            alt={`Slide ${index + 1}`}
+            className="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[380px] xl:h-[450px] w-full object-cover shadow-lg rounded-md"
+          />
         </div>
+      ))}
+    </div>
+  </div>
 
-         <div className="flex justify-end px-4 sm:px-8 md:px-12 lg:px-20 lg:py-8 py-2">
-            <NavLink
-              to="/engagement"
-              className="text-lg sm:text-xl md:text-2xl lg:text-[48px] font-cormorant text-gray-800 border border-gray-800 px-6 py-2 rounded hover:bg-gray-800 hover:text-white transition"
-            >
-              View All
-            </NavLink>
-          </div>
+  <div className="flex justify-end  lg:py-8 py-2 mb-10">
+    <NavLink
+      to="/wedding"
+      className="text-sm sm:text-base md:text-lg lg:text-2xl font-cormorant text-gray-800 border border-gray-800 px-6 lg:px-16 py-2 rounded hover:bg-gray-800 hover:text-white transition"
+    >
+      View All
+    </NavLink>
+  </div>
+</div>
 
-          <div>
-        <div className="flex items-center justify-center pt-6 font-cormorant">
-          <h1 className="text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] text-center">
-            Wedding
-          </h1>
-        </div>
 
-        <div className="w-full px-4 md:px-10 lg:px-16">
-          <div className="relative">
-            <div className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-4 pb-4 scrollbar-hide">
-              {images.map((src, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 snap-center w-[260px] sm:w-[320px] md:w-[400px] lg:w-[486px]"
-                >
-                  <img
-                    src={src}
-                    alt={`Slide ${index + 1}`}
-                    className="h-[350px] sm:h-[440px] md:h-[500px] lg:h-[578px] w-full object-cover shadow-lg"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-          <div className="flex justify-end px-4 sm:px-8 md:px-12 lg:px-20 lg:py-8 py-2 mb-10">
-            <NavLink
-              to="/wedding"
-              className="text-lg sm:text-xl md:text-2xl lg:text-[48px] font-cormorant text-gray-800 border border-gray-800 px-6 py-2 rounded hover:bg-gray-800 hover:text-white transition"
-            >
-              View All
-            </NavLink>
-          </div>
-
-          </div>
           
     </Layout>
   )
