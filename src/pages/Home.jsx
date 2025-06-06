@@ -151,9 +151,12 @@ useEffect(() => {
       <p className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-cormorant leading-relaxed pt-6 md:pt-8 pb-12">
         We were blown away by Paper Plane Wedding! They made us feel so relaxed, and the photos and video perfectly captured our personalities and the joy of our day.
       </p>
-      <button className="bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant w-full sm:w-[300px] md:w-[400px] lg:w-[520px] h-[50px] md:h-[64px] lg:h-[80px] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px]">
-        Explore their memories
-      </button>
+      <NavLink
+  to="/swasika-pream"
+  className="bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant w-full sm:w-[300px] md:w-[400px] lg:w-[520px] h-[50px] md:h-[64px] lg:h-[80px] text-[18px] py-5 sm:text-[20px] md:text-[22px] lg:text-[24px]"
+>
+  Explore their memories
+</NavLink>
     </div>
   </div>
 
@@ -166,9 +169,9 @@ useEffect(() => {
       <p className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-cormorant leading-relaxed pt-6 md:pt-8 pb-12">
         We were blown away by Paper Plane Wedding! They made us feel so relaxed, and the photos and video perfectly captured our personalities and the joy of our day.
       </p>
-      <button className="bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant w-full sm:w-[300px] md:w-[400px] lg:w-[520px] h-[50px] md:h-[64px] lg:h-[80px] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px]">
+      <NavLink to="/rishi&aiswarya" className="bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant w-full sm:w-[300px] md:w-[400px] lg:w-[520px] h-[50px] md:h-[64px] lg:h-[80px] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] py-5">
         Explore their memories
-      </button>
+      </NavLink>
     </div>
     <img
       src="https://images.pexels.com/photos/16632447/pexels-photo-16632447/free-photo-of-smiling-indian-bride-and-groom-in-traditional-costumes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"

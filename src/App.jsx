@@ -7,11 +7,13 @@ import SaveTheDate from "./pages/secondarypages/SaveTheDate";
 import Wedding from "./pages/secondarypages/Wedding";
 import Engagement from "./pages/secondarypages/Engagement";
 import ScrollToTop from "./components/ScrollToTop";
+import TestimonialFirst from "./pages/secondarypages/TestimonialFirst";
+import TestimonialSecond from "./pages/secondarypages/TestimonialSecond";
 
 function App() {
   return (
     <div className="App">
-      <ScrollToTop /> {/* 👈 Add this here */}
+      <ScrollToTop /> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -20,6 +22,8 @@ function App() {
         <Route path="/save-the-date" element={<SaveTheDate />} />
         <Route path="/wedding" element={<Wedding />} />
         <Route path="/engagement" element={<Engagement />} />
+        <Route path="/swasika&pream" element={<TestimonialFirst/>} />
+        <Route path="/rishi&aiswarya" element={<TestimonialSecond />} />
       </Routes>
     </div>
   );
