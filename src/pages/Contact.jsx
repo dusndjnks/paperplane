@@ -49,7 +49,7 @@ const Contact = () => {
                   key={index}
                   src={img}
                   alt={`Slide ${index}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-all  brightness-50 duration-[1000ms] ease-in-out ${
+                  className={`absolute inset-0 w-full h-full object-cover transition-all  brightness-75 duration-[1000ms] ease-in-out ${
                     index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
                   }`}
                   style={{ transitionProperty: 'opacity, transform' }}
