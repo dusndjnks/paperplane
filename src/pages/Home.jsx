@@ -98,7 +98,7 @@ useEffect(() => {
 
    <div
             {...handlers}
-            className="relative h-screen 2xl:h-[1080px] w-full overflow-hidden bg-black"
+            className="relative h-screen w-full overflow-hidden bg-black"
           >
             <div className="relative h-full w-full">
               {images.map((img, index) => (

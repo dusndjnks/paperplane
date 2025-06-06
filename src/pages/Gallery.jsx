@@ -50,7 +50,7 @@ const Gallery = () => {
       <div>
           <div
             {...handlers}
-            className="relative h-screen 2xl:h-[1080px] w-full overflow-hidden bg-black"
+            className="relative h-screen  w-full overflow-hidden bg-black"
           >
             <div className="relative h-full w-full">
               {image.map((img, index) => (
@@ -58,7 +58,7 @@ const Gallery = () => {
                   key={index}
                   src={img}
                   alt={`Slide ${index}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-all  brightness-75 duration-[1000ms] ease-in-out ${
+                  className={`absolute inset-0 w-full h-full object-cover transition-all  brightness-50 duration-[1000ms] ease-in-out ${
                     index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
                   }`}
                   style={{ transitionProperty: 'opacity, transform' }}

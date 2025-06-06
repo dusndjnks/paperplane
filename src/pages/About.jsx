@@ -42,7 +42,7 @@ const About = () => {
         <div>
           <div
             {...handlers}
-            className="relative h-screen 2xl:h-[1080px] w-full overflow-hidden bg-black"
+            className="relative h-screen w-full overflow-hidden bg-black"
           >
             <div className="relative h-full w-full">
               {images.map((img, index) => (
@@ -50,7 +50,7 @@ const About = () => {
                   key={index}
                   src={img}
                   alt={`Slide ${index}`}
-                  className={`absolute inset-0 w-full h-full object-cover  brightness-75 transition-all duration-[1000ms] ease-in-out ${
+                  className={`absolute inset-0 w-full h-full object-cover  brightness-50 transition-all duration-[1000ms] ease-in-out ${
                     index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
                   }`}
                   style={{ transitionProperty: 'opacity, transform' }}
@@ -88,7 +88,6 @@ const About = () => {
     </p>
   </div>
 </section>
-
 
 <section className="flex items-center justify-center px-6 py-16 md:py-20 lg:py-24">
   <div className="bg-[#fefefe] border-2 border-gray-300 p-8 md:p-16 w-full max-w-7xl relative text-center font-cormorant text-[#1e1e1e]">
@@ -128,9 +127,6 @@ const About = () => {
     <hr className="border-t-4 border-gray-400 mt-14" />
   </div>
 </section>
-
-
-
 
    </Layout>
   )

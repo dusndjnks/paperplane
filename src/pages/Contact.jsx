@@ -41,7 +41,7 @@ const Contact = () => {
          <div>
           <div
             {...handlers}
-            className="relative h-screen 2xl:h-[1080px] w-full overflow-hidden bg-black"
+            className="relative h-screen w-full overflow-hidden bg-black"
           >
             <div className="relative h-full w-full">
               {images.map((img, index) => (
@@ -49,7 +49,7 @@ const Contact = () => {
                   key={index}
                   src={img}
                   alt={`Slide ${index}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-all  brightness-75 duration-[1000ms] ease-in-out ${
+                  className={`absolute inset-0 w-full h-full object-cover transition-all brightness-50 duration-[1000ms] ease-in-out ${
                     index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
                   }`}
                   style={{ transitionProperty: 'opacity, transform' }}
@@ -58,7 +58,7 @@ const Contact = () => {
             </div>
           <div className="absolute inset-0 flex items-center justify-center text-center z-20">
              <h1 className="text-white font-cormorant leading-tight
-                   text-[46px] sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[140px]">
+                   text-[46px] sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[110px]">
                     Let’s capture your <br /> story together
               </h1>
           </div>
