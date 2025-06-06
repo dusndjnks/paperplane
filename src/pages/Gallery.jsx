@@ -75,7 +75,8 @@ const Gallery = () => {
           </div>
     </div>
 
-        <div className="flex items-center justify-center pt-16 font-cormorant">
+       <div>
+         <div className="flex items-center justify-center pt-16 font-cormorant">
           <h1 className="text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] text-center">
             Save The Date
           </h1>
@@ -108,6 +109,7 @@ const Gallery = () => {
               View All
             </NavLink>
           </div>
+       </div>
 
           <div className="flex items-center justify-center pt-5 font-cormorant">
             <h1 className="text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] text-center">

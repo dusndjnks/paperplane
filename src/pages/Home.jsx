@@ -9,6 +9,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'swiper/css'
 import 'swiper/css/navigation'
+import rishi from "../images/2nd-photo-rishi-aishwrya-_1_-_1_.webp"
+import pream from "../images/1st-photo-swasika-pream-_2_.webp"
 
 
 const images = [
@@ -120,7 +122,6 @@ useEffect(() => {
 </div>
           </div>
 
-
     <div className="flex items-center justify-center px-4 my-20 lg:my-10  md:mt-16 ">
       <div className="bg-white border-2 border-gray-200 p-6  md:p-16 w-full max-w-[840px] md:w-[840px] md:h-[720px] h-auto relative text-center space-y-10">
         <hr className="border-t-4 border-gray-400" />
@@ -140,9 +141,9 @@ useEffect(() => {
   {/* Block 1 */}
   <div className="flex flex-col md:flex-row items-center gap-10 justify-center max-w-[1440px] mx-auto">
     <img
-      src="https://images.pexels.com/photos/16632447/pexels-photo-16632447/free-photo-of-smiling-indian-bride-and-groom-in-traditional-costumes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      src={pream}
       alt="Kiran and Anu"
-      className="w-full md:w-1/2 h-[240px] sm:h-[300px] md:h-[400px] lg:w-[560px] lg:h-[520px] rounded-md object-cover shadow-md"
+      className="w-full md:w-1/2 aspect-square lg:w-[520px] rounded-md object-cover shadow-md"
     />
     <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
       <h2 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-cormorant uppercase font-semibold">
@@ -191,12 +192,13 @@ useEffect(() => {
       </NavLink>
     </div>
     <img
-      src="https://images.pexels.com/photos/16632447/pexels-photo-16632447/free-photo-of-smiling-indian-bride-and-groom-in-traditional-costumes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      src={rishi}
       alt="Kiran and Anu"
-      className="w-full md:w-1/2 h-[240px] sm:h-[300px] md:h-[400px] lg:w-[560px] lg:h-[520px] rounded-md object-cover shadow-md"
+      className="w-full md:w-1/2 aspect-square lg:w-[520px] rounded-md object-cover shadow-md"
     />
   </div>
 </div>
+
 
 <div className="bg-[#1e1e1e] py-16 px-4 mt-28">
   <h2 className="text-white text-center text-2xl md:text-3xl lg:text-[36px] font-serif mb-6 md:mb-8 lg:mb-10 leading-tight">
@@ -230,7 +232,7 @@ useEffect(() => {
       <NavLink
         to="/gallery"
         key={index}
-        className="group relative rounded-md overflow-hidden shadow-md w-full max-w-[380px] h-[360px] sm:h-[420px] md:h-[500px] lg:h-[550px] transition-transform duration-300"
+        className="group relative rounded-md overflow-hidden shadow-md w-full max-w-[380px] h-[440px] sm:h-[420px] md:h-[500px] lg:h-[550px] transition-transform duration-300"
       >
         <img
           src={item.image}
