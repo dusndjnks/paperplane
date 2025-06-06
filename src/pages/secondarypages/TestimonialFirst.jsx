@@ -1,11 +1,10 @@
-import { NavLink } from 'react-router-dom'
 import Layout from '../../components/Layout'
-import main from "../../images/main photo.webp"
 import { useState, useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import pream from "../../images/1st photo optional (2).webp"
 
 const TestimonialFirst = () => {
  const [fullscreenImage, setFullscreenImage] = useState(null);
@@ -31,13 +30,13 @@ const TestimonialFirst = () => {
       <div className="relative h-screen w-full">
         {/* Background Image */}
         <img
-          src={main}
+          src={pream}
           alt="Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/25" />
 
         {/* Content */}
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
