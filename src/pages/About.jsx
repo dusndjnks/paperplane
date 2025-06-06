@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import main from "../images/main photo.webp"
 import { useSwipeable } from "react-swipeable";
 import { useEffect, useState } from "react";
+import creator from "../images/screator.jpg"
 
 
 
@@ -85,7 +86,6 @@ const About = () => {
           We don't just shoot moments—we create magic that earns us those glowing{" "}
           <span className="text-yellow-500 font-bold">★★★★★</span> reviews. 💫
         </p>
-        
       </div>
     </section>
 
@@ -93,7 +93,7 @@ const About = () => {
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-12">
         <div className="w-full md:w-1/3">
           <img
-            src="https://instagram.fccj2-3.fna.fbcdn.net/v/t51.2885-19/472276071_944466930607425_8164442877245603029_n.jpg?_nc_ht=instagram.fccj2-3.fna.fbcdn.net&_nc_cat=109&_nc_oc=Q6cZ2QErkT8b1P95Xyh7gocmOFQ2iecRSpV9uBRp01QU5RkVZ_9Q5rnLw4RzE-ANpXA99sCt-KmbdKk5Eidt-PkaoFyo&_nc_ohc=rkuVJ778I-sQ7kNvwHyFpON&_nc_gid=EHM9cdNEcW7qOGQdITgUFg&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AfNmAJt0NyvfN0LhK_fouUWC6yK7iKXVaTBsO7FYhB3R3g&oe=6847ED67&_nc_sid=22de04"
+            src={creator}
             alt="Mohammed Shafeek Hussain"
             className="rounded-lg shadow-lg"
           />

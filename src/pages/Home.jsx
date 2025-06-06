@@ -88,12 +88,7 @@ useEffect(() => {
   AOS.init({ once: true, duration: 1000 });
 }, []); 
 
-    
   const [index, setIndex] = useState(0);
-
-
-
-
 
   return (
    <Layout>
@@ -143,7 +138,7 @@ useEffect(() => {
     </div> 
 
 
-<div className="h-full bg-[#f4f4f4] border border-black px-8 sm:px-12 md:px-20 py-12 lg:py-20 shadow-lg rounded-md md:my-12 space-y-24 mx-5 md:mx-14 lg:mx-24">
+<div className="h-full bg-[#f4f4f4] border border-black px-8 sm:px-12 md:px-20 lg:px-32 py-12 lg:py-20 shadow-lg rounded-md md:my-12 space-y-24 mx-5 md:mx-14 lg:mx-24">
   {/* Block 1 */}
   <div className="flex flex-col md:flex-row items-center gap-12 justify-center max-w-[1440px] mx-auto">
     <img
