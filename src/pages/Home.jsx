@@ -13,8 +13,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'swiper/css'
 import 'swiper/css/navigation'
-import rishi from "../images/2nd-photo-rishi-aishwrya-_1_-_1_.webp"
-import pream from "../images/1st-photo-swasika-pream-_2_.webp"
+import rishi1 from "../images/rishi1.webp"
+import pream1 from "../images/pream1.webp"
+import jose1 from  "../images/jose1.webp"
 
 
 const images = [
@@ -185,10 +186,9 @@ useEffect(() => {
 
 <div className="bg-[#f4f4f4] border-2 border-gray-200 px-4 sm:px-6 md:px-12 lg:px-24 py-10 lg:py-24 shadow-xl rounded-md md:my-12 space-y-20 mx-4 sm:mx-6 md:mx-12 lg:mx-20 xl:max-w-[1400px] xl:mx-auto ">
 
-  {/* Block 1 */}
   <div className="flex flex-col md:flex-row items-center gap-10 justify-center max-w-[1340px] mx-auto">
     <img
-      src={pream}
+      src={pream1}
       alt="Swasika and Pream"
       className="w-full md:w-1/2 aspect-square object-cover rounded-lg shadow-lg max-h-[400px] md:max-h-none"
     />
@@ -212,7 +212,6 @@ useEffect(() => {
     </div>
   </div>
 
-  {/* Block 2 */}
   <div className="flex flex-col-reverse md:flex-row items-center gap-10 justify-center max-w-[1340px] mx-auto">
     <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center px-4 md:px-8">
       <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-cormorant uppercase font-semibold">
@@ -233,16 +232,15 @@ useEffect(() => {
       </NavLink>
     </div>
     <img
-      src={rishi}
+      src={rishi1}
       alt="Rishi and Aiswarya"
       className="w-full md:w-1/2 aspect-square object-cover rounded-lg shadow-lg max-h-[400px] md:max-h-none"
     />
   </div>
     
-  {/* Block 3 */}
   <div className="flex flex-col md:flex-row items-center gap-10 justify-center max-w-[1340px] mx-auto">
     <img
-      src={pream}
+      src={jose1}
       alt="Swasika and Pream"
       className="w-full md:w-1/2 aspect-square object-cover rounded-lg shadow-lg max-h-[400px] md:max-h-none"
     />
@@ -266,6 +264,7 @@ useEffect(() => {
     </div>
   </div>
 </div>
+
 
 
 <div className="bg-[#1e1e1e] py-16 px-4 mt-28">
@@ -316,7 +315,7 @@ useEffect(() => {
 <div className="bg-[#f4f4f4] flex flex-col md:flex-row items-center justify-between md:px-24 xl:px-32 px-6 py-6 md:py-12 md:space-x-5 gap-5 rounded-md shadow-md overflow-hidden">
   <h3
     ref={leftRef}
-    className={`text-xl md:text-3xl lg:text-[47px] xl:text-[59px] font-cormorant text-center md:text-left transition-all duration-1000 ease-in-out ${
+    className={`text-xl md:text-3xl lg:text-[47px] xl:text-[53px] font-cormorant text-center md:text-left transition-all duration-1000 ease-in-out ${
       leftVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
     }`}
   >
@@ -332,8 +331,6 @@ useEffect(() => {
     Connect with us
   </NavLink>
 </div>
-
-
 
   <hr className="border-t-2 border-black" />
         </section>

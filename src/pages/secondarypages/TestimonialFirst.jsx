@@ -4,7 +4,6 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import pream from "../../images/1st photo optional (2).webp"
 
 const TestimonialFirst = () => {
  const [fullscreenImage, setFullscreenImage] = useState(null);

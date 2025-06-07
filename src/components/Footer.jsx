@@ -97,7 +97,7 @@ const Footer = () => {
 
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="bg-black text-white px-6 py-2 rounded-md shadow hover:bg-gray-900 transition duration-300 font-cormorant text-xl font-semibold absolute right-16"
+      className="bg-black text-white px-6 py-2 rounded-md shadow hover:bg-gray-900 transition duration-300 font-cormorant text-xl font-semibold absolute right-3 xl:right-28"
     >
       Back to Top
     </button>
