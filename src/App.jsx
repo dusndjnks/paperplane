@@ -9,6 +9,7 @@ import Engagement from "./pages/secondarypages/Engagement";
 import ScrollToTop from "./components/ScrollToTop";
 import TestimonialFirst from "./pages/secondarypages/TestimonialFirst";
 import TestimonialSecond from "./pages/secondarypages/TestimonialSecond";
+import TestimonialThird from "./pages/secondarypages/TestimonialThird";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/engagement" element={<Engagement />} />
         <Route path="/swasika&pream" element={<TestimonialFirst/>} />
         <Route path="/rishi&aiswarya" element={<TestimonialSecond />} />
+        <Route path="/jose&sreelekshmi" element={<TestimonialThird/>} />
       </Routes>
     </div>
   );

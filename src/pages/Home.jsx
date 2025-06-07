@@ -7,8 +7,7 @@ import { useSwipeable } from "react-swipeable";
 import main from "../images/main1.webp"
 import main2 from "../images/main2.webp"
 import main3 from "../images/main3.webp"  
-import main4 from "../images/main4.webp"
-import main5 from "../images/contact/contact1.webp"
+import main5 from "../images/contact/contact2.webp"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'swiper/css'
@@ -17,12 +16,15 @@ import rishi1 from "../images/rishi1.webp"
 import pream1 from "../images/pream1.webp"
 import jose1 from  "../images/jose1.webp"
 
+import best2 from "../images/best2.webp"
+import best1 from "../images/best1.webp"
+import best3 from "../images/best3.webp"
+
 
 const images = [
 main,
 main2,
 main3,
-main4,
 main5
 ];
 
@@ -252,7 +254,7 @@ useEffect(() => {
         Paper Plane Wedding exceeded all our expectations! They captured every special moment so naturally and beautifully. We felt completely at ease the entire time, and the final photos and film truly reflect the love and excitement of our wedding day.
       </p>
       <NavLink
-        to="/swasika&pream"
+        to="/jose&sreelekshmi"
         className="bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant
           w-[180px] sm:w-[220px] md:w-[240px] lg:w-[300px] xl:w-[340px]
           h-[36px] sm:h-[44px] md:h-[46px] lg:h-[54px] xl:h-[60px]
@@ -276,19 +278,19 @@ useEffect(() => {
   <div className="flex flex-wrap md:flex-nowrap justify-center items-stretch gap-6 sm:gap-6 lg:gap-8 max-w-[1200px] mx-auto px-5 md:px-6 ">
     {[
       {
-        title: "Ashique & Asiya",
+        title: "Gokul & Divya",
         description: "Step into their world and explore the beautifully captured moments from their unforgettable wedding day.",
-        image: "https://images.pexels.com/photos/30756162/pexels-photo-30756162/free-photo-of-romantic-black-and-white-wedding-portrait.jpeg",
+        image: best1,
       },
       {
-        title: "Anna's Bride to be",
+        title: "Anandhu & Anjali",
         description: "Explore candid captures as brides-to-be filled with love, anticipation, and wedding planning moments.",
-        image: "https://images.pexels.com/photos/28949501/pexels-photo-28949501/free-photo-of-tender-embrace-with-elegant-rose-bouquet.jpeg",
+        image: best2,
       },
       {
-        title: "Kiran & Anu",
+        title: "Monu & Mervin",
         description: "Witness their love blossom in their enchanting pre-wedding moments.",
-        image: "https://images.pexels.com/photos/30756162/pexels-photo-30756162/free-photo-of-romantic-black-and-white-wedding-portrait.jpeg",
+        image: best3,
       },
     ].map((item, index) => (
       <NavLink
@@ -312,6 +314,9 @@ useEffect(() => {
     ))}
   </div>
 </div>
+
+
+
 
 <div className="bg-[#f4f4f4] flex flex-col md:flex-row items-center justify-between md:px-24 xl:px-32 px-6 py-6 md:py-12 md:space-x-5 gap-5 rounded-md shadow-md overflow-hidden">
   <h3

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import main1 from "../images/main1.webp"
 import main2 from "../images/main3.webp"
-import main3 from "../images/main4.webp"
 import main4 from "../images/main2.webp"
 
 
@@ -12,7 +11,6 @@ import main4 from "../images/main2.webp"
 
 const images = [
   main4,
- main3,
  main1, 
  main2
 ];

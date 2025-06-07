@@ -1,9 +1,10 @@
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout';
 import { useState, useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import rishi from "../../images/videos/rishi.mp4"
 
 const TestimonialSecond = () => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
@@ -26,30 +27,30 @@ const TestimonialSecond = () => {
 
   return (
     <Layout>
-      <div className="relative h-screen w-full">
-  {/* Background Image */}
-  <img
-    src="https://images.pexels.com/photos/10257984/pexels-photo-10257984.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-    alt="Hero"
-    className="absolute inset-0 w-full h-full object-cover object-top"
-  />
+      {/* Hero Section with Background Video */}
+      <div className="relative h-[60vh] sm:h-[70vh] md:h-screen w-full overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover brightness-75"
+        >
+          <source src={rishi} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
-
-        {/* Content */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-          <h1 className="text-white font-cormorant leading-tight
-                         text-[42px] sm:text-[60px] md:text-[80px] lg:text-[100px] uppercase">
+        {/* Overlay Title */}
+        <div className="absolute inset-0 z-10 flex items-center justify-center text-center px-4">
+          <h1 className="text-white font-cormorant leading-tight uppercase text-[42px] sm:text-[60px] md:text-[80px]  ">
             Rishi & Aiswarya
           </h1>
-          
         </div>
       </div>
 
+      {/* Gallery Section */}
       <div className="min-h-screen bg-[#f9f7f6] px-4 sm:px-6 md:px-12 lg:px-20 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {images.map((src, index) => (
             <LazyLoadImage
               key={index}
@@ -63,6 +64,7 @@ const TestimonialSecond = () => {
           ))}
         </div>
 
+        {/* Fullscreen Image Preview */}
         {fullscreenImage && (
           <div
             onClick={() => setFullscreenImage(null)}
@@ -88,7 +90,7 @@ const TestimonialSecond = () => {
         `}</style>
       </div>
     </Layout>
-  )
-}
-  
-export default TestimonialSecond
+  );
+};
+
+export default TestimonialSecond;
