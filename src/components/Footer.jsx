@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import logo from "../images/Logo Paper Plane (1).svg";
 import { useState, useEffect } from "react";
 
@@ -22,27 +23,9 @@ const Footer = () => {
     <button
       onClick={() => setMenuOpen(!menuOpen)}
       aria-label="Toggle footer menu"
-      className="text-gray-700 hover:text-black focus:outline-none"
+     className="bg-black text-white px-4 py-2 rounded-md shadow hover:bg-gray-900 transition duration-300 font-cormorant text-lg sm:text-xl font-semibold"
     >
-      {/* Hamburger icon */}
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d={
-            menuOpen
-              ? "M6 18L18 6M6 6l12 12"
-              : "M4 6h16M4 12h16M4 18h16"
-          }
-        ></path>
-      </svg>
+      Menu
     </button>
 
     <button
@@ -56,10 +39,10 @@ const Footer = () => {
   {/* Menu Links for small screen */}
   {menuOpen && (
     <nav className="flex flex-col gap-4 mt-4 text-center text-gray-700 font-cormorant text-xl sm:text-2xl font-semibold md:hidden">
-      <a href="#home" onClick={() => setMenuOpen(false)} className="hover:underline">Home</a>
-      <a href="#about" onClick={() => setMenuOpen(false)} className="hover:underline">About</a>
-      <a href="#gallery" onClick={() => setMenuOpen(false)} className="hover:underline">Gallery</a>
-      <a href="#contact" onClick={() => setMenuOpen(false)} className="hover:underline">Contact</a>
+      <NavLink to="/" onClick={() => setMenuOpen(false)} className="hover:underline">Home</NavLink>
+      <NavLink to="/about" onClick={() => setMenuOpen(false)} className="hover:underline">About</NavLink>
+      <NavLink to="/gallery" onClick={() => setMenuOpen(false)} className="hover:underline">Gallery</NavLink>
+      <NavLink to="/contact" onClick={() => setMenuOpen(false)} className="hover:underline">Contact</NavLink>
     </nav>
   )}
 
@@ -82,8 +65,7 @@ const Footer = () => {
 </div>
 
 
-      {/* Floating Back to Top Button for small screens */}
-      {showTopBtn && (
+      {/* {showTopBtn && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="Scroll to top"
@@ -101,7 +83,7 @@ const Footer = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7"></path>
           </svg>
         </button>
-      )}
+      )} */}
 
       {/* Mobile Section */}
       <div className="flex md:hidden">
@@ -212,7 +194,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Logo + Tagline */}
-      <div className="flex flex-col items-center justify-center px-4 py-6">
+      <div className="flex flex-col items-center justify-center px-4 pt-2">
         <img
           src={logo}
           alt="Logo"

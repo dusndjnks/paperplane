@@ -122,7 +122,7 @@ useEffect(() => {
                   key={index}
                   src={img}
                   alt={`Slide ${index}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-all brightness-50 duration-[1000ms] ease-in-out ${
+                  className={`absolute inset-0 w-full h-full object-cover transition-all brightness-75 duration-[1000ms] ease-in-out ${
                     index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
                   }`}
                   style={{ transitionProperty: 'opacity, transform' }}
@@ -138,7 +138,7 @@ useEffect(() => {
 </div>
           </div>
 
- <div className="flex items-center justify-center px-6 my-20 lg:my-10 md:my-16">
+ <div className="flex items-center justify-center px-6 my-20 lg:my-10 md:my-16 xl:my-20">
   <div className="bg-white border-2 border-gray-200 p-6 md:p-12 w-full max-w-[760px] relative text-center space-y-8 mx-auto py-8">
     <hr className="border-t-4 border-gray-400" />
 
@@ -146,12 +146,12 @@ useEffect(() => {
       <img
         src={logo1}
         alt="Centered"
-        className="w-48 md:w-64 lg:w-[180px] opacity-90 lg:pt-5"
+        className="w-48 md:w-64 lg:w-[180px] xl:w-[250px] opacity-90 lg:pt-5"
       />
     </div>
 
     <p
-      className="text-lg md:text-[22px] lg:text-[22px] xl:text-[26px] px-2 md:px-6 xl:px-9 font-semibold  leading-6 md:leading-8  lg:leading-9 font-cormorant text-gray-800 flex items-center mx-auto"
+      className="text-lg md:text-[22px] lg:text-[22px] xl:text-[26px] 2xl:text-[30px] px-2 md:px-6 xl:px-9 font-semibold  leading-6 md:leading-8  lg:leading-9 xl:leading-[40px] font-cormorant text-gray-800 flex items-center mx-auto  "
       data-aos="fade-up"
       data-aos-delay="200"
     >
@@ -162,7 +162,7 @@ useEffect(() => {
   </div>
 </div>
 
-<div className="bg-[#f4f4f4] border px-4 sm:px-6 md:px-12 lg:px-24 py-10 lg:py-24 shadow-lg rounded-md md:my-12 space-y-20 mx-4 sm:mx-6 md:mx-12 lg:mx-20">
+<div className="bg-[#f4f4f4] border-2 border-gray-200 px-4 sm:px-6 md:px-12 lg:px-24 py-10 lg:py-24 shadow-xl rounded-md md:my-12 space-y-20 mx-4 sm:mx-6 md:mx-12 lg:mx-20 ">
   {/* Block 1 */}
   <div className="flex flex-col md:flex-row items-center gap-10 justify-center max-w-[1340px] mx-auto">
     <img
@@ -216,9 +216,34 @@ useEffect(() => {
       className="w-full md:w-1/2 aspect-square object-cover rounded-lg shadow-lg max-h-[400px] md:max-h-none"
     />
   </div>
+    
+  {/* Block 3 */}
+  <div className="flex flex-col md:flex-row items-center gap-10 justify-center max-w-[1340px] mx-auto">
+    <img
+      src={pream}
+      alt="Swasika and Pream"
+      className="w-full md:w-1/2 aspect-square object-cover rounded-lg shadow-lg max-h-[400px] md:max-h-none"
+    />
+    <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center px-4 md:px-8">
+      <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-cormorant uppercase font-semibold">
+        Swasika & Pream
+      </h2>
+      <p className="text-sm sm:text-base md:text-[14px] lg:text-xl xl:text-2xl max-w-[420px] font-cormorant leading-relaxed pt-4 md:pt-6 pb-6">
+        Paper Plane Wedding's work is breathtaking. They made us feel so comfortable, and the film and photos are incredibly personal and beautiful.
+      </p>
+      <NavLink
+        to="/swasika&pream"
+        className="bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant
+          w-[180px] sm:w-[220px] md:w-[240px] lg:w-[300px] xl:w-[340px]
+          h-[36px] sm:h-[44px] md:h-[46px] lg:h-[54px] xl:h-[60px]
+          text-sm sm:text-base md:text-[14px] lg:text-lg xl:text-xl
+          flex items-center justify-center mx-auto"
+      >
+        Explore their memories
+      </NavLink>
+    </div>
+  </div>
 </div>
-
-
 
 
 <div className="bg-[#1e1e1e] py-16 px-4 mt-28">
@@ -265,13 +290,6 @@ useEffect(() => {
     ))}
   </div>
 </div>
-
-
-
-
-
-
-
 
 
    <div className="bg-[#f4f4f4] flex flex-col md:flex-row items-center justify-between md:px-24 xl:px-32 px-6 py-6 md:py-12 md:space-x-5 gap-5 rounded-md shadow-md overflow-hidden">
