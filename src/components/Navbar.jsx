@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <header
-  className="absolute top-0 left-0 w-full z-30"
+  className="absolute top-0 left-0 w-full z-50"
   style={{
     background: "linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0))",
   }}
@@ -43,7 +43,7 @@ const Header = () => {
       href="https://www.instagram.com/paperplanewedding"
       target="_blank"
       rel="noopener noreferrer"
-      className="hidden md:block absolute right-3 2xl:right-[-180px]   text-white hover:text-pink-500 transition"
+      className="hidden md:block absolute right-3 2xl:right-[-180px]    text-white hover:text-pink-500 transition"
       aria-label="Instagram"
     >
       <svg

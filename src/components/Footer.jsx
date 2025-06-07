@@ -24,7 +24,7 @@ const Footer = () => {
 
   return (
     <div className="bg-gray-300">
-      <div className="w-full max-w-[1440px] mx-auto px-4 py-6 border-t border-gray-400">
+      <div className="w-full mx-auto px-4 py-6 border-t border-gray-400">
         {/* Small screen: Hamburger & toggle */}
         <div className="flex items-center justify-between md:hidden">
           <button
