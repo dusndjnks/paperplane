@@ -18,9 +18,9 @@ const Header = () => {
         background: "linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0))",
       }}
     >
-      <div className="flex items-center justify-center px-6 py-16 relative max-w-[1400px] mx-auto">
+      <div className="flex items-center justify-center px-6 pt-10 xl:pt-16 relative max-w-[1400px] mx-auto">
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-20 text-lg md:text-2xl lg:text-[32px] font-cormorant uppercase items-center">
+        <nav className="hidden md:flex space-x-20 text-lg md:text-lg lg:text-[22px] xl:text-[32px] font-cormorant uppercase items-center">
           {navLinks.map((link) => (
             <NavLink
               key={link.name}

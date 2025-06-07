@@ -1,5 +1,4 @@
-import logo from "../images/Logo Paper Plane (1).svg"
-
+import logo from "../images/Logo Paper Plane (1).svg";
 
 const Footer = () => {
   return (
@@ -20,8 +19,8 @@ const Footer = () => {
               </a>
             </div>
 
-            {/* Image Grid */}
-            <div className="mt-6 grid grid-cols-2 lg:grid-cols-5 gap-4 px-2 md:px-0 relative z-0">
+            {/* Responsive Image Grid */}
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 px-2 md:px-0 relative z-0">
               {[...Array(5)].map((_, index) => (
                 <div key={index} className="w-full">
                   <img
@@ -77,19 +76,22 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center px-4 py-8">
-  <img
-    src={logo}
-    alt="Logo"
-    className="w-[220px] sm:w-[300px] md:w-[360px] lg:w-[420px]"
-  />
-  
-<h1 className="lg:text-2xl pt-3 font-cormorant w-[220px] sm:w-[300px] md:w-[360px] lg:w-[420px] text-center">Say yes to unforgettable, beautiful, lasting wedding photos!</h1>
-</div>
+        <img
+          src={logo}
+          alt="Logo"
+          className="w-[220px] sm:w-[300px] md:w-[360px] lg:w-[420px]"
+        />
 
+        <h1 className="lg:text-2xl pt-3 font-cormorant w-[220px] sm:w-[300px] md:w-[360px] lg:w-[420px] text-center">
+          Say yes to unforgettable, beautiful, lasting wedding photos!
+        </h1>
+      </div>
 
       {/* Footer Text */}
       <p className="text-center text-base sm:text-lg md:text-xl lg:text-[22px] font-cormorant text-gray-600 py-6 px-4 font-medium">
-        Developed by <span className="font-semibold text-gray-700">Divegrid Pvt Ltd</span> | All Rights Reserved © 2025
+        Developed by{" "}
+        <span className="font-semibold text-gray-700">Divegrid Pvt Ltd</span> | All
+        Rights Reserved © 2025
       </p>
     </div>
   );
