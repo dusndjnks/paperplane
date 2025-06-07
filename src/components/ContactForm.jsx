@@ -51,7 +51,7 @@ export default function ContactForm() {
           <input
             type={field.type}
             name={field.name}
-            className="w-full h-[60px] md:h-[84px] border border-black px-3 md:px-4 text-[18px] md:text-[24px] rounded"
+            className="w-full py-2 border border-black px-3 md:px-4 text-[18px] md:text-[24px] rounded"
             required={field.label.includes("*")}
           />
         </div>
@@ -63,7 +63,7 @@ export default function ContactForm() {
           type="date"
           name="project_date"
           required
-          className="w-full h-[54px] md:h-[70px] border border-black px-4 text-[16px] md:text-[20px] rounded"
+          className="w-full py-2 border border-black px-4 text-[16px] md:text-[20px] rounded"
         />
       </div>
 
@@ -72,7 +72,7 @@ export default function ContactForm() {
         <select
           name="event_type"
           required
-          className="w-full h-[54px] md:h-[70px] border border-black px-4 text-[16px] md:text-[20px] rounded"
+          className="w-full py-2 border border-black px-4 text-[16px] md:text-[20px] rounded"
         >
           <option value="">Select an option</option>
           <option value="wedding">Wedding</option>
@@ -88,7 +88,7 @@ export default function ContactForm() {
           <input
             type={field.type}
             name={field.name}
-            className="w-full h-[60px] md:h-[84px] border border-black px-3 md:px-4 text-[18px] md:text-[24px] rounded"
+            className="w-full py-2 border border-black px-3 md:px-4 text-[18px] md:text-[24px] rounded"
           />
         </div>
       ))}
@@ -97,7 +97,7 @@ export default function ContactForm() {
         <label className="text-[20px] md:text-[28px] font-medium">Tell me more about the project</label>
         <textarea
           name="message"
-          className="w-full h-[140px] md:h-[180px] border border-black px-3 md:px-4 py-2 text-[18px] md:text-[24px] rounded resize-none"
+          className="w-full py-3 min-h-28 border border-black px-3 md:px-4 text-[18px] md:text-[24px] rounded resize-none"
         />
       </div>
 
