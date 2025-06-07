@@ -25,67 +25,85 @@ const Footer = () => {
   return (
     <div className="bg-gray-300">
       <div className="w-full mx-auto px-4 py-6 border-t border-gray-400">
-        {/* Small screen: Hamburger & toggle */}
-        <div className="flex items-center justify-between md:hidden">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle footer menu"
-            className="bg-black text-white px-4 py-2 rounded-md shadow hover:bg-gray-900 transition duration-300 font-cormorant text-lg sm:text-xl font-semibold"
-          >
-            Menu
-          </button>
+  {/* Small screen: Hamburger & toggle */}
+  <div className="flex items-center justify-between md:hidden">
+    <button
+      onClick={() => setMenuOpen(!menuOpen)}
+      aria-label="Toggle footer menu"
+      className="bg-black text-white px-4 py-2 rounded-md shadow hover:bg-gray-900 transition duration-300 font-cormorant text-lg sm:text-xl font-semibold"
+    >
+      Menu
+    </button>
 
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="bg-black text-white px-4 py-2 rounded-md shadow hover:bg-gray-900 transition duration-300 font-cormorant text-lg sm:text-xl font-semibold"
-          >
-            Back to Top
-          </button>
-        </div>
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className="bg-black text-white px-4 py-2 rounded-md shadow hover:bg-gray-900 transition duration-300 font-cormorant text-lg sm:text-xl font-semibold"
+    >
+      Back to Top
+    </button>
+  </div>
 
-        {/* Menu Links for small screen */}
-        {menuOpen && (
-          <nav className="flex flex-col gap-4 mt-4 text-center text-gray-700 font-cormorant text-xl sm:text-2xl font-semibold md:hidden">
-            <NavLink to="/" onClick={() => setMenuOpen(false)} className="hover:underline">
-              Home
-            </NavLink>
-            <NavLink to="/about" onClick={() => setMenuOpen(false)} className="hover:underline">
-              About
-            </NavLink>
-            <NavLink to="/gallery" onClick={() => setMenuOpen(false)} className="hover:underline">
-              Gallery
-            </NavLink>
-            <NavLink to="/contact" onClick={() => setMenuOpen(false)} className="hover:underline">
-              Contact
-            </NavLink>
-          </nav>
-        )}
+  {/* Menu Links for small screen */}
+  {menuOpen && (
+    <nav className="flex flex-col gap-4 mt-4 text-center text-gray-700 font-cormorant text-xl sm:text-2xl font-semibold md:hidden">
+      {[
+        { name: "Home", path: "/" },
+        { name: "About", path: "/about" },
+        { name: "Gallery", path: "/gallery" },
+        { name: "Contact", path: "/contact" },
+      ].map((link) => (
+        <NavLink
+          key={link.name}
+          to={link.path}
+          onClick={() => setMenuOpen(false)}
+          className={({ isActive }) =>
+            `relative transition duration-300 inline-block ${
+              isActive
+                ? "after:block after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-12 after:bg-black"
+                : "hover:after:block hover:after:absolute hover:after:bottom-[-4px] hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:h-[2px] hover:after:w-12 hover:after:bg-black"
+            }`
+          }
+        >
+          {link.name}
+        </NavLink>
+      ))}
+    </nav>
+  )}
 
-        {/* Medium+ screens */}
-        <div className="hidden md:flex items-center mt-6 relative max-w-[1440px] mx-auto px-4">
-          <nav className="flex flex-wrap justify-center gap-10 text-gray-700 font-cormorant text-2xl font-semibold flex-1">
-            <NavLink to="/" className="hover:underline transition">
-              Home
-            </NavLink>
-            <NavLink to="/about" className="hover:underline transition">
-              About
-            </NavLink>
-            <NavLink to="/gallery" className="hover:underline transition">
-              Gallery
-            </NavLink>
-            <NavLink to="/contact" className="hover:underline transition">
-              Contact
-            </NavLink>
-          </nav>
+  {/* Medium+ screens */}
+  <div className="hidden md:flex items-center mt-6 relative max-w-[1440px] mx-auto px-4">
+    <nav className="flex flex-wrap justify-center gap-10 text-gray-700 font-cormorant text-2xl font-semibold flex-1">
+      {[
+        { name: "Home", path: "/" },
+        { name: "About", path: "/about" },
+        { name: "Gallery", path: "/gallery" },
+        { name: "Contact", path: "/contact" },
+      ].map((link) => (
+        <NavLink
+          key={link.name}
+          to={link.path}
+          className={({ isActive }) =>
+            `relative transition duration-300 inline-block ${
+              isActive
+                ? "after:block after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-12 after:bg-black"
+                : "hover:after:block hover:after:absolute hover:after:bottom-[-4px] hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:h-[2px] hover:after:w-12 hover:after:bg-black"
+            }`
+          }
+        >
+          {link.name}
+        </NavLink>
+      ))}
+    </nav>
 
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="bg-black text-white px-6 py-2 rounded-md shadow hover:bg-gray-900 transition duration-300 font-cormorant text-xl font-semibold absolute right-16"
-          >
-            Back to Top
-          </button>
-        </div>
-      </div>
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className="bg-black text-white px-6 py-2 rounded-md shadow hover:bg-gray-900 transition duration-300 font-cormorant text-xl font-semibold absolute right-16"
+    >
+      Back to Top
+    </button>
+  </div>
+</div>
+
 
       {/* Mobile Section */}
       <div className="flex md:hidden">

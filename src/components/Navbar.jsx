@@ -12,10 +12,16 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 w-full z-50" style={{background: "linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0))",}}>
+   <header
+  className="absolute top-0 left-0 w-full z-50"
+  style={{
+    background:
+      "linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0))",
+  }}
+>
   <div className="relative flex items-center justify-center px-6 pt-10 xl:pt-16 max-w-[1400px] mx-auto">
     {/* Desktop Menu */}
-    <nav className="hidden md:flex space-x-20 text-lg md:text-lg lg:text-[25px] xl:text-[32px] font-cormorant uppercase items-center">
+    <nav className="hidden md:flex space-x-20 text-sm md:text-base lg:text-[18px] xl:text-[22px] font-cormorant uppercase items-center">
       {navLinks.map((link) => (
         <NavLink
           key={link.name}
@@ -24,7 +30,7 @@ const Header = () => {
             `text-white transition duration-300 inline-block relative ${
               isActive
                 ? "after:block after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-16 after:bg-white"
-                : "hover:after:block hover:after:absolute hover:after:bottom-[-4px] hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:h-[2px] hover:after:w-16 hover:after:bg-white"
+                : "hover:after:block hover:after:absolute hover:after:bottom-[-4px] hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:h-[2px] hover:after:w-16 hover:bg-white"
             }`
           }
         >
@@ -33,17 +39,17 @@ const Header = () => {
       ))}
     </nav>
 
-    {/* Instagram Icon - absolutely positioned to the right */}
+    {/* Instagram Icon */}
     <a
       href="https://www.instagram.com/paperplanewedding"
       target="_blank"
       rel="noopener noreferrer"
-      className="hidden md:block absolute right-3     text-white hover:text-pink-500 transition"
+      className="hidden md:block absolute right-3 text-white hover:text-pink-500 transition"
       aria-label="Instagram"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="lg:w-8 lg:h-8 h-5 w-5 "
+        className="lg:w-8 lg:h-8 h-5 w-5"
         fill="currentColor"
         viewBox="0 0 24 24"
       >
@@ -105,6 +111,7 @@ const Header = () => {
     </div>
   )}
 </header>
+
 
   );
 };
