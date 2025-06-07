@@ -138,31 +138,41 @@ useEffect(() => {
 </div>
           </div>
 
- <div className="flex items-center justify-center px-6 my-20 lg:my-10 md:my-16 xl:my-20">
-  <div className="bg-white border-2 border-gray-200 p-6 md:p-12 w-full max-w-[760px] relative text-center space-y-8 mx-auto py-8">
-    <hr className="border-t-4 border-gray-400" />
+<div className="flex items-center justify-center px-6 my-20 md:my-16 lg:my-14 xl:my-20">
+  <div className="bg-white border-2 border-gray-200 p-6 md:p-12 w-full max-w-[760px] text-center space-y-10 mx-auto py-10 font-cormorant">
+    
+    {/* Top Border */}
+    <hr className="border-t-4 border-gray-300" />
 
-    <div className="relative z-20 flex items-center justify-center" data-aos="fade-up">
+    {/* Logo */}
+    <div className="flex justify-center" data-aos="fade-up">
       <img
         src={logo1}
-        alt="Centered"
-        className="w-48 md:w-64 lg:w-[180px] xl:w-[250px] opacity-90 lg:pt-5"
+        alt="Paper Plane Logo"
+        className="w-44 sm:w-52 md:w-64 lg:w-[180px] xl:w-[240px] opacity-90"
       />
     </div>
 
+    {/* Description Text */}
     <p
-      className="text-lg md:text-[22px] lg:text-[22px] xl:text-[26px] 2xl:text-[30px] px-2 md:px-6 xl:px-9 font-semibold  leading-6 md:leading-8  lg:leading-9 xl:leading-[40px] font-cormorant text-gray-800 flex items-center mx-auto  "
+      className="text-lg sm:text-xl md:text-2xl lg:text-[22px] xl:text-[24px] 2xl:text-[26px] leading-relaxed text-gray-800 px-3 sm:px-6 md:px-8 xl:px-12"
       data-aos="fade-up"
       data-aos-delay="200"
     >
-      Paper Plane Wedding aims to craft heartfelt and visually stunning wedding films for couples embarking on their unique adventure of love, while guiding aspiring filmmakers to soar in their own creative journeys. From documenting intimate elopements in breathtaking landscapes to sharing our passion through inspiring workshops, Paper Plane Wedding caters to adventurous, free-spirited couples and fellow storytellers around the globe.
+      <span className="font-semibold">Paper Plane Wedding</span> aims to craft heartfelt and visually
+      stunning wedding films for couples embarking on their unique adventure of love, while guiding
+      aspiring filmmakers to soar in their own creative journeys. From documenting intimate elopements
+      in breathtaking landscapes to sharing our passion through inspiring workshops, Paper Plane Wedding
+      caters to adventurous, free-spirited couples and fellow storytellers around the globe.
     </p>
 
-    <hr className="border-t-4 border-gray-400" />
+    {/* Bottom Border */}
+    <hr className="border-t-4 border-gray-300" />
   </div>
 </div>
 
-<div className="bg-[#f4f4f4] border-2 border-gray-200 px-4 sm:px-6 md:px-12 lg:px-24 py-10 lg:py-24 shadow-xl rounded-md md:my-12 space-y-20 mx-4 sm:mx-6 md:mx-12 lg:mx-20 xl:max-w-[1400px] xl:mx-auto">
+
+<div className="bg-[#f4f4f4] border-2 border-gray-200 px-4 sm:px-6 md:px-12 lg:px-24 py-10 lg:py-24 shadow-xl rounded-md md:my-12 space-y-20 mx-4 sm:mx-6 md:mx-12 lg:mx-20 xl:max-w-[1400px] xl:mx-auto ">
 
   {/* Block 1 */}
   <div className="flex flex-col md:flex-row items-center gap-10 justify-center max-w-[1340px] mx-auto">
@@ -252,7 +262,7 @@ useEffect(() => {
     Best Moments of their Life
   </h2>
 
-  <div className="flex flex-wrap md:flex-nowrap justify-center items-stretch gap-4 sm:gap-6 lg:gap-8 max-w-[1200px] mx-auto px-2 md:px-6">
+  <div className="flex flex-wrap md:flex-nowrap justify-center items-stretch gap-6 sm:gap-6 lg:gap-8 max-w-[1200px] mx-auto px-5 md:px-6 ">
     {[
       {
         title: "Ashique & Asiya",
