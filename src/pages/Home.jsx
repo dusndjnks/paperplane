@@ -184,13 +184,13 @@ useEffect(() => {
 </div>
 
 
-<div className="bg-[#f4f4f4] border-2 border-gray-200 px-4 sm:px-6 md:px-12 lg:px-24 py-10 lg:py-24 shadow-xl rounded-md md:my-12 space-y-20 mx-4 sm:mx-6 md:mx-12 lg:mx-20 xl:max-w-[1400px] xl:mx-auto ">
+<div className="bg-[#f4f4f4] border-2 border-gray-200 px-4 sm:px-6 md:px-12 lg:px-12 xl:px-8 py-10 lg:py-24 shadow-xl rounded-md md:my-12 space-y-20 mx-4 sm:mx-6 md:mx-12 lg:mx-10 xl:max-w-[1100px] xl:mx-auto ">
 
   <div className="flex flex-col md:flex-row items-center gap-10 justify-center max-w-[1340px] mx-auto">
     <img
       src={pream1}
       alt="Swasika and Pream"
-      className="w-full md:w-1/2 aspect-square object-cover rounded-lg shadow-lg max-h-[400px] md:max-h-none"
+      className="w-full md:w-1/2 aspect-square object-cover  rounded-lg shadow-lg max-h-[400px] md:max-h-none xl:max-w-[440px] xl:max-h-[440px]"
     />
     <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center px-4 md:px-8">
       <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-cormorant uppercase font-semibold">
@@ -234,22 +234,22 @@ useEffect(() => {
     <img
       src={rishi1}
       alt="Rishi and Aiswarya"
-      className="w-full md:w-1/2 aspect-square object-cover rounded-lg shadow-lg max-h-[400px] md:max-h-none"
+      className="w-full md:w-1/2 aspect-square object-cover sm:object-top rounded-lg shadow-lg max-h-[400px] md:max-h-none xl:max-w-[440px] xl:max-h-[440px]"
     />
   </div>
     
   <div className="flex flex-col md:flex-row items-center gap-10 justify-center max-w-[1340px] mx-auto">
     <img
       src={jose1}
-      alt="Swasika and Pream"
-      className="w-full md:w-1/2 aspect-square object-cover rounded-lg shadow-lg max-h-[400px] md:max-h-none"
+      alt="Jose and Sreelekshmi"
+      className="w-full md:w-1/2 aspect-square object-cover rounded-lg shadow-lg max-h-[400px] md:max-h-none xl:max-w-[440px] xl:max-h-[440px]"
     />
     <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center px-4 md:px-8">
       <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-cormorant uppercase font-semibold">
-        jose & sreelekshmi
+        Jose & Sreelekshmi
       </h2>
       <p className="text-sm sm:text-base md:text-[14px] lg:text-xl xl:text-2xl max-w-[420px] font-cormorant leading-relaxed pt-4 md:pt-6 pb-6">
-       Paper Plane Wedding exceeded all our expectations! They captured every special moment so naturally and beautifully. We felt completely at ease the entire time, and the final photos and film truly reflect the love and excitement of our wedding day.
+        Paper Plane Wedding exceeded all our expectations! They captured every special moment so naturally and beautifully. We felt completely at ease the entire time, and the final photos and film truly reflect the love and excitement of our wedding day.
       </p>
       <NavLink
         to="/swasika&pream"
@@ -264,6 +264,7 @@ useEffect(() => {
     </div>
   </div>
 </div>
+
 
 
 
