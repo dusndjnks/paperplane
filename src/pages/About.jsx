@@ -128,6 +128,52 @@ const About = () => {
   </div>
 </section>
 
+<section className="bg-[#f4f4f0] text-[#1e1e1e] py-20 px-4 sm:px-6 md:px-12 lg:px-24 font-cormorant">
+      <h2 className="text-center text-3xl sm:text-4xl md:text-5xl mb-16">
+        Meet the Visionary
+      </h2>
+
+      <div className="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
+        {/* Image */}
+        <div className="w-full md:w-1/2 border border-gray-400 shadow-lg">
+          <img
+            src={creator}
+            alt="Mohammed Shafeek Hussain"
+            className="w-full h-[380px] object-cover rounded-lg"
+          />
+        </div>
+
+        {/* Content */}
+        <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+            Mohammed Shafeek Hussain
+          </h3>
+          <p className="text-base sm:text-lg md:text-xl leading-relaxed">
+            <span className="font-bold">Mohammed Shafeek Hussain</span>, the creative force behind{" "}
+            <span className="font-bold">PaperPlane</span>, has been capturing love stories since 2013.
+            Based in Palakkad, his lens has traveled across Kerala, Tamil Nadu, and Karnataka, turning
+            moments into timeless memories.
+          </p>
+          <p className="text-base sm:text-lg md:text-xl leading-relaxed">
+            With a passion for storytelling, Shafeek specializes in weddings, save-the-date shoots,
+            engagements, and cinematic films. His dedication and artistry have earned PaperPlane a
+            reputation for excellence and a trail of 5-star reviews.
+          </p>
+          <p className="text-base sm:text-lg md:text-xl leading-relaxed">
+            Connect with Shafeek on Instagram:{" "}
+            <a
+              href="https://www.instagram.com/shafeekaaliofficial?igsh=bjNkZnIxc2hwODkx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline font-semibold"
+            >
+              @shafeekaaliofficial
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
    </Layout>
   )
 }

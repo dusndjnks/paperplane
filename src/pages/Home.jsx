@@ -162,7 +162,8 @@ useEffect(() => {
   </div>
 </div>
 
-<div className="bg-[#f4f4f4] border-2 border-gray-200 px-4 sm:px-6 md:px-12 lg:px-24 py-10 lg:py-24 shadow-xl rounded-md md:my-12 space-y-20 mx-4 sm:mx-6 md:mx-12 lg:mx-20 ">
+<div className="bg-[#f4f4f4] border-2 border-gray-200 px-4 sm:px-6 md:px-12 lg:px-24 py-10 lg:py-24 shadow-xl rounded-md md:my-12 space-y-20 mx-4 sm:mx-6 md:mx-12 lg:mx-20 xl:max-w-[1400px] xl:mx-auto">
+
   {/* Block 1 */}
   <div className="flex flex-col md:flex-row items-center gap-10 justify-center max-w-[1340px] mx-auto">
     <img

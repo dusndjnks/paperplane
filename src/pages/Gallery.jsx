@@ -81,20 +81,23 @@ const Gallery = () => {
       Save The Date
     </h1>
   </div>
-
- <div className="w-full overflow-hidden">
+<div className="w-full overflow-hidden">
   <div className="flex animate-marquee">
     {[...images, ...images].map((src, i) => (
-      <div key={i} className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[420px]">
+      <div
+        key={i}
+        className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[370px] xl:w-[420px] mx-1 "
+      >
         <img
           src={src}
           alt={`Slide ${i + 1}`}
-          className="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[380px] xl:h-[450px] w-full object-cover shadow-lg"
+          className="h-[310px] md:h-[360px] lg:h-[400px] xl:h-[530px] w-full object-cover shadow-lg"
         />
       </div>
     ))}
   </div>
 </div>
+
 
 
   <div className="flex justify-end lg:py-8 py-2">
@@ -115,19 +118,24 @@ const Gallery = () => {
     </h1>
   </div>
 
-  <div className="w-full overflow-hidden">
-  <div className="flex animate-marquee">
+<div className="w-full overflow-hidden">
+  <div className="flex animate-marquee-reverse">
     {[...images, ...images].map((src, i) => (
-      <div key={i} className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[420px]">
+      <div
+        key={i}
+        className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[370px] xl:w-[420px] mx-1"
+      >
         <img
           src={src}
           alt={`Slide ${i + 1}`}
-          className="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[380px] xl:h-[450px] w-full object-cover shadow-lg"
+          className="h-[310px] md:h-[360px] lg:h-[400px] xl:h-[530px] w-full object-cover shadow-lg"
         />
       </div>
     ))}
   </div>
 </div>
+
+
 
 
   <div className="flex justify-end lg:py-8 py-2">
@@ -150,11 +158,14 @@ const Gallery = () => {
 <div className="w-full overflow-hidden">
   <div className="flex animate-marquee">
     {[...images, ...images].map((src, i) => (
-      <div key={i} className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[420px]">
+      <div
+        key={i}
+        className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[370px] xl:w-[420px] mx-1 "
+      >
         <img
           src={src}
           alt={`Slide ${i + 1}`}
-          className="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[380px] xl:h-[450px] w-full object-cover shadow-lg"
+          className="h-[310px] md:h-[360px] lg:h-[400px] xl:h-[530px] w-full object-cover shadow-lg"
         />
       </div>
     ))}
