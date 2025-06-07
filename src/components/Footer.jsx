@@ -95,7 +95,7 @@ const Footer = () => {
                 href="https://www.instagram.com/paperplanewedding"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black/60 hover:bg-black/70 text-white text-lg sm:text-xl text-center font-serif w-full max-w-[600px] py-3 rounded-md shadow-lg transition-all duration-300"
+                className="bg-black/60 hover:bg-black/70 text-white text-xl sm:text-2xl text-center font-serif  px-10 py-3 rounded-md shadow-lg transition-all duration-300"
               >
                 Check Our Instagram
               </a>
