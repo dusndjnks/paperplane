@@ -39,7 +39,7 @@ const Header = () => {
 
           {/* Instagram Icon */}
           <a
-            href="https://www.instagram.com/yourprofile" // Replace with your Insta URL
+            href="https://www.instagram.com/paperplanewedding" // Replace with your Insta URL
             target="_blank"
             rel="noopener noreferrer"
             className="ml-6 text-white hover:text-pink-500 transition"

@@ -302,8 +302,7 @@ useEffect(() => {
   </div>
 </div>
 
-
-   <div className="bg-[#f4f4f4] flex flex-col md:flex-row items-center justify-between md:px-24 xl:px-32 px-6 py-6 md:py-12 md:space-x-5 gap-5 rounded-md shadow-md overflow-hidden">
+<div className="bg-[#f4f4f4] flex flex-col md:flex-row items-center justify-between md:px-24 xl:px-32 px-6 py-6 md:py-12 md:space-x-5 gap-5 rounded-md shadow-md overflow-hidden">
   <h3
     ref={leftRef}
     className={`text-xl md:text-3xl lg:text-[47px] xl:text-[59px] font-cormorant text-center md:text-left transition-all duration-1000 ease-in-out ${
@@ -315,13 +314,14 @@ useEffect(() => {
   <NavLink
     to="/contact"
     ref={rightRef}
-    className={`bg-[#1A1A18] text-white px-6 py-2 rounded-md lg:text-[28px] xl:text-[36px] font-cormorant hover:bg-gray-800 transition-all duration-1000 ease-in-out ${
+    className={`bg-[#1A1A18] text-white px-6 py-2 rounded-md font-cormorant hover:bg-gray-800 transition-all duration-1000 ease-in-out ${
       rightVisible ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'
-    }`}
+    } text-lg md:text-xl lg:text-2xl xl:text-3xl`}
   >
     Connect with us
   </NavLink>
 </div>
+    
 
 
   <hr className="border-t-2 border-black" />
