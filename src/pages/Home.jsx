@@ -237,10 +237,10 @@ useEffect(() => {
     />
     <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center px-4 md:px-8">
       <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-cormorant uppercase font-semibold">
-        Swasika & Pream
+        jose & sreelekshmi
       </h2>
       <p className="text-sm sm:text-base md:text-[14px] lg:text-xl xl:text-2xl max-w-[420px] font-cormorant leading-relaxed pt-4 md:pt-6 pb-6">
-        Paper Plane Wedding's work is breathtaking. They made us feel so comfortable, and the film and photos are incredibly personal and beautiful.
+       Paper Plane Wedding exceeded all our expectations! They captured every special moment so naturally and beautifully. We felt completely at ease the entire time, and the final photos and film truly reflect the love and excitement of our wedding day.
       </p>
       <NavLink
         to="/swasika&pream"
@@ -321,7 +321,7 @@ useEffect(() => {
     Connect with us
   </NavLink>
 </div>
-    
+
 
 
   <hr className="border-t-2 border-black" />
