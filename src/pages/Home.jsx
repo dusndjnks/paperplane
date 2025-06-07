@@ -16,9 +16,9 @@ import pream from "../images/1st-photo-swasika-pream-_2_.webp"
 const images = [
   main,
   "https://images.pexels.com/photos/5759215/pexels-photo-5759215.jpeg",
- "https://images.pexels.com/photos/2507026/pexels-photo-2507026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  "https://images.pexels.com/photos/15006261/pexels-photo-15006261/free-photo-of-grayscale-photo-of-a-bride-and-a-groom-smiling.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-  "https://images.pexels.com/photos/9210832/pexels-photo-9210832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+ "https://instagram.fcjb3-2.fna.fbcdn.net/v/t39.30808-6/421779287_18037634458726065_983376464591270904_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQuaW1hZ2VfdXJsZ2VuLjE0NDB4OTkyLnNkci5mMzA4MDguZGVmYXVsdF9pbWFnZSJ9&_nc_ht=instagram.fcjb3-2.fna.fbcdn.net&_nc_cat=109&_nc_oc=Q6cZ2QGEL03uWbkrEMQY2TapaqED_i6y4PnM-a6NtVDc2VUVjxWz-1jVvhG34Wa5QAUJQdL8rEgCDhSTNw85wOUOKpZf&_nc_ohc=2pGtFiH0WR8Q7kNvwHEszSK&_nc_gid=W-6YLnkN85tz8RiAxMvo_g&edm=AP4sbd4AAAAA&ccb=7-5&ig_cache_key=MzI4Nzg5ODA4Mjg5Mjk1Mjc2NQ%3D%3D.3-ccb7-5&oh=00_AfNMF1c6REQRxFM0YI--5JLKKLClCBSjlJiR7aO1jq_5Cg&oe=6849B05A&_nc_sid=7a9f4b",
+  "https://instagram.fcjb3-2.fna.fbcdn.net/v/t51.2885-15/474002154_18073310071726065_8746625963891873110_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4OTYwLnNkci5mNzU3NjEuZGVmYXVsdF9pbWFnZSJ9&_nc_ht=instagram.fcjb3-2.fna.fbcdn.net&_nc_cat=109&_nc_oc=Q6cZ2QHsODikXC4ZP_RCHTNYc36uxJmB63aXDNBQK4r2Geo4Z0StSmDRulWa659lXTqDNE34tzaF9XEXpV_uUdlJ5i5k&_nc_ohc=CPvgAImufA8Q7kNvwGdSnF2&_nc_gid=-UnOLT4bM-yy4Trj9Herdw&edm=APoiHPcBAAAA&ccb=7-5&ig_cache_key=MzU0Njk2MzQyNjcwMDg0NzEyOA%3D%3D.3-ccb7-5&oh=00_AfP5qmXZDHUyE8jFeFfgG8p1qQn7l4GBU7Q1KVI-2y-GfA&oe=6849D5FE&_nc_sid=22de04",
+  "https://instagram.fcjb3-3.fna.fbcdn.net/v/t51.29350-15/458486604_915396617280784_5313754220408095017_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4OTYwLnNkci5mMjkzNTAuZGVmYXVsdF9pbWFnZSJ9&_nc_ht=instagram.fcjb3-3.fna.fbcdn.net&_nc_cat=104&_nc_oc=Q6cZ2QEEm--WEUcgzgye5IwYRzV9JsSwGhALJJPsU5b5pLRmF-p51eI2qjlfOLTn5rdc9TjlOtEDMhfe_Q_hEbCfpu7M&_nc_ohc=e9G4yaqqbAAQ7kNvwGtXL9o&_nc_gid=fZcrKIyx46UbUvoHOdgjeA&edm=APoiHPcBAAAA&ccb=7-5&ig_cache_key=MzQ1MDI1NDMxOTg2NDUzMjc2Ng%3D%3D.3-ccb7-5&oh=00_AfPGGy7F1E0DZX4driIBItMCeWHPuKmiufv0J3M6pj6Xvg&oe=6849BBC6&_nc_sid=22de04"
 ];
 
 const image = [
@@ -117,7 +117,7 @@ useEffect(() => {
   <img
     src={logo}
     alt="Logo"
-    className="w-[290px] sm:w-[360px] md:w-[480px] lg:w-[578px] h-auto object-contain"
+    className="w-[290px] sm:w-[360px] md:w-[480px] lg:w-[548px] h-auto object-contain"
   />
 </div>
           </div>
