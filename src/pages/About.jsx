@@ -88,20 +88,20 @@ const images = [
   </div>
 </section>
 
-<section className="flex items-center justify-center px-6  lg:pb-24">
-  <div className="bg-[#fefefe] border-2 border-gray-300 p-8 md:p-16 w-full max-w-7xl relative text-center font-cormorant text-[#1e1e1e]">
+<section className="flex items-center justify-center px-4  pb-6 lg:pb-24">
+  <div className="bg-[#fefefe] border-2 border-gray-300 p-8 md:p-16 w-full relative text-center font-cormorant text-[#1e1e1e]">
     
     <hr className="border-t-4 border-gray-400 mb-10" />
 
     <div className="relative z-20 flex flex-col md:flex-row items-stretch justify-center space-y-10 md:space-y-0 md:space-x-16">
-      <div className="w-full md:w-1/3 flex-shrink-0 px-4 md:px-0">
+      <div className="w-full md:w-1/3 flex-shrink-0  md:px-0">
         <img
           src={creator}
           alt="Mohammed Shafeek Hussain"
           className="rounded-lg shadow-lg mx-auto w-full h-64 sm:h-80 md:h-[380px] object-cover"
         />
       </div>
-      <div className="w-full md:w-2/3 space-y-6 text-left flex flex-col justify-center px-4 md:px-0">
+      <div className="w-full md:w-2/3 space-y-6 text-left flex flex-col justify-center md:px-0">
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">Meet the Visionary</h3>
         <p className="text-base sm:text-lg md:text-xl leading-relaxed">
           <span className="font-bold">Mohammed Shafeek Hussain</span>, the creative force behind <span className="font-bold">PaperPlane</span>, has been capturing love stories since 2013. Based in Palakkad, his lens has traveled across Kerala, Tamil Nadu, and Karnataka, turning moments into timeless memories.

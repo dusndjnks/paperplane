@@ -118,7 +118,7 @@ useEffect(() => {
         
    <div
   {...handlers}
-  className="relative w-full overflow-hidden bg-black h-[70vh] sm:h-screen"
+  className="relative w-full overflow-hidden bg-black h-[60vh] sm:h-screen"
 >
   {/* Slide Track */}
   <div
