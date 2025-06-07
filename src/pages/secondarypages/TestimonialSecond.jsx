@@ -1,12 +1,9 @@
-import { NavLink } from 'react-router-dom'
 import Layout from '../../components/Layout'
-import main from "../../images/main photo.webp"
 import { useState, useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import rishi from "../../images/rishi.jpg"
 
 const TestimonialSecond = () => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
@@ -32,7 +29,7 @@ const TestimonialSecond = () => {
       <div className="relative h-screen w-full">
   {/* Background Image */}
   <img
-    src={rishi}
+    src="https://images.pexels.com/photos/10257984/pexels-photo-10257984.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
     alt="Hero"
     className="absolute inset-0 w-full h-full object-cover object-top"
   />

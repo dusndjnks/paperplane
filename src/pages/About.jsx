@@ -1,21 +1,22 @@
-import ContactForm from "../components/ContactForm"
 import Layout from "../components/Layout"
-import main from "../images/main photo.webp"
 import { useSwipeable } from "react-swipeable";
 import { useEffect, useState } from "react";
 import creator from "../images/screator.jpg"
+import main1 from "../images/main1.webp"
+import main2 from "../images/main3.webp"
+import main3 from "../images/main4.webp"
 
 
 
-const images = [
-  main,
-  "https://images.pexels.com/photos/27043729/pexels-photo-27043729/free-photo-of-a-lotus-flower.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  "https://images.pexels.com/photos/10257984/pexels-photo-10257984.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-  "https://images.pexels.com/photos/15006261/pexels-photo-15006261/free-photo-of-grayscale-photo-of-a-bride-and-a-groom-smiling.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-  "https://images.pexels.com/photos/9210832/pexels-photo-9210832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-];
 
 const About = () => {
+
+  
+const images = [
+ main2,
+ main1, 
+ main3
+];
 
     const [currentIndex, setCurrentIndex] = useState(0);
         const nextSlide = () => {
@@ -39,33 +40,31 @@ const About = () => {
 
   return (
    <Layout>
-        <div>
-          <div
-            {...handlers}
-            className="relative h-screen w-full overflow-hidden bg-black"
-          >
-            <div className="relative h-full w-full">
-              {images.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt={`Slide ${index}`}
-                  className={`absolute inset-0 w-full h-full object-cover  brightness-50 transition-all duration-[1000ms] ease-in-out ${
-                    index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
-                  }`}
-                  style={{ transitionProperty: 'opacity, transform' }}
-                />
-              ))}
-            </div>
-          <div className="absolute inset-0 flex items-center justify-center text-center z-20">
-             <h1 className="text-white font-cormorant leading-tight
-                   text-[52px] sm:text-[60px] md:text-[80px] lg:text-[90px] xl:text-[120px]">
-                    About Us
-              </h1>
-          </div>
+        
+        <div className="relative w-full overflow-hidden bg-black h-[70vh] sm:h-screen" {...handlers}>
+  {/* Background Images with Fade Transition */}
+  <div className="relative h-full w-full">
+    {images.map((img, index) => (
+      <img
+        key={index}
+        src={img}
+        alt={`Slide ${index}`}
+        className={`absolute inset-0 w-full h-full object-cover brightness-75 transition-all duration-[1000ms] ease-in-out
+          ${index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'}`}
+        style={{ transitionProperty: 'opacity, transform' }}
+      />
+    ))}
+  </div>
 
-          </div>
-    </div>
+  {/* Centered Title Overlay */}
+  <div className="absolute inset-0 flex items-center justify-center text-center z-20">
+    <h1 className="text-white font-cormorant leading-tight px-4
+      text-[40px] sm:text-[60px] md:text-[80px] lg:text-[90px] xl:text-[120px]">
+      About Us
+    </h1>
+  </div>
+</div>
+
 
     <section className="bg-[#fefefe] text-[#1e1e1e] py-20 px-6 md:px-16 font-cormorant">
   <div className="max-w-5xl mx-auto text-center space-y-8">
@@ -89,7 +88,7 @@ const About = () => {
   </div>
 </section>
 
-<section className="flex items-center justify-center px-6 py-16 md:py-20 lg:py-24">
+<section className="flex items-center justify-center px-6  lg:pb-24">
   <div className="bg-[#fefefe] border-2 border-gray-300 p-8 md:p-16 w-full max-w-7xl relative text-center font-cormorant text-[#1e1e1e]">
     
     <hr className="border-t-4 border-gray-400 mb-10" />
@@ -128,51 +127,6 @@ const About = () => {
   </div>
 </section>
 
-<section className="bg-[#f4f4f0] text-[#1e1e1e] py-20 px-4 sm:px-6 md:px-12 lg:px-24 font-cormorant">
-      <h2 className="text-center text-3xl sm:text-4xl md:text-5xl mb-16">
-        Meet the Visionary
-      </h2>
-
-      <div className="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
-        {/* Image */}
-        <div className="w-full md:w-1/2 border border-gray-400 shadow-lg">
-          <img
-            src={creator}
-            alt="Mohammed Shafeek Hussain"
-            className="w-full h-[380px] object-cover rounded-lg"
-          />
-        </div>
-
-        {/* Content */}
-        <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
-            Mohammed Shafeek Hussain
-          </h3>
-          <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-            <span className="font-bold">Mohammed Shafeek Hussain</span>, the creative force behind{" "}
-            <span className="font-bold">PaperPlane</span>, has been capturing love stories since 2013.
-            Based in Palakkad, his lens has traveled across Kerala, Tamil Nadu, and Karnataka, turning
-            moments into timeless memories.
-          </p>
-          <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-            With a passion for storytelling, Shafeek specializes in weddings, save-the-date shoots,
-            engagements, and cinematic films. His dedication and artistry have earned PaperPlane a
-            reputation for excellence and a trail of 5-star reviews.
-          </p>
-          <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-            Connect with Shafeek on Instagram:{" "}
-            <a
-              href="https://www.instagram.com/shafeekaaliofficial?igsh=bjNkZnIxc2hwODkx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline font-semibold"
-            >
-              @shafeekaaliofficial
-            </a>
-          </p>
-        </div>
-      </div>
-    </section>
 
    </Layout>
   )

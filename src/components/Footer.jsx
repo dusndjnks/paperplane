@@ -173,7 +173,7 @@ const Footer = () => {
 
       {/* Large & XL Screens */}
       <div className="hidden lg:flex justify-center">
-        <section className="relative py-12">
+        <section className="relative py-8">
           <div className="max-w-[1540px] mx-auto px-4 sm:px-6 lg:px-20 relative">
             {/* CTA Overlay */}
             <div className="absolute inset-0 z-10 flex items-center justify-center px-2">
@@ -194,7 +194,7 @@ const Footer = () => {
                   <img
                     src={img}
                     alt={`Footer image ${index + 1}`}
-                    className="w-full object-cover object-top hover:scale-105 transition-transform duration-300 h-[400px] xl:h-[460px]"
+                    className="w-full xl:w-[240px] object-cover object-top hover:scale-105 transition-transform duration-300 h-[380px]"
                   />
                 </div>
               ))}
@@ -204,15 +204,15 @@ const Footer = () => {
       </div>
 
       {/* Footer Logo + Tagline */}
-      <div className="flex flex-col items-center justify-center px-4 pt-2">
-        <img src={logo} alt="Logo" className="w-[200px] sm:w-[280px] md:w-[340px] lg:w-[400px]" />
-        <h1 className="text-center pt-3 font-cormorant text-base sm:text-lg md:text-xl lg:text-2xl max-w-[700px]">
+      <div className="flex flex-col items-center justify-center px-4">
+        <img src={logo} alt="Logo" className="w-[200px] sm:w-[280px] md:w-[300px]" />
+        <h1 className="text-center pt-3 font-cormorant text-base sm:text-lg md:text-xl">
           Say yes to unforgettable, beautiful, lasting wedding photos!
         </h1>
       </div>
 
       {/* Footer Text */}
-      <p className="text-center text-sm sm:text-base md:text-lg lg:text-[20px] font-cormorant text-gray-600 py-6 px-4 font-medium">
+      <p className="text-center text-sm sm:text-base md:text-lg lg:text-[20px] font-cormorant text-gray-600 pb-3 pt-4 px-4 font-medium">
         Developed by <span className="font-semibold text-gray-700">Divegrid Pvt Ltd</span> | All Rights
         Reserved © 2025
       </p>

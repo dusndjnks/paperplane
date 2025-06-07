@@ -1,26 +1,35 @@
-import main from "../images/main photo.webp"
 import { useSwipeable } from "react-swipeable";
 import Layout from "../components/Layout"
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import main1 from "../images/main1.webp"
+import main2 from "../images/main3.webp"
+import main3 from "../images/main4.webp"
+import main4 from "../images/main2.webp"
+
 
 
 
 const images = [
-  main,
-  "https://images.pexels.com/photos/27043729/pexels-photo-27043729/free-photo-of-a-lotus-flower.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  "https://images.pexels.com/photos/10257984/pexels-photo-10257984.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-  "https://images.pexels.com/photos/15006261/pexels-photo-15006261/free-photo-of-grayscale-photo-of-a-bride-and-a-groom-smiling.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-  "https://images.pexels.com/photos/9210832/pexels-photo-9210832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-];  
-
-const image = [
-  "https://images.pexels.com/photos/10257984/pexels-photo-10257984.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-  "https://images.pexels.com/photos/2507026/pexels-photo-2507026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  "https://images.pexels.com/photos/15006261/pexels-photo-15006261/free-photo-of-grayscale-photo-of-a-bride-and-a-groom-smiling.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-  "https://images.pexels.com/photos/9210832/pexels-photo-9210832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  "https://images.pexels.com/photos/9210832/pexels-photo-9210832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  main4,
+ main3,
+ main1, 
+ main2
 ];
+
+
+const SaveTheDate = [
+
+]
+
+const Engagement = [
+
+]
+
+const Wedding = [
+
+]
+
 
 
 const Gallery = () => {
@@ -47,33 +56,30 @@ const Gallery = () => {
   
   return (
     <Layout>
-      <div>
-          <div
-            {...handlers}
-            className="relative h-screen  w-full overflow-hidden bg-black"
-          >
-            <div className="relative h-full w-full">
-              {image.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt={`Slide ${index}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-all  brightness-50 duration-[1000ms] ease-in-out ${
-                    index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
-                  }`}
-                  style={{ transitionProperty: 'opacity, transform' }}
-                />
-              ))}
-            </div>
-          <div className="absolute inset-0 flex items-center justify-center text-center z-20">
-             <h1 className="text-white font-cormorant leading-tight
-                   text-[52px] sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[120px]">
-                    Your precious moments
-              </h1>
-          </div>
+   
+    <div {...handlers} className="relative w-full h-[70vh] sm:h-screen overflow-hidden bg-black">
+  {/* Image Slides */}
+  <div className="relative w-full h-full">
+    {images.map((img, index) => (
+      <img
+        key={index}
+        src={img}
+        alt={`Slide ${index}`}
+        className={`absolute inset-0 w-full h-full object-cover brightness-75 transition-all duration-[1000ms] ease-in-out
+          ${index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'}`}
+        style={{ transitionProperty: 'opacity, transform' }}
+      />
+    ))}
+  </div>
 
-          </div>
-    </div>
+  {/* Text Overlay */}
+  <div className="absolute inset-0 z-20 flex items-center justify-center px-4 text-center">
+    <h1 className="text-white font-cormorant leading-tight text-[42px] sm:text-[60px] md:text-[80px] lg:text-[100px] ">
+      Your precious moments
+    </h1>
+  </div>
+</div>
+
 
      <div className=" px-5 md:px-12 xl:px-20">
   <div className="flex items-center justify-center pt-16 font-cormorant">

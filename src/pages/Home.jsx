@@ -4,7 +4,11 @@ import logo from "../images/Logo Paper Plane.svg"
 import logo1 from "../images/Logo Paper Plane (1).svg"
 import { NavLink } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
-import main from "../images/main photo.webp"
+import main from "../images/main1.webp"
+import main2 from "../images/main2.webp"
+import main3 from "../images/main3.webp"  
+import main4 from "../images/main4.webp"
+import main5 from "../images/contact/contact1.webp"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'swiper/css'
@@ -14,11 +18,11 @@ import pream from "../images/1st-photo-swasika-pream-_2_.webp"
 
 
 const images = [
-  main,
-  "https://images.pexels.com/photos/5759215/pexels-photo-5759215.jpeg",
- "https://instagram.fcjb3-2.fna.fbcdn.net/v/t39.30808-6/421779287_18037634458726065_983376464591270904_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQuaW1hZ2VfdXJsZ2VuLjE0NDB4OTkyLnNkci5mMzA4MDguZGVmYXVsdF9pbWFnZSJ9&_nc_ht=instagram.fcjb3-2.fna.fbcdn.net&_nc_cat=109&_nc_oc=Q6cZ2QGEL03uWbkrEMQY2TapaqED_i6y4PnM-a6NtVDc2VUVjxWz-1jVvhG34Wa5QAUJQdL8rEgCDhSTNw85wOUOKpZf&_nc_ohc=2pGtFiH0WR8Q7kNvwHEszSK&_nc_gid=W-6YLnkN85tz8RiAxMvo_g&edm=AP4sbd4AAAAA&ccb=7-5&ig_cache_key=MzI4Nzg5ODA4Mjg5Mjk1Mjc2NQ%3D%3D.3-ccb7-5&oh=00_AfNMF1c6REQRxFM0YI--5JLKKLClCBSjlJiR7aO1jq_5Cg&oe=6849B05A&_nc_sid=7a9f4b",
-  "https://instagram.fcjb3-2.fna.fbcdn.net/v/t51.2885-15/474002154_18073310071726065_8746625963891873110_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4OTYwLnNkci5mNzU3NjEuZGVmYXVsdF9pbWFnZSJ9&_nc_ht=instagram.fcjb3-2.fna.fbcdn.net&_nc_cat=109&_nc_oc=Q6cZ2QHsODikXC4ZP_RCHTNYc36uxJmB63aXDNBQK4r2Geo4Z0StSmDRulWa659lXTqDNE34tzaF9XEXpV_uUdlJ5i5k&_nc_ohc=CPvgAImufA8Q7kNvwGdSnF2&_nc_gid=-UnOLT4bM-yy4Trj9Herdw&edm=APoiHPcBAAAA&ccb=7-5&ig_cache_key=MzU0Njk2MzQyNjcwMDg0NzEyOA%3D%3D.3-ccb7-5&oh=00_AfP5qmXZDHUyE8jFeFfgG8p1qQn7l4GBU7Q1KVI-2y-GfA&oe=6849D5FE&_nc_sid=22de04",
-  "https://instagram.fcjb3-3.fna.fbcdn.net/v/t51.29350-15/458486604_915396617280784_5313754220408095017_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4OTYwLnNkci5mMjkzNTAuZGVmYXVsdF9pbWFnZSJ9&_nc_ht=instagram.fcjb3-3.fna.fbcdn.net&_nc_cat=104&_nc_oc=Q6cZ2QEEm--WEUcgzgye5IwYRzV9JsSwGhALJJPsU5b5pLRmF-p51eI2qjlfOLTn5rdc9TjlOtEDMhfe_Q_hEbCfpu7M&_nc_ohc=e9G4yaqqbAAQ7kNvwGtXL9o&_nc_gid=fZcrKIyx46UbUvoHOdgjeA&edm=APoiHPcBAAAA&ccb=7-5&ig_cache_key=MzQ1MDI1NDMxOTg2NDUzMjc2Ng%3D%3D.3-ccb7-5&oh=00_AfPGGy7F1E0DZX4driIBItMCeWHPuKmiufv0J3M6pj6Xvg&oe=6849BBC6&_nc_sid=22de04"
+main,
+main2,
+main3,
+main4,
+main5
 ];
 
 const image = [
@@ -85,7 +89,6 @@ const Home = () => {
     };
   }, []);
 
-  
 useEffect(() => {
   AOS.init({ once: true, duration: 1000 });
 }, []); 
@@ -95,7 +98,7 @@ useEffect(() => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000);
+    const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -113,30 +116,38 @@ useEffect(() => {
         <section className="bg-[#f4f4f4] min-h-screen">
         
    <div
-            {...handlers}
-            className="relative h-screen w-full overflow-hidden bg-black"
-          >
-            <div className="relative h-full w-full">
-              {images.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt={`Slide ${index}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-all brightness-75 duration-[1000ms] ease-in-out ${
-                    index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
-                  }`}
-                  style={{ transitionProperty: 'opacity, transform' }}
-                />
-              ))}
-            </div>
-          <div className="absolute inset-0 flex items-center justify-center text-center z-20">
-  <img
-    src={logo}
-    alt="Logo"
-    className="w-[290px] sm:w-[360px] md:w-[480px] lg:w-[548px] h-auto object-contain"
-  />
+  {...handlers}
+  className="relative w-full overflow-hidden bg-black h-[70vh] sm:h-screen"
+>
+  {/* Slide Track */}
+  <div
+    className="flex h-full transition-transform duration-[1500ms] ease-in-out"
+    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+  >
+    {images.map((img, index) => (
+      <div
+        key={index}
+        className="w-full h-full flex-shrink-0"
+      >
+        <img
+          src={img}
+          alt={`Slide ${index}`}
+          className="w-full h-full object-cover brightness-75"
+        />
+      </div>
+    ))}
+  </div>
+
+  {/* Overlay Logo */}
+  <div className="absolute inset-0 z-20 flex items-center justify-center">
+    <img
+      src={logo}
+      alt="Logo"
+      className="w-[280px] sm:w-[360px] md:w-[460px] lg:w-[540px] xl:w-[600px] h-auto object-contain"
+    />
+  </div>
 </div>
-          </div>
+
 
 <div className="flex items-center justify-center px-6 my-20 md:my-16 lg:my-14 xl:my-20">
   <div className="bg-white border-2 border-gray-200 p-6 md:p-12 w-full max-w-[760px] text-center space-y-10 mx-auto py-10 font-cormorant">
