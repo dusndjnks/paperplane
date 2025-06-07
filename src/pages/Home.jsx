@@ -92,10 +92,26 @@ useEffect(() => {
 
   const [index, setIndex] = useState(0);
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+
   return (
    <Layout>
 
+       {loading && (
+        <div className="fixed inset-0 z-50 bg-white flex items-center justify-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-black"></div>
+        </div>
+      )}
 
+      <div className={`${loading ? "hidden" : "block"}`}>
+        <section className="bg-[#f4f4f4] min-h-screen">
+        
    <div
             {...handlers}
             className="relative h-screen w-full overflow-hidden bg-black"
@@ -146,32 +162,28 @@ useEffect(() => {
   </div>
 </div>
 
-
-<div className="h-full bg-[#f4f4f4] border px-4 sm:px-6 md:px-12 lg:px-24 py-10 lg:py-24   shadow-lg rounded-md md:my-12 space-y-20 mx-4 sm:mx-6 md:mx-12 lg:mx-20">
+<div className="bg-[#f4f4f4] border px-4 sm:px-6 md:px-12 lg:px-24 py-10 lg:py-24 shadow-lg rounded-md md:my-12 space-y-20 mx-4 sm:mx-6 md:mx-12 lg:mx-20">
   {/* Block 1 */}
   <div className="flex flex-col md:flex-row items-center gap-10 justify-center max-w-[1340px] mx-auto">
     <img
-      src="https://instagram.fcjb3-3.fna.fbcdn.net/v/t51.29350-15/422610351_882388843886896_482627537331775516_n.heic?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4MTgwMC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.fcjb3-3.fna.fbcdn.net&_nc_cat=104&_nc_oc=Q6cZ2QHtgbRnQn-CKQawRv6X8uVNy_UfDp2tKQGm8re2eZQxtVQMEa0FML-uu-XJYA1534C1PJXn9vLLl-Q21glL6nR9&_nc_ohc=AOPOqmd-btsQ7kNvwHgvEry&_nc_gid=gUI0LhzpXnYae-gFbjjTRQ&edm=APoiHPcBAAAA&ccb=7-5&ig_cache_key=MzI4ODQ2MjM1NDE4NjQ4NTc0MA%3D%3D.3-ccb7-5&oh=00_AfMC8aYP3QpOJljpIFf6jYGujuDtKC4rDCs4G9skEq3tCQ&oe=6849D148&_nc_sid=22de04"
-      alt="Kiran and Anu"
-      className="w-full md:w-1/2 aspect-square lg:w-[520px] rounded-md object-cover shadow-md"
+      src={pream}
+      alt="Swasika and Pream"
+      className="w-full md:w-1/2 aspect-square object-cover rounded-lg shadow-lg max-h-[400px] md:max-h-none"
     />
-    <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
-      <h2 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-cormorant uppercase font-semibold">
-        swasika & pream
+    <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center px-4 md:px-8">
+      <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-cormorant uppercase font-semibold">
+        Swasika & Pream
       </h2>
-      <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]  w-full sm:w-[260px] md:w-[340px] lg:w-[420px]  font-cormorant leading-relaxed pt-4 md:pt-10 pb-10">
-        Paper Plane Wedding's work is breathtaking. They made us feel so comfortable, and the film and photos are incredibly personal and beautiful.
+      <p className="text-sm sm:text-base md:text-[14px] lg:text-xl xl:text-2xl max-w-[420px] font-cormorant leading-relaxed pt-4 md:pt-6 pb-6">
+        Paper Plane Wedding's work is breathtaking. They made us feel so comfortable, and the film and photos are incredibly personal and beautiful.
       </p>
       <NavLink
         to="/swasika&pream"
-        className="
-          bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant
-          mx-auto
-          w-full sm:w-[260px] md:w-[340px] lg:w-[400px]
-          h-[44px] md:h-[58px] lg:h-[64px]
-          text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]
-          flex items-center justify-center
-        "
+        className="bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant
+          w-[180px] sm:w-[220px] md:w-[240px] lg:w-[300px] xl:w-[340px]
+          h-[36px] sm:h-[44px] md:h-[46px] lg:h-[54px] xl:h-[60px]
+          text-sm sm:text-base md:text-[14px] lg:text-lg xl:text-xl
+          flex items-center justify-center mx-auto"
       >
         Explore their memories
       </NavLink>
@@ -179,149 +191,86 @@ useEffect(() => {
   </div>
 
   {/* Block 2 */}
-  <div className="flex flex-col-reverse md:flex-row items-center gap-10 justify-center max-w-[1440px] mx-auto">
-    <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
-      <h2 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-cormorant uppercase font-semibold">
-        rishi & aiswarya
+  <div className="flex flex-col-reverse md:flex-row items-center gap-10 justify-center max-w-[1340px] mx-auto">
+    <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center px-4 md:px-8">
+      <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-cormorant uppercase font-semibold">
+        Rishi & Aiswarya
       </h2>
-      <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]  w-full sm:w-[260px] md:w-[340px] lg:w-[420px]  font-cormorant leading-relaxed pt-4 md:pt-10 pb-10">
+      <p className="text-sm sm:text-base md:text-[14px] lg:text-xl xl:text-2xl max-w-[420px] font-cormorant leading-relaxed pt-4 md:pt-6 pb-6">
         We were blown away by Paper Plane Wedding! They made us feel so relaxed, and the photos and video perfectly captured our personalities and the joy of our day.
       </p>
       <NavLink
         to="/rishi&aiswarya"
-        className="
-          bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant
-          mx-auto
-          w-full sm:w-[260px] md:w-[340px] lg:w-[400px]
-          h-[44px] md:h-[58px] lg:h-[64px]
-          text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]
-          flex items-center justify-center
-        "
+        className="bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant
+          w-[180px] sm:w-[220px] md:w-[240px] lg:w-[300px] xl:w-[340px]
+          h-[36px] sm:h-[44px] md:h-[46px] lg:h-[54px] xl:h-[60px]
+          text-sm sm:text-base md:text-[14px] lg:text-lg xl:text-xl
+          flex items-center justify-center mx-auto"
       >
         Explore their memories
       </NavLink>
     </div>
     <img
-      src="https://instagram.fcjb3-4.fna.fbcdn.net/v/t51.29350-15/458499090_1696014751228044_5823032497820993474_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4MTgwMC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.fcjb3-4.fna.fbcdn.net&_nc_cat=100&_nc_oc=Q6cZ2QHm9wB1pJV_S8s2Ov0UHTLCN_ekCX4OqDrKNIhVKV4AYzxumbZRpYXgr0lawxin4ztW_gcJ7nmTnTjVLeccUOPD&_nc_ohc=NVaesP84KhUQ7kNvwFOQklv&_nc_gid=JjSv7uiRJpKswbkiSGYhyQ&edm=APoiHPcBAAAA&ccb=7-5&ig_cache_key=MzQ1MTY3NTI4NTk4NjkyOTY2MQ%3D%3D.3-ccb7-5&oh=00_AfP6CGiqfZL937b5flmp62oYyL61FB_WskRedOcQzujTZQ&oe=6849DDEE&_nc_sid=22de04"
-      alt="Kiran and Anu"
-      className="w-full md:w-1/2 aspect-square lg:w-[520px] rounded-md object-cover shadow-md"
+      src={rishi}
+      alt="Rishi and Aiswarya"
+      className="w-full md:w-1/2 aspect-square object-cover rounded-lg shadow-lg max-h-[400px] md:max-h-none"
     />
   </div>
-              
-    <div className="flex flex-col md:flex-row items-center gap-10 justify-center max-w-[1340px] mx-auto">
-    <img
-      src={pream}
-      alt="Kiran and Anu"
-      className="w-full md:w-1/2 aspect-square lg:w-[520px] rounded-md object-cover shadow-md"
-    />
-    <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
-      <h2 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-cormorant uppercase font-semibold">
-        swasika & pream
-      </h2>
-      <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]  w-full sm:w-[260px] md:w-[340px] lg:w-[420px]  font-cormorant leading-relaxed pt-4 md:pt-10 pb-10">
-        Paper Plane Wedding's work is breathtaking. They made us feel so comfortable, and the film and photos are incredibly personal and beautiful.
-      </p>
-      <NavLink
-        to="/swasika&pream"
-        className="
-          bg-gray-600 text-white rounded-md hover:bg-gray-700 transition font-cormorant
-          mx-auto
-          w-full sm:w-[260px] md:w-[340px] lg:w-[400px]
-          h-[44px] md:h-[58px] lg:h-[64px]
-          text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]
-          flex items-center justify-center
-        "
-      >
-        Explore their memories
-      </NavLink>
-    </div>
-  </div>
-
 </div>
 
-<div className="bg-[#1e1e1e] py-16 px-4 mt-20 md:mt-24 lg:mt-32">
-  <h2 className="text-white text-center text-2xl md:text-3xl lg:text-[32px] font-serif mb-6 md:mb-8 lg:mb-10 leading-tight">
+
+
+
+<div className="bg-[#1e1e1e] py-16 px-4 mt-28">
+  <h2 className="text-white text-center text-2xl md:text-3xl lg:text-[48px] font-serif mb-6 md:mb-8 lg:mb-10 leading-tight">
     Best Moments of their Life
   </h2>
 
-<div className="flex flex-col md:flex-row justify-center items-center gap-8 max-w-[1300px] mx-auto w-full px-6">
-  
-  <NavLink
-    to="/gallery"
-    className="group relative rounded-md overflow-hidden shadow-md flex-shrink-0 w-full max-w-xs md:max-w-[280px] lg:max-w-[320px] h-[400px] sm:h-[400px] md:h-[420px] lg:h-[460px] transition-transform duration-300"
-  >
-    <img
-      src="https://images.pexels.com/photos/30756162/pexels-photo-30756162/free-photo-of-romantic-black-and-white-wedding-portrait.jpeg"
-      alt="Ashique & Asiya"
-      className="w-full h-full object-cover rounded-md transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
-    />
-    <div className="absolute left-0 right-0 bottom-0 top-1/2 flex flex-col items-center justify-center gap-3 bg-black bg-opacity-60 text-white text-center rounded-b-md
-                    px-6 py-10
-                    sm:px-8 sm:py-12
-                    md:px-4 md:py-6">
-      <h3 className="font-cormorant font-semibold leading-tight
-                    text-lg sm:text-xl md:text-2xl lg:text-[24px]">
-        Ashique & Asiya
-      </h3>
-      <p className="font-cormorant max-w-xs leading-relaxed
-                   text-base sm:text-lg md:text-base lg:text-[18px]">
-        Step into their world and explore the beautifully captured moments from their unforgettable wedding day.
-      </p>
-    </div>
-  </NavLink>
-
-  <NavLink
-    to="/gallery"
-    className="group relative rounded-md overflow-hidden shadow-md flex-shrink-0 w-full max-w-xs md:max-w-[280px] lg:max-w-[320px] h-[400px] sm:h-[400px] md:h-[420px] lg:h-[460px] transition-transform duration-300"
-  >
-    <img
-      src="https://images.pexels.com/photos/28949501/pexels-photo-28949501/free-photo-of-tender-embrace-with-elegant-rose-bouquet.jpeg"
-      alt="Anna’s Bride to be"
-      className="w-full h-full object-cover rounded-md transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
-    />
-    <div className="absolute left-0 right-0 bottom-0 top-1/2 flex flex-col items-center justify-center gap-3 bg-black bg-opacity-60 text-white text-center rounded-b-md
-                    px-6 py-10
-                    sm:px-8 sm:py-12
-                    md:px-4 md:py-6">
-      <h3 className="font-cormorant font-semibold leading-tight
-                    text-lg sm:text-xl md:text-2xl lg:text-[24px]">
-        Anna’s Bride to be
-      </h3>
-      <p className="font-cormorant max-w-xs leading-relaxed
-                   text-base sm:text-lg md:text-base lg:text-[18px]">
-        Explore candid captures as brides-to-be filled with love, anticipation, and wedding planning moments.
-      </p>
-    </div>
-  </NavLink>
-
-  <NavLink
-    to="/gallery"
-    className="group relative rounded-md overflow-hidden shadow-md flex-shrink-0 w-full max-w-xs md:max-w-[280px] lg:max-w-[320px] h-[400px] sm:h-[400px] md:h-[420px] lg:h-[460px] transition-transform duration-300"
-  >
-    <img
-      src="https://images.pexels.com/photos/28949501/pexels-photo-28949501/free-photo-of-tender-embrace-with-elegant-rose-bouquet.jpeg"
-      alt="Kiran & Anu"
-      className="w-full h-full object-cover rounded-md transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
-    />
-    <div className="absolute left-0 right-0 bottom-0 top-1/2 flex flex-col items-center justify-center gap-3 bg-black bg-opacity-60 text-white text-center rounded-b-md
-                    px-6 py-10
-                    sm:px-8 sm:py-12
-                    md:px-4 md:py-6">
-      <h3 className="font-cormorant font-semibold leading-tight
-                    text-lg sm:text-xl md:text-2xl lg:text-[24px]">
-        Kiran & Anu
-      </h3>
-      <p className="font-cormorant max-w-xs leading-relaxed
-                   text-base sm:text-lg md:text-base lg:text-[18px]">
-        Witness their love blossom in their enchanting pre-wedding moments.
-      </p>
-    </div>
-  </NavLink>
-
+  <div className="flex flex-wrap md:flex-nowrap justify-center items-stretch gap-4 sm:gap-6 lg:gap-8 max-w-[1200px] mx-auto px-2 md:px-6">
+    {[
+      {
+        title: "Ashique & Asiya",
+        description: "Step into their world and explore the beautifully captured moments from their unforgettable wedding day.",
+        image: "https://images.pexels.com/photos/30756162/pexels-photo-30756162/free-photo-of-romantic-black-and-white-wedding-portrait.jpeg",
+      },
+      {
+        title: "Anna's Bride to be",
+        description: "Explore candid captures as brides-to-be filled with love, anticipation, and wedding planning moments.",
+        image: "https://images.pexels.com/photos/28949501/pexels-photo-28949501/free-photo-of-tender-embrace-with-elegant-rose-bouquet.jpeg",
+      },
+      {
+        title: "Kiran & Anu",
+        description: "Witness their love blossom in their enchanting pre-wedding moments.",
+        image: "https://images.pexels.com/photos/30756162/pexels-photo-30756162/free-photo-of-romantic-black-and-white-wedding-portrait.jpeg",
+      },
+    ].map((item, index) => (
+      <NavLink
+        key={index}
+        to="/gallery"
+        className="group relative rounded-md overflow-hidden shadow-md transition-transform duration-300 aspect-[4/5] 
+          w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] max-w-[380px] md:max-w-[300px] lg:max-w-[340px]"
+      >
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-full h-full object-cover rounded-md transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
+        />
+        <div className="absolute inset-0 top-1/2 flex flex-col items-center justify-center gap-3 bg-black bg-opacity-60 text-white text-center px-4 py-6">
+          <h3 className="font-cormorant font-semibold text-lg sm:text-xl md:text-[18px] lg:text-2xl">{item.title}</h3>
+          <p className="font-cormorant text-sm sm:text-base md:text-sm lg:text-base max-w-xs">
+            {item.description}
+          </p>
+        </div>
+      </NavLink>
+    ))}
+  </div>
 </div>
 
 
-</div>
+
+
+
+
 
 
 
@@ -347,6 +296,10 @@ useEffect(() => {
 
 
   <hr className="border-t-2 border-black" />
+        </section>
+      </div>
+
+
    </Layout>
    
   )

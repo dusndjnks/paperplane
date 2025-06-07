@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "480px",                     // Custom small screen breakpoint
+        ...defaultTheme.screens,         // Spread in all default Tailwind breakpoints
+      },
       fontFamily: {
         alex: ["'Alex Brush'", "cursive"],
         cormorant: ["'Cormorant Upright'", ...defaultTheme.fontFamily.serif],

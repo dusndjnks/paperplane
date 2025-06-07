@@ -17,88 +17,70 @@ const Footer = () => {
   return (
     <div className="bg-gray-300">
       <div className="w-full max-w-[1440px] mx-auto px-4 py-6 border-t border-gray-400">
-        {/* Small screen: Hamburger & toggle */}
-        <div className="flex items-center justify-between md:hidden">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle footer menu"
-            className="text-gray-700 hover:text-black focus:outline-none"
-          >
-            {/* Hamburger icon */}
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d={
-                  menuOpen
-                    ? "M6 18L18 6M6 6l12 12" // X icon when open
-                    : "M4 6h16M4 12h16M4 18h16" // Hamburger lines when closed
-                }
-              ></path>
-            </svg>
-          </button>
+  {/* Small screen: Hamburger & toggle */}
+  <div className="flex items-center justify-between md:hidden">
+    <button
+      onClick={() => setMenuOpen(!menuOpen)}
+      aria-label="Toggle footer menu"
+      className="text-gray-700 hover:text-black focus:outline-none"
+    >
+      {/* Hamburger icon */}
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d={
+            menuOpen
+              ? "M6 18L18 6M6 6l12 12"
+              : "M4 6h16M4 12h16M4 18h16"
+          }
+        ></path>
+      </svg>
+    </button>
 
-          {/* Button always visible on small */}
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="bg-black text-white px-4 py-2 rounded-md shadow hover:bg-gray-900 transition duration-300 font-cormorant font-semibold"
-          >
-            Back to Top
-          </button>
-        </div>
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className="bg-black text-white px-4 py-2 rounded-md shadow hover:bg-gray-900 transition duration-300 font-cormorant text-lg sm:text-xl font-semibold"
+    >
+      Back to Top
+    </button>
+  </div>
 
-        {/* Menu Links for small screen, toggle with state */}
-        {menuOpen && (
-          <nav className="flex flex-col gap-4 mt-4 text-center text-gray-700 font-cormorant text-lg font-medium md:hidden">
-            <a href="#home" onClick={() => setMenuOpen(false)} className="hover:underline">
-              Home
-            </a>
-            <a href="#about" onClick={() => setMenuOpen(false)} className="hover:underline">
-              About
-            </a>
-            <a href="#gallery" onClick={() => setMenuOpen(false)} className="hover:underline">
-              Gallery
-            </a>
-            <a href="#contact" onClick={() => setMenuOpen(false)} className="hover:underline">
-              Contact
-            </a>
-          </nav>
-        )}
+  {/* Menu Links for small screen */}
+  {menuOpen && (
+    <nav className="flex flex-col gap-4 mt-4 text-center text-gray-700 font-cormorant text-xl sm:text-2xl font-semibold md:hidden">
+      <a href="#home" onClick={() => setMenuOpen(false)} className="hover:underline">Home</a>
+      <a href="#about" onClick={() => setMenuOpen(false)} className="hover:underline">About</a>
+      <a href="#gallery" onClick={() => setMenuOpen(false)} className="hover:underline">Gallery</a>
+      <a href="#contact" onClick={() => setMenuOpen(false)} className="hover:underline">Contact</a>
+    </nav>
+  )}
 
-        {/* Medium+ screens: regular horizontal menu + right side button */}
-        <div className="hidden md:flex items-center mt-6 relative max-w-[1440px] mx-auto px-4">
-          {/* Center the menu */}
-          <nav className="flex flex-wrap justify-center gap-8 text-gray-700 font-cormorant text-lg md:text-xl font-medium flex-1">
-            <a href="#home" className="hover:underline transition">
-              Home
-            </a>
-            <a href="#about" className="hover:underline transition">
-              About
-            </a>
-            <a href="#gallery" className="hover:underline transition">
-              Gallery
-            </a>
-            <a href="#contact" className="hover:underline transition">
-              Contact
-            </a>
-          </nav>
+  {/* Medium+ screens */}
+  <div className="hidden md:flex items-center mt-6 relative max-w-[1440px] mx-auto px-4">
+    <nav className="flex flex-wrap justify-center gap-10 text-gray-700 font-cormorant text-2xl font-semibold flex-1">
+      <a href="#home" className="hover:underline transition">Home</a>
+      <a href="#about" className="hover:underline transition">About</a>
+      <a href="#gallery" className="hover:underline transition">Gallery</a>
+      <a href="#contact" className="hover:underline transition">Contact</a>
+    </nav>
 
-          {/* Position the button on the right */}
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="bg-black text-white px-6 py-2 rounded-md shadow hover:bg-gray-900 transition duration-300 font-cormorant text-lg font-semibold absolute right-0"
-          >
-            Back to Top
-          </button>
-        </div>
-      </div>
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className="bg-black text-white px-6 py-2 rounded-md shadow hover:bg-gray-900 transition duration-300 font-cormorant text-xl font-semibold absolute right-16"
+    >
+      Back to Top
+    </button>
+  </div>
+</div>
+
 
       {/* Floating Back to Top Button for small screens */}
       {showTopBtn && (

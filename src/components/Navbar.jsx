@@ -20,7 +20,7 @@ const Header = () => {
     >
       <div className="flex items-center justify-center px-6 pt-10 xl:pt-16 relative max-w-[1400px] mx-auto">
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-20 text-lg md:text-lg lg:text-[22px] xl:text-[32px] font-cormorant uppercase items-center">
+        <nav className="hidden md:flex space-x-20 text-lg md:text-lg lg:text-[25px] xl:text-[32px] font-cormorant uppercase items-center">
           {navLinks.map((link) => (
             <NavLink
               key={link.name}
@@ -57,40 +57,41 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden absolute right-6 top-1/2 -translate-y-1/2">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="focus:outline-none text-white"
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-          >
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-            >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
+        <div className="md:hidden absolute right-6 top-1/2">
+  <button
+    onClick={() => setIsOpen(!isOpen)}
+    className="focus:outline-none text-white"
+    aria-label={isOpen ? "Close menu" : "Open menu"}
+  >
+    <svg
+      className="w-8 h-8"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+    >
+      {isOpen ? (
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      ) : (
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      )}
+    </svg>
+  </button>
+</div>
+
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden flex flex-col items-center bg-black bg-opacity-80 py-6 space-y-6 text-xl font-cormorant uppercase">
+        <div className="md:hidden flex flex-col items-center bg-black bg-opacity-80 py-6 mt-8 space-y-6 text-xl font-cormorant uppercase">
           {navLinks.map((link) => (
             <NavLink
               key={link.name}
