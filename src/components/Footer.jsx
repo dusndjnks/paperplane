@@ -104,7 +104,7 @@ const Footer = () => {
             </div>
 
             {/* Grid - Square Images */}
-            <div className="grid grid-cols-2 gap-3 px-2 mx-auto relative z-0">
+            <div className="grid grid-cols-2 gap-1 xs:gap-2 px-2 mx-auto relative z-0">
               {[footer1, footer2, footer3, footer4].map((img, index) => (
                 <div key={index} className="aspect-square">
                   <img
@@ -119,37 +119,39 @@ const Footer = () => {
         </section>
       </div>
 
-      {/* Medium Screens (md only) */}
-      <div className="hidden md:flex lg:hidden justify-center">
-        <section className="relative py-16 w-full">
-          <div className="w-full max-w-[1200px] px-4 sm:px-6 relative mx-auto">
-            {/* CTA Overlay on top of images */}
-            <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
-              <a
-                href="https://www.instagram.com/paperplanewedding"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black/60 hover:bg-black/70 text-white text-2xl text-center font-serif w-full max-w-[600px] py-4 rounded-md shadow-lg transition-all duration-300"
-              >
-                Check Our Instagram
-              </a>
-            </div>
-
-            {/* 2x2 Grid - Wide Landscape Images */}
-            <div className="grid grid-cols-2 gap-4 relative z-0">
-              {[footer1, footer2, footer3, footer4].map((img, index) => (
-                <div key={index}>
-                  <img
-                    src={img}
-                    alt={`Footer image ${index + 1}`}
-                    className="w-full h-[260px] object-cover object-top transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+     
+     {/* Medium Screens (md only) */}
+<div className="hidden md:flex lg:hidden justify-center my-8">
+  <section className="relative py-16 w-full">
+    <div className="w-full max-w-[1200px] px-4 sm:px-6 relative mx-auto">
+      {/* CTA Overlay on top of images */}
+      <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
+        <a
+          href="https://www.instagram.com/paperplanewedding"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-black/60 hover:bg-black/70 text-white text-2xl text-center font-serif w-full max-w-[600px] py-4 rounded-md shadow-lg transition-all duration-300"
+        >
+          Check Our Instagram
+        </a>
       </div>
+
+      {/* Horizontal image layout */}
+      <div className="flex gap-1 relative z-0 justify-center">
+        {[footer1, footer2, footer3].map((img, index) => (
+          <div key={index} className="w-[240px] h-[360px] flex-shrink-0">
+            <img
+              src={img}
+              alt={`Footer image ${index + 1}`}
+              className="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</div>
+
 
       {/* Large & XL Screens */}
       <div className="hidden lg:flex justify-center">
