@@ -118,26 +118,21 @@ useEffect(() => {
       <div className={`${loading ? "hidden" : "block"}`}>
         <section className="bg-[#f4f4f4] min-h-screen">
         
-   <div
+<div
   {...handlers}
   className="relative w-full overflow-hidden bg-black h-[60vh] sm:h-screen"
 >
-  {/* Slide Track */}
-  <div
-    className="flex h-full transition-transform duration-[1500ms] ease-in-out"
-    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-  >
+  {/* Slide Track with Fade/Scale */}
+  <div className="relative h-full w-full">
     {images.map((img, index) => (
-      <div
+      <img
         key={index}
-        className="w-full h-full flex-shrink-0"
-      >
-        <img
-          src={img}
-          alt={`Slide ${index}`}
-          className="w-full h-full object-cover brightness-75"
-        />
-      </div>
+        src={img}
+        alt={`Slide ${index}`}
+        className={`absolute inset-0 w-full h-full object-cover brightness-75 transition-all duration-[1200ms] ease-in-out 
+          ${index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'}`}
+        style={{ transitionProperty: 'opacity, transform' }}
+      />
     ))}
   </div>
 
@@ -150,6 +145,7 @@ useEffect(() => {
     />
   </div>
 </div>
+
 
 
 <div className="flex items-center justify-center px-6 my-20 md:my-16 lg:my-14 xl:my-20">

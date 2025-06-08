@@ -88,13 +88,13 @@ const images = [
   </div>
 </section>
 
-<section className="flex items-center justify-center px-4  pb-6 lg:pb-24">
-  <div className="bg-[#fefefe] border-2 border-gray-300 p-8 md:p-16 w-full relative text-center font-cormorant text-[#1e1e1e]">
+<section className="flex items-center justify-center px-4 pb-6 lg:pb-24">
+  <div className="bg-[#fefefe] border-2 border-gray-300 p-8 md:p-16 w-full max-w-[1100px] mx-auto relative text-center font-cormorant text-[#1e1e1e]">
     
     <hr className="border-t-4 border-gray-400 mb-10" />
 
     <div className="relative z-20 flex flex-col md:flex-row items-stretch justify-center space-y-10 md:space-y-0 md:space-x-16">
-      <div className="w-full md:w-1/3 flex-shrink-0  md:px-0">
+      <div className="w-full md:w-1/3 flex-shrink-0 md:px-0">
         <img
           src={creator}
           alt="Mohammed Shafeek Hussain"
@@ -126,6 +126,7 @@ const images = [
     <hr className="border-t-4 border-gray-400 mt-14" />
   </div>
 </section>
+
 
 
    </Layout>
