@@ -5,6 +5,7 @@ import creator from "../images/screator.jpg"
 import main1 from "../images/main1.webp"
 import main2 from "../images/main3.webp"
 import main3 from "../images/main4.webp"
+import OurValuesSection from "../components/OurValuesSection";
 
 
 
@@ -127,6 +128,7 @@ const images = [
   </div>
 </section>
 
+    <OurValuesSection/>
 
 
    </Layout>
