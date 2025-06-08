@@ -4,7 +4,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import rishi from "../../images/videos/rishi.mp4"
+import rishi from "../../images/videos/rishi1.mp4"
 
 const TestimonialSecond = () => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
