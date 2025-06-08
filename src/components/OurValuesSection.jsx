@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import img from "../images/aboutvalue.jpeg"
+
 const values = [
   {
     title: "Quality",
@@ -41,7 +43,7 @@ const OurValuesSection = () => {
     className="absolute inset-0 bg-center bg-cover bg-right -z-30"
     style={{
       backgroundImage:
-        "url('https://images.pexels.com/photos/31412709/pexels-photo-31412709/free-photo-of-romantic-forest-wedding-couple-embracing-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
+        `url(${img})`,
       backgroundAttachment: "fixed",
     }}
   ></div>
