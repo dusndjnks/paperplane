@@ -1,21 +1,21 @@
 import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
+import { NavLink } from "react-router-dom";
 const values = [
   {
     title: "Quality",
     description:
-      "Quality is at the heart of everything we do, from the storytelling in our films to the resources we offer. Every detail is crafted to deliver a rich and memorable experience.",
+      "Excellence defines our work, from cinematic storytelling to educational materials. We meticulously craft each element to ensure a profound and lasting impression.",
   },
   {
     title: "Creativity",
     description:
-      "We approach every wedding with fresh eyes, using our creativity to turn genuine emotions into visually stunning films. Each project is designed to reflect your unique story and energy.",
+      "Every wedding receives our unique vision, transforming authentic moments into breathtaking films. We tailor each project to embody your distinctive love story and spirit.",
   },
   {
     title: "Connection",
     description:
-      "We believe real connection is key. By building trust and truly understanding our couples, we create a relaxed environment that brings out natural, heartfelt moments in every frame we capture.",
+      "Authentic relationships are fundamental. Through trust and deep understanding, we foster a comfortable atmosphere that reveals genuine, emotional moments in every shot.",
   },
 ];
 
@@ -32,20 +32,36 @@ const OurValuesSection = () => {
   }, []);
 
   return (
-   <section className="bg-black text-white py-20 px-6 text-center font-cormorant flex flex-col justify-center items-center">
+ <section className="relative text-white py-10 md:py-20 px-6 text-center font-cormorant flex flex-col justify-center items-center min-h-screen">
+  {/* Dark Overlay - Increased to 80% opacity for darker effect */}
+  <div className="absolute inset-0 bg-black/80 -z-20"></div>
+  
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-center bg-cover bg-right -z-30"
+    style={{
+      backgroundImage:
+        "url('https://images.pexels.com/photos/31412709/pexels-photo-31412709/free-photo-of-romantic-forest-wedding-couple-embracing-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
+      backgroundAttachment: "fixed",
+    }}
+  ></div>
+
   <h2 className="text-4xl sm:text-5xl font-semibold mb-5 tracking-widest">
     OUR VALUES
   </h2>
 
-  <p className="max-w-3xl mb-10 text-lg sm:text-xl leading-relaxed text-gray-300 px-2">
+  <p className="max-w-3xl mb-10 text-lg sm:text-xl leading-relaxed text-gray-200 px-2">
     At PaperPlane, our mission is to redefine the standard of quality in
     wedding filmmaking while fostering a community of learning and
     inspiration. Built on passion and purpose, our brand is guided by
     values that shape both our work and our relationships.
   </p>
 
-  <div className="relative bg-white text-black rounded-xl py-10 shadow-lg
-                  w-[260px] sm:w-[400px] md:w-[480px] lg:w-[520px] mx-auto">
+  <div
+    className="relative bg-white/90 text-black rounded-xl py-10 shadow-lg
+                w-[260px] sm:w-[400px] md:w-[480px] lg:w-[520px] mx-auto
+                backdrop-blur-sm" // subtle blur for modern glass effect
+  >
     {/* Left Arrow */}
     <button
       onClick={prevSlide}
@@ -77,18 +93,20 @@ const OurValuesSection = () => {
     </button>
   </div>
 
-  <div className="mt-20">
-    <p className="uppercase tracking-widest text-white text-sm sm:text-lg mb-5">
+  <div className="mt-5 md:mt-20">
+    <p className="uppercase tracking-widest text-white/90 text-sm sm:text-lg mb-5">
       ARE WE THE TEAM FOR YOU?
     </p>
-    <a
-      href="#contact"
+    <NavLink
+      to="/contact"
       className="inline-block bg-white text-black font-semibold px-12 py-4 rounded-md tracking-wide hover:bg-gray-200 transition text-base sm:text-lg"
     >
       CONNECT TODAY
-    </a>
+    </NavLink>
   </div>
 </section>
+
+
 
   );
 };
