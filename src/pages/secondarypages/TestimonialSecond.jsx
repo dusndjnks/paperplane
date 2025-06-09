@@ -17,6 +17,12 @@ const TestimonialSecond = () => {
     "https://images.pexels.com/photos/9210832/pexels-photo-9210832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   ];
 
+  const verticalImages = [
+    "https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/1024970/pexels-photo-1024970.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600"
+  ];
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -42,7 +48,7 @@ const TestimonialSecond = () => {
 
         {/* Overlay Title */}
         <div className="absolute inset-0 z-10 flex items-center justify-center text-center px-4">
-          <h1 className="text-white font-cormorant leading-tight uppercase text-[42px] sm:text-[60px] md:text-[80px]  ">
+          <h1 className="text-white font-cormorant leading-tight uppercase text-[42px] sm:text-[60px] md:text-[80px]">
             Rishi & Aiswarya
           </h1>
         </div>
@@ -88,6 +94,19 @@ const TestimonialSecond = () => {
             animation: zoomIn 0.3s ease forwards;
           }
         `}</style>
+
+        {/* Vertical Bottom Images Section */}
+        <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {verticalImages.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`Vertical ${index + 1}`}
+              className="w-full h-[400px] object-cover rounded-xl shadow-md"
+              data-aos="fade-up"
+            />
+          ))}
+        </div>
       </div>
     </Layout>
   );
