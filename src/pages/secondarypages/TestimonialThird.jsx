@@ -31,7 +31,7 @@ const TestimonialThird = () => {
         
         <div className={`absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
           <h1 className="text-white text-center font-cormorant text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight px-4">
-            Swasika & Pream
+            JOSE & SREELEKSHMI
           </h1>
         </div>
       </div>
