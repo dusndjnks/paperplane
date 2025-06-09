@@ -1,11 +1,11 @@
 import jose from "../../images/videos/jose.mp4";
-import jose1 from "../../images/videos/jose1.mp4";
+import jose3 from "../../images/videos/jose3.mp4";
 import Layout from '../../components/Layout';
 import { useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import jose2 from "../../images/couples/jose (1).jpg"
-import jose3 from "../../images/couples/jose (2).jpg"
+import jose8 from "../../images/couples/jose (2).jpg"
 import jose4 from "../../images/couples/jose (3).jpg"
 import jose5 from "../../images/couples/jose (4).jpg"
 import jose7 from "../../images/couples/jose (6).jpg"
@@ -14,7 +14,7 @@ const TestimonialThird = () => {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <Layout>
+    <Layout>  
       {/* Hero Section with Background Video */}
       <div className="relative h-[60vh] md:h-screen w-full overflow-hidden">
         <video
@@ -25,7 +25,7 @@ const TestimonialThird = () => {
           className="absolute inset-0 w-full h-full object-cover object-bottom brightness-75"
           onLoadedData={() => setLoaded(true)}
         >
-          <source src={jose1} type="video/mp4" />
+          <source src={jose3} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         
@@ -42,7 +42,7 @@ const TestimonialThird = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             jose2,
-            jose3,
+            jose8,
           ].map((img, index) => (
             <div key={index} className="aspect-[16/9] overflow-hidden rounded-lg">
               <LazyLoadImage
