@@ -1,24 +1,81 @@
 import Layout from '../../components/Layout';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import swasika from "../../images/videos/swasika.mp4"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import swasika from "../../images/videos/swasika.mp4";
 
-// Example images array — replace with your actual imports or URLs
-const images = [
-  '/gallery/img1.jpg',
-  '/gallery/img2.jpg',
-  '/gallery/img3.jpg',
-  // Add more as needed
-];
+import swasika1 from "../../images/couples/swasika  (1).jpg";
+import swasika2 from "../../images/couples/swasika  (2).jpg";
+import swasika3 from "../../images/couples/swasika  (3).jpg";
+import swasika4 from "../../images/couples/swasika  (4).jpg";
+import swasika5 from "../../images/couples/swasika  (5).jpg";
+import swasika6 from "../../images/couples/swasika  (6).jpg";
+import swasika7 from "../../images/couples/swasika  (7).jpg";
+import swasike8 from "../../images/couples/swasika  (8).jpg";
+
+
+import pream1 from "../../images/couples/pream (1).jpg"
+import pream2 from "../../images/couples/pream (2).jpg"
+import pream3 from "../../images/couples/pream (3).jpg"
+import pream4 from "../../images/couples/pream (4).jpg"
+import pream5 from "../../images/couples/pream (5).jpg"
+import pream6 from "../../images/couples/pream (6).jpg"
+import pream7 from "../../images/couples/pream (7).jpg"
+import pream8 from "../../images/couples/pream (8).jpg"
+import pream9 from "../../images/couples/pream (9).jpg"
+import pream10 from "../../images/couples/pream (10).jpg"
+import pream11 from "../../images/couples/pream (11).jpg"
+import pream12 from "../../images/couples/pream (12).jpg"
+import pream13 from "../../images/couples/pream (13).jpg"
+
+
 
 const TestimonialFirst = () => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-in-out',
+    });
+  }, []);
+
+  const landscapeImages = [
+  swasika1,
+  swasike8,
+  swasika6,
+  swasika3,
+  swasika7,
+  swasika2,
+  swasika4,
+  swasika5
+];
+
+const portraitImages = [
+  pream1,
+  pream5,
+  pream7,
+  pream12,
+  pream8,
+  pream3,
+  pream7,
+  pream8,
+  pream9,
+  pream10,
+  pream11,
+  pream12,
+  pream13,pream2
+];
+
+
+
   return (
     <Layout>
-      {/* Hero Section with Background Video */}
-      <div className="relative h-[60vh] md:h-screen w-full overflow-hidden">
+      {/* Hero Section */}
+      <div className="relative h-[60vh] sm:h-[70vh] md:h-screen w-full overflow-hidden">
         <video
           autoPlay
           loop
@@ -27,33 +84,83 @@ const TestimonialFirst = () => {
           className="absolute inset-0 w-full h-full object-cover brightness-75"
         >
           <source src={swasika} type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
-
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          <h1 className="text-white text-center font-cormorant text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight px-4">
+        <div className="absolute inset-0 z-10 flex items-center justify-center text-center px-4">
+          <h1 className="text-white font-cormorant leading-tight uppercase text-[42px] sm:text-[60px] md:text-[80px]">
             Swasika & Pream
           </h1>
         </div>
       </div>
 
-      {/* Gallery Section */}
-      <div className="min-h-screen bg-[#f9f7f6] px-4 sm:px-6 md:px-12 lg:px-20 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-          {images.map((src, index) => (
-            <LazyLoadImage
-              key={index}
-              src={src}
-              effect="blur"
-              alt={`Gallery ${index + 1}`}
-              onClick={() => setFullscreenImage(src)}
-              className="w-full rounded-lg cursor-pointer break-inside-avoid-column shadow-lg transition-transform duration-700 hover:scale-105"
-              data-aos="zoom-in"
-            />
+      {/* Main Section */}
+      <div className="min-h-screen bg-[#f9f7f6] px-4 sm:px-6 md:px-12 lg:px-20 py-12 space-y-24">
+
+        {/* Top Landscape Images */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {landscapeImages.map((src, index) => (
+            <div key={index} className="aspect-[16/9] overflow-hidden rounded-lg shadow-md" data-aos="zoom-in">
+              <LazyLoadImage
+                src={src}
+                alt={`Landscape ${index + 1}`}
+                className="w-full h-full object-cover hover:scale-105 transition duration-300 cursor-pointer"
+                effect="blur"
+                onClick={() => setFullscreenImage(src)}
+              />
+            </div>
           ))}
         </div>
 
-        {/* Fullscreen View */}
+        {/* About Section */}
+        <div className="flex items-center justify-center px-6">
+          <div className="bg-white border-2 border-gray-200 p-6 md:p-12 w-full max-w-[760px] text-center space-y-10 mx-auto py-10 font-cormorant">
+            <hr className="border-t-4 border-gray-300" />
+            <p
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-[36px] xl:text-[40px] text-gray-900 font-semibold"
+              data-aos="fade-up"
+            >
+              Swasika & Pream
+            </p>
+            <p
+              className="text-lg sm:text-xl md:text-2xl lg:text-[22px] xl:text-[24px] 2xl:text-[26px] leading-relaxed text-gray-800 px-3 sm:px-6 md:px-8 xl:px-12"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              Witnessing <span className="font-semibold">Swasika and Pream's</span> celebration was an experience filled with love, elegance, and sincere emotion. Their wedding day overflowed with genuine moments and stunning visuals. Every detail captured speaks of a timeless bond.
+            </p>
+            <hr className="border-t-4 border-gray-300" />
+          </div>
+        </div>
+
+        {/* Center Video */}
+        <div className="px-0 md:px-8 py-8 xl:w-4/5 xl:mx-auto">
+          <div className="aspect-video w-full overflow-hidden rounded-xl bg-gray-100 shadow-lg" data-aos="fade-up">
+            <video
+              src={swasika}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Portrait Images */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {portraitImages.map((src, index) => (
+            <div key={index} className="aspect-[2/3] overflow-hidden rounded-xl shadow-md" data-aos="fade-up">
+              <LazyLoadImage
+                src={src}
+                alt={`Portrait ${index + 1}`}
+                className="w-full h-full object-cover hover:scale-105 transition duration-300 cursor-pointer"
+                effect="blur"
+                onClick={() => setFullscreenImage(src)}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Fullscreen Image View */}
         {fullscreenImage && (
           <div
             onClick={() => setFullscreenImage(null)}
@@ -68,7 +175,6 @@ const TestimonialFirst = () => {
           </div>
         )}
 
-        {/* Fullscreen animation style */}
         <style>{`
           @keyframes zoomIn {
             0% { opacity: 0; transform: scale(0.8); }
