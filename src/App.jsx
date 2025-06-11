@@ -10,6 +10,11 @@ import ScrollToTop from "./components/ScrollToTop";
 import TestimonialFirst from "./pages/secondarypages/TestimonialFirst";
 import TestimonialSecond from "./pages/secondarypages/TestimonialSecond";
 import TestimonialThird from "./pages/secondarypages/TestimonialThird";
+import Kavya from "./pages/couples/Kavya";
+import Uk from "./pages/couples/Uk";
+import Muslim from "./pages/couples/Muslim";
+import Christain from "./pages/couples/Christain";
+import BridetoBe from "./pages/couples/BridetoBe";
 
 function App() {
   return (
@@ -26,6 +31,12 @@ function App() {
         <Route path="/swasika&pream" element={<TestimonialFirst/>} />
         <Route path="/rishi&aiswarya" element={<TestimonialSecond />} />
         <Route path="/jose&sreelekshmi" element={<TestimonialThird/>} />
+        <Route path="/kavya" element={<Kavya/>} />
+        <Route path="/Uk" element={<Uk/>} />
+        <Route path="/muslim" element={<Muslim/>} />
+        <Route path="/christain" element={<Christain/>} />
+        <Route path="/wedding" element={<Wedding/>} />
+        <Route path="/Bride" element={<BridetoBe/>} />
       </Routes>
     </div>
   );

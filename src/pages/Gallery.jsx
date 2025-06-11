@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import main1 from "../images/main1.webp"
 import main2 from "../images/main3.webp"
 import main4 from "../images/main2.webp"
+import SimpleImageGrid from "../components/SimpleImageGrid";
 
 
 
@@ -77,6 +78,8 @@ const Gallery = () => {
     </h1>
   </div>
 </div>
+
+    <SimpleImageGrid/>
 
 
      <div className=" px-5 md:px-12 xl:px-20">
