@@ -62,7 +62,7 @@ const portraitImages = [
   pream8,
   pream3,
   pream7,
-  pream8,
+  // pream8,
   pream9,
   pream10,
   pream11,
