@@ -20,12 +20,12 @@ import save5 from "../images/savethedate/img (7).webp"
 const images = [
   main4,
  main1, 
- main2
+
 ];
 
 
 const SaveTheDate = [
-  save1,save2,
+  save1,save2,main2,
   save3,save4,
   save5,save6
 ]
