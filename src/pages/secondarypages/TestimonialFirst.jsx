@@ -5,6 +5,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import swasika from "../../images/videos/swasika.mp4";
+import swasika0 from "../../images/videos/Swasika-prem-wedding-video-header-kerala-2024.mp4"
 
 import swasika1 from "../../images/couples/swasika  (1).jpg";
 import swasika2 from "../../images/couples/swasika  (2).jpg";
@@ -55,19 +56,26 @@ const TestimonialFirst = () => {
 ];
 
 const portraitImages = [
-  pream1,
-  pream5,
-  pream7,
-  pream12,
-  pream8,
-  pream3,
-  pream7,
-  // pream8,
-  pream9,
+
   pream10,
+  pream6,
+  pream5,
+
   pream11,
+  pream7,
+  pream1,
+
+  pream8,
   pream12,
-  pream13,pream2
+  pream3,
+
+
+  pream9,
+  pream4,
+  pream2,
+  pream13,
+
+
 ];
 
 
@@ -135,7 +143,7 @@ const portraitImages = [
         <div className="px-0 md:px-8 py-8 xl:w-4/5 xl:mx-auto">
           <div className="aspect-video w-full overflow-hidden rounded-xl bg-gray-100 shadow-lg" data-aos="fade-up">
             <video
-              src={swasika}
+              src={swasika0}
               autoPlay
               muted
               loop

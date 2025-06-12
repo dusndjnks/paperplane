@@ -118,7 +118,7 @@ const Gallery = () => {
 </div>
 
 
-   <div className=" px-5 md:px-12 xl:px-20">
+   {/* <div className=" px-5 md:px-12 xl:px-20">
   <div className="flex items-center justify-center pt-16 font-cormorant">
     <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-6xl mb-3 text-center">
       Engagement
@@ -153,7 +153,7 @@ const Gallery = () => {
       View All
     </NavLink>
   </div>
-</div>
+</div> */}
 
 <div className="w-full px-4 md:px-10 lg:px-16">
   <div className="flex items-center justify-center pt-6 font-cormorant">
