@@ -25,7 +25,7 @@ const Muslim = () => {
   return (
     <div className="bg-white min-h-screen relative">
       {/* Page Header */}
-      <div className="text-center pt-40 pb-16 px-4">
+      <div className="text-center pt-14 pb-10 px-4">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-cormorant font-semibold text-gray-800">
           Muslim Wedding
         </h1>

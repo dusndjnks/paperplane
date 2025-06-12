@@ -5,21 +5,21 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// Replace these with your actual wedding reception image paths
-import wedding1 from "../../images/gallery/wedding (1).jpg"
-import wedding2 from "../../images/gallery/wedding (2).jpg";
-import wedding3 from "../../images/gallery/wedding (3).jpg";
-import wedding4 from "../../images/gallery/wedding (4).jpg";
-import wedding5 from "../../images/gallery/wedding (5).jpg";
-import wedding6 from "../../images/gallery/wedding (6).jpg";
-import wedding7 from "../../images/gallery/wedding (7).jpg";
-import wedding8 from "../../images/gallery/wedding (8).jpg";
-import wedding9 from "../../images/gallery/wedding (9).jpg";
-import wedding10 from "../../images/gallery/wedding (10).jpg";
+// Replace these with actual Anoop images
+import anoop1 from "../../images/gallery/anoop (1).jpg";
+import anoop2 from "../../images/gallery/anoop (2).jpg";
+import anoop3 from "../../images/gallery/anoop (3).jpg";
+import anoop4 from "../../images/gallery/anoop (4).jpg";
+import anoop5 from "../../images/gallery/anoop (5).jpg";
+import anoop6 from "../../images/gallery/anoop (6).jpg";
+import anoop7 from "../../images/gallery/anoop (7).jpg";
+import anoop8 from "../../images/gallery/anoop (8).jpg";
+import anoop9 from "../../images/gallery/anoop (9).jpg";
+import anoop10 from "../../images/gallery/anoop (10).jpg";
 
-const galleryImages = [wedding1, wedding2, wedding3, wedding4, wedding5, wedding6 , wedding7, wedding8, wedding9, wedding10];   
+const galleryImages = [anoop1, anoop2, anoop3, anoop4, anoop5, anoop6 , anoop7, anoop8, anoop9, anoop10];
 
-const Wedding = () => {
+const Anoop = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -30,8 +30,8 @@ const Wedding = () => {
     <div className="bg-white min-h-screen relative">
       {/* Page Header */}
       <div className="text-center pt-14 pb-10 px-4">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-cormorant font-semibold text-gray-800">
-          Wedding Reception
+        <h1 className="text-4xl sm:text-5xl font-cormorant font-semibold text-gray-800">
+          Anoop & Bride
         </h1>
       </div>
 
@@ -41,7 +41,7 @@ const Wedding = () => {
           Our Favorite Shots
         </h2>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div className="columns-1 sm:columns-2 gap-6 space-y-6">
           {galleryImages.map((src, index) => (
             <div
               key={index}
@@ -50,7 +50,7 @@ const Wedding = () => {
             >
               <LazyLoadImage
                 src={src}
-                alt={`Wedding Image ${index + 1}`}
+                alt={`Anoop Image ${index + 1}`}
                 effect="blur"
                 className="w-full h-auto object-cover rounded-md transition duration-300 ease-in-out hover:scale-[1.02]"
               />
@@ -70,4 +70,4 @@ const Wedding = () => {
   );
 };
 
-export default Wedding;
+export default Anoop;

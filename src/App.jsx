@@ -15,6 +15,10 @@ import Uk from "./pages/couples/Uk";
 import Muslim from "./pages/couples/Muslim";
 import Christain from "./pages/couples/Christain";
 import BridetoBe from "./pages/couples/BridetoBe";
+import Sajith from "./pages/couples/Sajith";
+import Monu from "./pages/couples/Monu";
+import Anoop from "./pages/couples/Anoop";
+import Gokul from "./pages/couples/Gokul";
 
 function App() {
   return (
@@ -37,6 +41,10 @@ function App() {
         <Route path="/christain" element={<Christain/>} />
         <Route path="/wedding" element={<Wedding/>} />
         <Route path="/Bride" element={<BridetoBe/>} />
+        <Route path="/sajith" element={<Sajith/>} />
+        <Route path="/monu" element={<Monu/>} />
+        <Route path="/divya" element={<Gokul/>} />
+        <Route path="/anoop" element={<Anoop/>} />
       </Routes>
     </div>
   );

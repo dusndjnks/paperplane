@@ -5,21 +5,17 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// Replace these with your actual wedding reception image paths
-import wedding1 from "../../images/gallery/wedding (1).jpg"
-import wedding2 from "../../images/gallery/wedding (2).jpg";
-import wedding3 from "../../images/gallery/wedding (3).jpg";
-import wedding4 from "../../images/gallery/wedding (4).jpg";
-import wedding5 from "../../images/gallery/wedding (5).jpg";
-import wedding6 from "../../images/gallery/wedding (6).jpg";
-import wedding7 from "../../images/gallery/wedding (7).jpg";
-import wedding8 from "../../images/gallery/wedding (8).jpg";
-import wedding9 from "../../images/gallery/wedding (9).jpg";
-import wedding10 from "../../images/gallery/wedding (10).jpg";
+// Replace these imports with actual Gokul gallery images
+import gokul1 from "../../images/gallery/kavya (1).jpg";
+import gokul2 from "../../images/gallery/kavya (2).jpg";
+import gokul3 from "../../images/gallery/kavya (3).jpg";
+import gokul4 from "../../images/gallery/kavya (4).jpg";
+import gokul5 from "../../images/gallery/kavya (5).jpg";
+import gokul6 from "../../images/gallery/kavya (6).jpg";
 
-const galleryImages = [wedding1, wedding2, wedding3, wedding4, wedding5, wedding6 , wedding7, wedding8, wedding9, wedding10];   
+const galleryImages = [gokul1, gokul2, gokul3, gokul6, gokul5, gokul4];
 
-const Wedding = () => {
+const Gokul = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -30,8 +26,8 @@ const Wedding = () => {
     <div className="bg-white min-h-screen relative">
       {/* Page Header */}
       <div className="text-center pt-14 pb-10 px-4">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-cormorant font-semibold text-gray-800">
-          Wedding Reception
+        <h1 className="text-4xl sm:text-5xl font-cormorant font-semibold text-gray-800">
+          Gokul & Divya
         </h1>
       </div>
 
@@ -41,7 +37,7 @@ const Wedding = () => {
           Our Favorite Shots
         </h2>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div className="columns-1 sm:columns-2 gap-6 space-y-6">
           {galleryImages.map((src, index) => (
             <div
               key={index}
@@ -50,7 +46,7 @@ const Wedding = () => {
             >
               <LazyLoadImage
                 src={src}
-                alt={`Wedding Image ${index + 1}`}
+                alt={`Gokul Image ${index + 1}`}
                 effect="blur"
                 className="w-full h-auto object-cover rounded-md transition duration-300 ease-in-out hover:scale-[1.02]"
               />
@@ -70,4 +66,4 @@ const Wedding = () => {
   );
 };
 
-export default Wedding;
+export default Gokul;

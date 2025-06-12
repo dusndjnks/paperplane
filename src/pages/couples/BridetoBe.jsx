@@ -14,6 +14,7 @@ import bride5 from "../../images/gallery/bride (5).jpg";
 import bride6 from "../../images/gallery/bride (6).jpg";
 
 
+
 const galleryImages = [bride1
 , bride2, bride3, bride4, bride5, bride6
 ];
@@ -28,7 +29,7 @@ const BridetoBe = () => {
   return (
     <div className="bg-white min-h-screen relative">
       {/* Header */}
-      <div className="text-center pt-40 pb-16 px-4">
+      <div className="text-center pt-14 pb-10 px-4">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-cormorant font-semibold text-gray-800">
           Bride To Be
         </h1>
