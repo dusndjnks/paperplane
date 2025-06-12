@@ -5,8 +5,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// Replace these with your actual wedding reception image paths
-import wedding1 from "../../images/gallery/wedding (1).jpg"
+import wedding1 from "../../images/gallery/wedding (1).jpg";
 import wedding2 from "../../images/gallery/wedding (2).jpg";
 import wedding3 from "../../images/gallery/wedding (3).jpg";
 import wedding4 from "../../images/gallery/wedding (4).jpg";
@@ -17,7 +16,8 @@ import wedding8 from "../../images/gallery/wedding (8).jpg";
 import wedding9 from "../../images/gallery/wedding (9).jpg";
 import wedding10 from "../../images/gallery/wedding (10).jpg";
 
-const galleryImages = [wedding1, wedding2, wedding3, wedding4, wedding5, wedding6 , wedding7, wedding8, wedding9, wedding10];   
+
+const galleryImages = [wedding1, wedding2, wedding3, wedding4, wedding5, wedding6 , wedding7, wedding8, wedding9 , wedding10];   
 
 const Wedding = () => {
   const navigate = useNavigate();

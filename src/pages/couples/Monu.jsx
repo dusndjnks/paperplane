@@ -26,7 +26,7 @@ const Monu = () => {
       {/* Page Header */}
       <div className="text-center pt-14 pb-10 px-4">
         <h1 className="text-4xl sm:text-5xl font-cormorant font-semibold text-gray-800">
-          Monu & Bride
+          Monu & Mervin
         </h1>
       </div>
 

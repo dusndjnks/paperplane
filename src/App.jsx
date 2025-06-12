@@ -4,7 +4,6 @@ import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import SaveTheDate from "./pages/secondarypages/SaveTheDate";
-import Wedding from "./pages/secondarypages/Wedding";
 import Engagement from "./pages/secondarypages/Engagement";
 import ScrollToTop from "./components/ScrollToTop";
 import TestimonialFirst from "./pages/secondarypages/TestimonialFirst";
@@ -19,6 +18,7 @@ import Sajith from "./pages/couples/Sajith";
 import Monu from "./pages/couples/Monu";
 import Anoop from "./pages/couples/Anoop";
 import Gokul from "./pages/couples/Gokul";
+import Wedding from "./pages/couples/Wedding";
 
 function App() {
   return (

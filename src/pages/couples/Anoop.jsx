@@ -31,7 +31,7 @@ const Anoop = () => {
       {/* Page Header */}
       <div className="text-center pt-14 pb-10 px-4">
         <h1 className="text-4xl sm:text-5xl font-cormorant font-semibold text-gray-800">
-          Anoop & Bride
+          Anoop & Akshara
         </h1>
       </div>
 
