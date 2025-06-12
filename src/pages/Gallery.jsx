@@ -7,6 +7,13 @@ import main2 from "../images/main3.webp"
 import main4 from "../images/main2.webp"
 import SimpleImageGrid from "../components/SimpleImageGrid";
 
+import save1 from "../images/savethedate/img (15).webp"
+import save6 from "../images/savethedate/img (6).webp"
+import save2 from "../images/savethedate/img (27).webp"
+import save3 from "../images/savethedate/img (18).webp"
+import save4 from "../images/savethedate/img (6).webp"
+import save5 from "../images/savethedate/img (7).webp"
+
 
 
 
@@ -18,7 +25,9 @@ const images = [
 
 
 const SaveTheDate = [
-
+  save1,save2,
+  save3,save4,
+  save5,save6
 ]
 
 const Engagement = [
@@ -90,7 +99,7 @@ const Gallery = () => {
   </div>
 <div className="w-full overflow-hidden">
   <div className="flex animate-marquee">
-    {[...images, ...images].map((src, i) => (
+    {[...SaveTheDate, ...SaveTheDate].map((src, i) => (
       <div
         key={i}
         className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[360px] lg:w-[370px] xl:w-[420px] mx-1 "

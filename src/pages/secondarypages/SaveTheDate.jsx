@@ -4,18 +4,16 @@ import { useState, useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import AOS from 'aos';
-import 'aos/dist/aos.css';
+import 'aos/dist/aos.css';  
+
+import save1 from "../../images/savethedate/img (1).webp"
 
 import main2 from "../../images/main2.webp";
 const SaveTheDate = () => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
 
   const images = [
-    "https://images.pexels.com/photos/10257984/pexels-photo-10257984.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "https://images.pexels.com/photos/2507026/pexels-photo-2507026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "https://images.pexels.com/photos/15006261/pexels-photo-15006261/free-photo-of-grayscale-photo-of-a-bride-and-a-groom-smiling.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "https://images.pexels.com/photos/9210832/pexels-photo-9210832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "https://images.pexels.com/photos/9210832/pexels-photo-9210832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    save1
   ];
 
   useEffect(() => {
@@ -48,12 +46,11 @@ const SaveTheDate = () => {
           <h1 className="text-white font-cormorant leading-tight text-[42px] sm:text-[60px] md:text-[80px] lg:text-[100px]">
             Save The Date
           </h1>
-          <NavLink
-            to="/gallery"
+          <h1
             className="mt-6 font-cormorant text-black text-xl sm:text-2xl px-6 py-2 bg-white border border-white opacity-70 hover:opacity-100 transition duration-300 rounded-lg"
           >
             Explore All
-          </NavLink>
+          </h1>
         </div>
       </div>
 
