@@ -7,7 +7,6 @@ import 'aos/dist/aos.css';
 
 import jose from "../../images/videos/jose.mp4";
 import jose3 from "../../images/videos/jose3.mp4";
-import jose2 from "../../images/couples/jose (1).jpg";
 import jose8 from "../../images/couples/jose (2).jpg";
 import jose4 from "../../images/couples/jose (3).jpg";
 import jose5 from "../../images/couples/jose (4).jpg";
@@ -16,10 +15,8 @@ import jose91 from "../../images/couples/jose9 (1).jpg";
 import jose92 from "../../images/couples/jose9 (2).jpg";
 import jose93 from "../../images/couples/jose9 (3).jpg";
 import jose94 from "../../images/couples/jose9 (4).jpg";
-import jose95 from "../../images/couples/jose9 (5).jpg";
-import jose9 from "../../images/couples/jose9.jpg";
 import jose01 from "../../images/couples/jose0 (1).jpg";
-import jose02 from "../../images/couples/jose0 (2).jpg";
+import jose2 from "../../images/couples/001 (8).jpg";
 
 const TestimonialThird = () => {
   const [loaded, setLoaded] = useState(false);
@@ -27,6 +24,8 @@ const TestimonialThird = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+
+  
 
   return (
     <Layout>
@@ -55,7 +54,7 @@ const TestimonialThird = () => {
       <div className="space-y-12 px-6 md:px-12 lg:px-24 py-12 bg-white">
         {/* Top row - 2 landscape images */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {[jose2, jose94, jose8, jose91].map((img, index) => (
+          {[jose93, jose94, jose8, jose91].map((img, index) => (
             <div key={index} className="aspect-[16/9] overflow-hidden rounded-lg">
               <LazyLoadImage
                 src={img}
@@ -108,7 +107,7 @@ const TestimonialThird = () => {
 
         {/* Bottom row - 3 portrait images */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {[jose4, jose5, jose7, jose92, jose01, jose02].map((img, index) => (
+          {[jose4, jose5, jose7, jose92, jose01, jose2].map((img, index) => (
             <div key={index} className="aspect-[2/3] overflow-hidden rounded-lg">
               <LazyLoadImage
                 src={img}

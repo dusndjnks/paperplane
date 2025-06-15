@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { FaInstagram } from "react-icons/fa";
+
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -83,27 +85,38 @@ const Header = () => {
     </div>
   </div>
 
-  {/* Mobile Menu */}
-  {isOpen && (
-    <div className="md:hidden flex flex-col items-center bg-black bg-opacity-80 py-6 mt-8 space-y-6 text-xl font-cormorant uppercase">
-      {navLinks.map((link) => (
-        <NavLink
-          key={link.name}
-          to={link.path}
-          onClick={() => setIsOpen(false)}
-          className={({ isActive }) =>
-            `text-white transition duration-300 inline-block relative ${
-              isActive
-                ? "after:block after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-12 after:bg-white"
-                : "hover:after:block hover:after:absolute hover:after:bottom-[-4px] hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:h-[2px] hover:after:w-12 hover:after:bg-white"
-            }`
-          }
-        >
-          {link.name}
-        </NavLink>
-      ))}
-    </div>
-  )}
+  
+{isOpen && (
+  <div className="md:hidden flex flex-col items-center bg-black bg-opacity-80 py-6 mt-8 space-y-6 text-xl font-cormorant uppercase">
+    {navLinks.map((link) => (
+      <NavLink
+        key={link.name}
+        to={link.path}
+        onClick={() => setIsOpen(false)}
+        className={({ isActive }) =>
+          `text-white transition duration-300 inline-block relative ${
+            isActive
+              ? "after:block after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-12 after:bg-white"
+              : "hover:after:block hover:after:absolute hover:after:bottom-[-4px] hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:h-[2px] hover:after:w-12 hover:bg-white"
+          }`
+        }
+      >
+        {link.name}
+      </NavLink>
+    ))}
+
+    {/* Instagram Icon */}
+    <a
+      href="https://www.instagram.com/paperplanewedding"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-4 text-white text-sm"
+      aria-label="Instagram"
+    >
+      <FaInstagram className="text-white text-xl hover:text-pink-500 transition" />
+    </a>
+  </div>
+)}
 </header>
 
   );
