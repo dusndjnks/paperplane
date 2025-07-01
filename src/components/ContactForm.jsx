@@ -5,7 +5,7 @@ export default function ContactForm({ onSuccess }) {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const form = formRef.current;
 
@@ -23,29 +23,31 @@ export default function ContactForm({ onSuccess }) {
       message: form.message.value,
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbyIX3buMKmmLTauQ8eR33qxg3VbVm4o00xl-lnC1gCkKhbrK7WEqyNlAjQgqkbvZwgz/exec", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-      // mode: "no-cors", // uncomment this line ONLY if your script is NOT returning CORS headers
-    })
-      .then((res) => {
-        // Google Scripts doesn't always return status with no-cors
-        console.log("Submitted:", res);
+    try {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbyeyP6pJbXWbJS9Xv8CzDGUA70CQq3zG0HH702nOjDp7PBHP6nqZQJsfuC7XcZYDIWj/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (result.success) {
         setSubmitted(true);
         setError(false);
         form.reset();
         if (onSuccess) onSuccess();
         setTimeout(() => setSubmitted(false), 5000);
-      })
-      .catch((err) => {
-        console.error("Submission failed:", err);
-        setError(true);
-        setSubmitted(false);
-        alert("❌ Submission failed. Please try again.");
-      });
+      } else {
+        throw new Error(result.error || "Unknown error");
+      }
+    } catch (err) {
+      console.error("Submission failed:", err);
+      setError(true);
+      setSubmitted(false);
+      alert("❌ Submission failed. Please try again.");
+    }
   };
 
   return (
