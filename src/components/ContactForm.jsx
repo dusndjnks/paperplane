@@ -1,8 +1,9 @@
 import { useRef, useState } from "react";
 
-export default function ContactForm() {
+export default function ContactForm({ onSuccess }) {
   const formRef = useRef();
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,16 +23,29 @@ export default function ContactForm() {
       message: form.message.value,
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbx2InBnbWhiY19amv7JX4cc7iUZdn7lqVfj4519TEFKet7Xv7XMKanKxRy1LT3l4A/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbyQrVpCv0TUhPRJ0I8INqNkwqMaXwgdQP67V-IE8z2ScUJ37V9OLwxddxGXDOlqt9Nz/exec", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(formData),
+      // mode: "no-cors", // uncomment this line ONLY if your script is NOT returning CORS headers
     })
-      .then(() => {
+      .then((res) => {
+        // Google Scripts doesn't always return status with no-cors
+        console.log("Submitted:", res);
         setSubmitted(true);
+        setError(false);
         form.reset();
+        if (onSuccess) onSuccess();
         setTimeout(() => setSubmitted(false), 5000);
       })
-      .catch(() => alert("Submission failed."));
+      .catch((err) => {
+        console.error("Submission failed:", err);
+        setError(true);
+        setSubmitted(false);
+        alert("❌ Submission failed. Please try again.");
+      });
   };
 
   return (
@@ -48,16 +62,16 @@ export default function ContactForm() {
             { label: "Phone Number*", name: "phone", type: "tel" },
             { label: "Instagram Handle", name: "instagram", type: "text" },
             { label: "Location | Venue", name: "venue", type: "text" }].map((field, i) => (
-            <div key={i} className="flex flex-col space-y-1 w-full">
-              <label className="text-[20px] md:text-[28px] font-medium">{field.label}</label>
-              <input
-                type={field.type}
-                name={field.name}
-                className="w-full py-2 border border-black px-3 md:px-4 text-[18px] md:text-[24px] rounded"
-                required={field.label.includes("*")}
-              />
-            </div>
-          ))}
+              <div key={i} className="flex flex-col space-y-1 w-full">
+                <label className="text-[20px] md:text-[28px] font-medium">{field.label}</label>
+                <input
+                  type={field.type}
+                  name={field.name}
+                  required={field.label.includes("*")}
+                  className="w-full py-2 border border-black px-3 md:px-4 text-[18px] md:text-[24px] rounded"
+                />
+              </div>
+            ))}
 
           <div className="flex flex-col space-y-2 w-full">
             <label className="text-[20px] md:text-[28px] font-medium">Project Date*</label>
@@ -70,7 +84,9 @@ export default function ContactForm() {
           </div>
 
           <div className="flex flex-col space-y-2 w-full">
-            <label className="text-[20px] md:text-[28px] font-medium">What type of event are you planning*</label>
+            <label className="text-[20px] md:text-[28px] font-medium">
+              What type of event are you planning*
+            </label>
             <select
               name="event_type"
               required
@@ -85,15 +101,15 @@ export default function ContactForm() {
 
           {[{ label: "Wedding Planner", name: "planner", type: "text" },
             { label: "Who referred us to you?", name: "referral", type: "text" }].map((field, i) => (
-            <div key={i} className="flex flex-col space-y-1 w-full">
-              <label className="text-[20px] md:text-[28px] font-medium">{field.label}</label>
-              <input
-                type={field.type}
-                name={field.name}
-                className="w-full py-2 border border-black px-3 md:px-4 text-[18px] md:text-[24px] rounded"
-              />
-            </div>
-          ))}
+              <div key={i} className="flex flex-col space-y-1 w-full">
+                <label className="text-[20px] md:text-[28px] font-medium">{field.label}</label>
+                <input
+                  type={field.type}
+                  name={field.name}
+                  className="w-full py-2 border border-black px-3 md:px-4 text-[18px] md:text-[24px] rounded"
+                />
+              </div>
+            ))}
 
           <div className="md:col-span-2 flex flex-col space-y-1 w-full">
             <label className="text-[20px] md:text-[28px] font-medium">Tell me more about the project</label>
