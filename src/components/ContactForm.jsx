@@ -23,7 +23,7 @@ export default function ContactForm({ onSuccess }) {
       message: form.message.value,
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbyQrVpCv0TUhPRJ0I8INqNkwqMaXwgdQP67V-IE8z2ScUJ37V9OLwxddxGXDOlqt9Nz/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbyIX3buMKmmLTauQ8eR33qxg3VbVm4o00xl-lnC1gCkKhbrK7WEqyNlAjQgqkbvZwgz/exec", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
