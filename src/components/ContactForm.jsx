@@ -141,29 +141,51 @@ export default function ContactForm() {
         </form>
       </div>
 
-      {/* Modal Popup */}
       {submitted && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
-          onClick={closeModal}
-        >
+        <div className="fixed inset-0 bg-black text-white flex items-center justify-center z-50">
           <div
-            className="bg-white rounded-2xl p-6 md:p-12 text-center w-full max-w-3xl mx-auto shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
+            className="w-full h-full flex flex-col items-center justify-center text-center px-6"
+            onClick={closeModal}
           >
-            <h3 className="text-3xl md:text-5xl font-bold mb-6">Thank You!</h3>
-            <p className="text-lg md:text-2xl mb-6 text-gray-800">
-              Your message has been sent successfully. We’ll be in touch shortly.
-            </p>
-            <button
-              onClick={goToHome}
-              className="bg-gray-600 hover:bg-gray-700 text-white text-lg md:text-xl px-6 py-3 rounded-md transition"
+            <div
+              className="flex flex-col items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
             >
-              Go to Homepage
-            </button>
+              {/* Checkmark Circle */}
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white flex items-center justify-center mb-8">
+                <svg
+                  className="w-10 h-10 md:w-14 md:h-14 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+            
+              {/* Text Content */}
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">Thank You!</h2>
+              <p className="text-gray-300 text-base md:text-lg max-w-md mb-8">
+                Your submission has been received. We'll reach out to you soon.
+              </p>
+            
+              {/* Back Home Button */}
+              <button
+                onClick={goToHome}
+                className="bg-white text-black text-base md:text-lg px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
+              >
+                Back home
+              </button>
+            </div>
           </div>
         </div>
       )}
+
     </div>
   );
 }
