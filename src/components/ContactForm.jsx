@@ -1,11 +1,10 @@
 import { useRef, useState } from "react";
 
-export default function ContactForm({ onSuccess }) {
+export default function ContactForm() {
   const formRef = useRef();
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const form = formRef.current;
 
@@ -23,31 +22,16 @@ export default function ContactForm({ onSuccess }) {
       message: form.message.value,
     };
 
-    try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbyeyP6pJbXWbJS9Xv8CzDGUA70CQq3zG0HH702nOjDp7PBHP6nqZQJsfuC7XcZYDIWj/exec", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-      if (result.success) {
+    fetch("https://script.google.com/macros/s/AKfycbysn3U4tHqTf2wMx72eE8uERxTOTR39H8LV-Sy9x1femJ-8iH_NL1IIiomByeoG_Igq/exec", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    })
+      .then(() => {
         setSubmitted(true);
-        setError(false);
         form.reset();
-        if (onSuccess) onSuccess();
         setTimeout(() => setSubmitted(false), 5000);
-      } else {
-        throw new Error(result.error || "Unknown error");
-      }
-    } catch (err) {
-      console.error("Submission failed:", err);
-      setError(true);
-      setSubmitted(false);
-      alert("❌ Submission failed. Please try again.");
-    }
+      })
+      .catch(() => alert("Submission failed."));
   };
 
   return (
@@ -64,16 +48,16 @@ export default function ContactForm({ onSuccess }) {
             { label: "Phone Number*", name: "phone", type: "tel" },
             { label: "Instagram Handle", name: "instagram", type: "text" },
             { label: "Location | Venue", name: "venue", type: "text" }].map((field, i) => (
-              <div key={i} className="flex flex-col space-y-1 w-full">
-                <label className="text-[20px] md:text-[28px] font-medium">{field.label}</label>
-                <input
-                  type={field.type}
-                  name={field.name}
-                  required={field.label.includes("*")}
-                  className="w-full py-2 border border-black px-3 md:px-4 text-[18px] md:text-[24px] rounded"
-                />
-              </div>
-            ))}
+            <div key={i} className="flex flex-col space-y-1 w-full">
+              <label className="text-[20px] md:text-[28px] font-medium">{field.label}</label>
+              <input
+                type={field.type}
+                name={field.name}
+                className="w-full py-2 border border-black px-3 md:px-4 text-[18px] md:text-[24px] rounded"
+                required={field.label.includes("*")}
+              />
+            </div>
+          ))}
 
           <div className="flex flex-col space-y-2 w-full">
             <label className="text-[20px] md:text-[28px] font-medium">Project Date*</label>
@@ -86,9 +70,7 @@ export default function ContactForm({ onSuccess }) {
           </div>
 
           <div className="flex flex-col space-y-2 w-full">
-            <label className="text-[20px] md:text-[28px] font-medium">
-              What type of event are you planning*
-            </label>
+            <label className="text-[20px] md:text-[28px] font-medium">What type of event are you planning*</label>
             <select
               name="event_type"
               required
@@ -103,15 +85,15 @@ export default function ContactForm({ onSuccess }) {
 
           {[{ label: "Wedding Planner", name: "planner", type: "text" },
             { label: "Who referred us to you?", name: "referral", type: "text" }].map((field, i) => (
-              <div key={i} className="flex flex-col space-y-1 w-full">
-                <label className="text-[20px] md:text-[28px] font-medium">{field.label}</label>
-                <input
-                  type={field.type}
-                  name={field.name}
-                  className="w-full py-2 border border-black px-3 md:px-4 text-[18px] md:text-[24px] rounded"
-                />
-              </div>
-            ))}
+            <div key={i} className="flex flex-col space-y-1 w-full">
+              <label className="text-[20px] md:text-[28px] font-medium">{field.label}</label>
+              <input
+                type={field.type}
+                name={field.name}
+                className="w-full py-2 border border-black px-3 md:px-4 text-[18px] md:text-[24px] rounded"
+              />
+            </div>
+          ))}
 
           <div className="md:col-span-2 flex flex-col space-y-1 w-full">
             <label className="text-[20px] md:text-[28px] font-medium">Tell me more about the project</label>
