@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 
 export default function ContactForm() {
   const formRef = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
@@ -22,25 +23,43 @@ export default function ContactForm() {
       message: form.message.value,
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbysn3U4tHqTf2wMx72eE8uERxTOTR39H8LV-Sy9x1femJ-8iH_NL1IIiomByeoG_Igq/exec", {
-      method: "POST",
-      body: JSON.stringify(formData),
-    })
+    setIsSubmitting(true);
+
+    fetch(
+      "https://script.google.com/macros/s/AKfycbysn3U4tHqTf2wMx72eE8uERxTOTR39H8LV-Sy9x1femJ-8iH_NL1IIiomByeoG_Igq/exec",
+      {
+        method: "POST",
+        body: JSON.stringify(formData),
+      }
+    )
       .then(() => {
-        setSubmitted(true);
-        form.reset();
-        setTimeout(() => setSubmitted(false), 5000);
+        setTimeout(() => {
+          setIsSubmitting(false);
+          setSubmitted(true);
+          form.reset();
+        }, 500); // simulate short processing time
       })
-      .catch(() => alert("Submission failed."));
+      .catch(() => {
+        setIsSubmitting(false);
+        alert("Submission failed. But your message may have still been received.");
+      });
+  };
+
+  const goToHome = () => {
+    window.location.href = "/";
+  };
+
+  const closeModal = () => {
+    setSubmitted(false);
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 mb-20">
+    <div className="min-h-screen flex items-center justify-center px-4 mb-20 font-cormorant">
       <div className="bg-white border border-gray-300 px-4 sm:px-6 md:px-10 w-full max-w-[1100px] h-auto py-10 flex items-center justify-center">
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="w-full max-w-[950px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-20 font-cormorant text-gray-900"
+          className="w-full max-w-[950px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-20 text-gray-900"
         >
           {[{ label: "Your Full Name*", name: "full_name", type: "text" },
             { label: "Your Partner’s Full Name*", name: "partner_name", type: "text" },
@@ -106,19 +125,45 @@ export default function ContactForm() {
           <div className="md:col-span-2 flex flex-col items-start gap-4">
             <button
               type="submit"
-              className="bg-[#1A1A18] text-white text-[24px] md:text-[36px] w-full sm:w-[300px] md:w-[400px] h-[60px] md:h-[84px] rounded"
+              disabled={isSubmitting}
+              className="bg-[#1A1A18] text-white text-[24px] md:text-[36px] w-full sm:w-[300px] md:w-[400px] h-[60px] md:h-[84px] rounded flex items-center justify-center transition-transform duration-300 hover:scale-105 disabled:opacity-60"
             >
-              Send
+              {isSubmitting ? (
+                <svg className="w-8 h-8 animate-spin text-white" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                </svg>
+              ) : (
+                "Send"
+              )}
             </button>
-
-            {submitted && (
-              <p className="text-black bg-white border border-black rounded px-4 py-2 text-lg md:text-2xl font-cormorant transition-all duration-300">
-                ✅ Your message has been sent!
-              </p>
-            )}
           </div>
         </form>
       </div>
+
+      {/* Modal Popup */}
+      {submitted && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <div
+            className="bg-white rounded-2xl p-6 md:p-12 text-center w-full max-w-3xl mx-auto shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-3xl md:text-5xl font-bold mb-6">Thank You!</h3>
+            <p className="text-lg md:text-2xl mb-6 text-gray-800">
+              Your message has been sent successfully. We’ll be in touch shortly.
+            </p>
+            <button
+              onClick={goToHome}
+              className="bg-gray-600 hover:bg-gray-700 text-white text-lg md:text-xl px-6 py-3 rounded-md transition"
+            >
+              Go to Homepage
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
